@@ -1,0 +1,200 @@
+{"kind":"deck","id":"pr/pgobxf","name":"Deck"}
+{"kind":"layout","layoutId":"bf63644b-a709-47e5-a2d4-d516255a8386","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"680dde80-4307-48e7-99fe-e08682f1eaf5","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dkvq94","slide":1,"title":"文献汇报","textShapes":7}
+{"kind":"shape","id":"sh/xkfydone","slide":1,"bbox":[0,0,1280,157]}
+{"kind":"textbox","id":"sh/vydgbe58","slide":1,"text":"文献汇报","textPreview":"文献汇报","textChars":4,"textLines":1,"bbox":[974,55,230,42]}
+{"kind":"textbox","id":"sh/kn6h8j65","slide":1,"text":"GIGN","textPreview":"GIGN","textChars":4,"textLines":1,"bbox":[69,204,700,135]}
+{"kind":"textbox","id":"sh/5ofyhonq","slide":1,"text":"基于三维结构的蛋白质–配体","textPreview":"基于三维结构的蛋白质–配体","textChars":13,"textLines":1,"bbox":[73,358,1090,60]}
+{"kind":"textbox","id":"sh/iloz6toz","slide":1,"text":"结合亲和力预测","textPreview":"结合亲和力预测","textChars":7,"textLines":1,"bbox":[73,415,1090,60]}
+{"kind":"textbox","id":"sh/jmxgfy5k","slide":1,"text":"Geometric Interaction Graph Neural Network","textPreview":"Geometric Interaction Graph Neural Network","textChars":42,"textLines":1,"bbox":[76,504,1090,38]}
+{"kind":"textbox","id":"sh/0r2xwz6l","slide":1,"text":"Yang Z. et al.  /  The Journal of Physical Chemistry Letters","textPreview":"Yang Z. et al.  /  The Journal of Physical Chemistry Letters","textChars":60,"textLines":1,"bbox":[76,594,1100,30]}
+{"kind":"textbox","id":"sh/lsvy54n6","slide":1,"text":"2023, 14(8): 2020–2033     DOI: 10.1021/acs.jpclett.2c03906","textPreview":"2023, 14(8): 2020–2033     DOI: 10.1021/acs.jpclett.2c03906","textChars":59,"textLines":1,"bbox":[76,631,1100,27]}
+{"kind":"shape","id":"sh/h0n29gju","slide":1,"bbox":[0,702,1280,18]}
+{"kind":"image","id":"im/36lcn2xg","slide":1,"name":"","alt":"华中农业大学官方校名校徽","bbox":[68,40,330,75]}
+{"kind":"notes","id":"nt/dkvq94","slide":1,"text":"Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906\n视觉参考：华中农业大学信息学院定制模板 https://coi.hzau.edu.cn/xygk/wh/dzmb.htm 。色彩与标识：学校官方网站 https://www.hzau.edu.cn/info/1172/12644_2.htm ，华农绿 RGB(0,112,50)。校名校徽原图 https://www.hzau.edu.cn/images/LOGO.png 。本文件为重新设计的个人文献汇报，不是学校发布的官方模板原文件。"}
+{"kind":"slide","id":"sl/3424e9","slide":2,"title":"华中农业大学 / 文献汇报","textShapes":26}
+{"kind":"textbox","id":"sh/f61o36xk","slide":2,"text":"华中农业大学 / 文献汇报","textPreview":"华中农业大学 / 文献汇报","textChars":13,"textLines":1,"bbox":[64,31,500,22]}
+{"kind":"textbox","id":"sh/07apwby5","slide":2,"text":"研究背景与研究动机","textPreview":"研究背景与研究动机","textChars":9,"textLines":1,"bbox":[64,60,1120,62]}
+{"kind":"shape","id":"sh/18j65wfq","slide":2,"bbox":[64,127,1114,2]}
+{"kind":"shape","id":"sh/29s7y1gb","slide":2,"bbox":[64,678,1114,1]}
+{"kind":"textbox","id":"sh/nalo76xw","slide":2,"text":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textPreview":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textChars":38,"textLines":1,"bbox":[64,684,520,18]}
+{"kind":"textbox","id":"sh/ovup0byh","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1128,681,50,22]}
+{"kind":"textbox","id":"sh/pw3q9gfm","slide":2,"text":"目标：从蛋白质–配体复合物的三维结构，直接预测结合亲和力","textPreview":"目标：从蛋白质–配体复合物的三维结构，直接预测结合亲和力","textChars":28,"textLines":1,"bbox":[64,155,1115,47]}
+{"kind":"textbox","id":"sh/id8nmhg7","slide":2,"text":"输入：原子化学特征、三维坐标与化学键    |    输出：一个连续的亲和力预测值","textPreview":"输入：原子化学特征、三维坐标与化学键    |    输出：一个连续的亲和力预测值","textChars":41,"textLines":1,"bbox":[66,207,1040,27]}
+{"kind":"shape","id":"sh/3ehovmxc","slide":2,"bbox":[407,260,1,287]}
+{"kind":"shape","id":"sh/nalo761o","slide":2,"bbox":[804,260,1,287]}
+{"kind":"textbox","id":"sh/29c7y1k3","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,257,48,34]}
+{"kind":"textbox","id":"sh/pc369wju","slide":2,"text":"为什么要预测","textPreview":"为什么要预测","textChars":6,"textLines":1,"bbox":[116,255,250,38]}
+{"kind":"textbox","id":"sh/obup0b29","slide":2,"text":"结合亲和力（PLA）用于候选化合物排序，也服务于虚拟筛选和先导化合物优化。","textPreview":"结合亲和力（PLA）用于候选化合物排序，也服务于虚拟筛选和先导化合物优化。","textChars":37,"textLines":1,"bbox":[66,310,305,76]}
+{"kind":"shape","id":"sh/f61o3m1s","slide":2,"bbox":[66,399,303,1]}
+{"kind":"textbox","id":"sh/e5snuhk7","slide":2,"text":"实验测定","textPreview":"实验测定","textChars":4,"textLines":1,"bbox":[66,417,105,25]}
+{"kind":"textbox","id":"sh/18365wji","slide":2,"text":"成本高、周期长，难以覆盖大规模候选分子。","textPreview":"成本高、周期长，难以覆盖大规模候选分子。","textChars":20,"textLines":1,"bbox":[66,448,305,54]}
+{"kind":"textbox","id":"sh/g7upwr2d","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[436,257,48,34]}
+{"kind":"textbox","id":"sh/ri1ozm1g","slide":2,"text":"亲和力由什么决定","textPreview":"亲和力由什么决定","textChars":8,"textLines":1,"bbox":[488,255,280,38]}
+{"kind":"shape","id":"sh/6hsn6hkv","slide":2,"bbox":[436,310,330,68]}
+{"kind":"textbox","id":"sh/ud87ih43","slide":2,"text":"分子内部","textPreview":"分子内部","textChars":4,"textLines":1,"bbox":[452,319,92,24]}
+{"kind":"textbox","id":"sh/veh8bm58","slide":2,"text":"共价拓扑决定原子的局部化学环境","textPreview":"共价拓扑决定原子的局部化学环境","textChars":15,"textLines":1,"bbox":[452,345,298,23]}
+{"kind":"shape","id":"sh/wfqpk7mt","slide":2,"bbox":[436,389,330,68]}
+{"kind":"textbox","id":"sh/hgjqdcne","slide":2,"text":"分子之间","textPreview":"分子之间","textChars":4,"textLines":1,"bbox":[452,398,92,24]}
+{"kind":"textbox","id":"sh/ihs7mh4z","slide":2,"text":"三维距离与空间接触反映结合相互作用","textPreview":"三维距离与空间接触反映结合相互作用","textChars":17,"textLines":1,"bbox":[452,424,298,23]}
+{"kind":"textbox","id":"sh/j218fm5k","slide":2,"text":"两类信息必须联合建模；同一种原子处在不同空间位置时，对结合的贡献也不同。","textPreview":"两类信息必须联合建模；同一种原子处在不同空间位置时，对结合的贡献也不同。","textChars":36,"textLines":1,"bbox":[436,478,330,66]}
+{"kind":"textbox","id":"sh/43aporm5","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[834,257,48,34]}
+{"kind":"textbox","id":"sh/54jqhwnq","slide":2,"text":"现有方法的缺口","textPreview":"现有方法的缺口","textChars":7,"textLines":1,"bbox":[886,255,280,38]}
+{"kind":"textbox","id":"sh/65s7q14v","slide":2,"text":"无相互作用方法","textPreview":"无相互作用方法","textChars":7,"textLines":1,"bbox":[834,311,150,24]}
+{"kind":"textbox","id":"sh/r618j6lg","slide":2,"text":"序列、SMILES 或二维图不包含真实结合构象，难以显式描述蛋白质–配体接触。","textPreview":"序列、SMILES 或二维图不包含真实结合构象，难以显式描述蛋白质–配体接触。","textChars":39,"textLines":1,"bbox":[834,340,330,62]}
+{"kind":"shape","id":"sh/10na907y","slide":2,"bbox":[834,412,330,1]}
+{"kind":"textbox","id":"sh/0zu9gv6d","slide":2,"text":"三维相互作用方法","textPreview":"三维相互作用方法","textChars":8,"textLines":1,"bbox":[834,429,160,24]}
+{"kind":"textbox","id":"sh/fyls7qps","slide":2,"text":"体素表示计算开销较大；已有图模型可能混合两类边，或分阶段处理分子内、分子间作用。","textPreview":"体素表示计算开销较大；已有图模型可能混合两类边，或分阶段处理分子内、分子间作用。","textChars":40,"textLines":1,"bbox":[834,458,330,78]}
+{"kind":"shape","id":"sh/excrelo7","slide":2,"bbox":[64,574,1114,73]}
+{"kind":"textbox","id":"sh/p4nad0nu","slide":2,"text":"论文的研究问题","textPreview":"论文的研究问题","textChars":7,"textLines":1,"bbox":[84,588,150,22]}
+{"kind":"textbox","id":"sh/o3etkv69","slide":2,"text":"能否在同一张原子图中联合学习分子内部结构与跨分子接触，同时区分两类关系并满足平移、旋转不变性？","textPreview":"能否在同一张原子图中联合学习分子内部结构与跨分子接触，同时区分两类关系并满足平移、旋转不变性？","textChars":47,"textLines":1,"bbox":[84,615,1058,25]}
+{"kind":"notes","id":"nt/3424e9","slide":2,"text":"Motivation follows the paper's distinction between interaction-free and interaction-based methods, its discussion of data scarcity, and the need for structural and interaction inductive biases. Source: Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906"}
+{"kind":"slide","id":"sl/6l21r6","slide":3,"title":"华中农业大学 / 文献汇报","textShapes":14}
+{"kind":"textbox","id":"sh/vid43qt0","slide":3,"text":"华中农业大学 / 文献汇报","textPreview":"华中农业大学 / 文献汇报","textChars":13,"textLines":1,"bbox":[64,31,500,22]}
+{"kind":"textbox","id":"sh/wjm5cbu5","slide":3,"text":"方法：三维相互作用图 + 异质消息传递","textPreview":"方法：三维相互作用图 + 异质消息传递","textChars":19,"textLines":1,"bbox":[64,60,1120,62]}
+{"kind":"shape","id":"sh/xkvm5gbq","slide":3,"bbox":[64,127,1114,2]}
+{"kind":"shape","id":"sh/il4nelcb","slide":3,"bbox":[64,678,1114,1]}
+{"kind":"textbox","id":"sh/jmd47qtw","slide":3,"text":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textPreview":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textChars":38,"textLines":1,"bbox":[64,684,520,18]}
+{"kind":"textbox","id":"sh/k765gvuh","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1128,681,50,22]}
+{"kind":"shape","id":"sh/58fm90b2","slide":3,"bbox":[64,159,612,480]}
+{"kind":"textbox","id":"sh/7ax4bats","slide":3,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[720,170,42,42]}
+{"kind":"textbox","id":"sh/3qpgbexg","slide":3,"text":"构图","textPreview":"构图","textChars":2,"textLines":1,"bbox":[780,168,410,30]}
+{"kind":"textbox","id":"sh/ipgf29wv","slide":3,"text":"原子为节点；分子内部化学键为共价边；蛋白质–配体原子对距离 < 5 Å 时建立候选非共价边。","textPreview":"原子为节点；分子内部化学键为共价边；蛋白质–配体原子对距离 < 5 Å 时建立候选非共价边。","textChars":46,"textLines":1,"bbox":[780,202,410,74]}
+{"kind":"textbox","id":"sh/5c7ydofm","slide":3,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[720,312,42,42]}
+{"kind":"textbox","id":"sh/4ryx4je1","slide":3,"text":"三层异质交互","textPreview":"三层异质交互","textChars":6,"textLines":1,"bbox":[780,310,410,30]}
+{"kind":"textbox","id":"sh/vmpg7exk","slide":3,"text":"共价与非共价消息分别聚合、分别更新，再相加融合；三层逐步扩大原子的多跳感受野。","textPreview":"共价与非共价消息分别聚合、分别更新，再相加融合；三层逐步扩大原子的多跳感受野。","textChars":39,"textLines":1,"bbox":[780,344,410,74]}
+{"kind":"textbox","id":"sh/ulwfy9wz","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[720,454,42,42]}
+{"kind":"textbox","id":"sh/ho7y94fa","slide":3,"text":"读出亲和力","textPreview":"读出亲和力","textChars":5,"textLines":1,"bbox":[780,452,410,30]}
+{"kind":"textbox","id":"sh/gnyx0je5","slide":3,"text":"对全部原子表示做 global sum pooling，再由 MLP 输出一个结合亲和力预测值。","textPreview":"对全部原子表示做 global sum pooling，再由 MLP 输出一个结合亲和力预测值。","textChars":48,"textLines":1,"bbox":[780,486,410,74]}
+{"kind":"textbox","id":"sh/fi9gjyxo","slide":3,"text":"距离先决定是否连边，再经 RBF → Linear 得到逐通道权重；三维坐标只通过原子间距离进入模型。","textPreview":"距离先决定是否连边，再经 RBF → Linear 得到逐通道权重；三维坐标只通过原子间距离进入模型。","textChars":51,"textLines":1,"bbox":[720,584,470,55]}
+{"kind":"image","id":"im/zatwnu1w","slide":3,"name":"","alt":"GIGN Figure 3: overall architecture and heterogeneous interaction layer","bbox":[80,175,580,445]}
+{"kind":"notes","id":"nt/6l21r6","slide":3,"text":"Figure 3 reproduced from the paper. Source: Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906. Local source image: E:\\Obsidian\\paper\\论文\\GIGN\\Pasted image 20260911161022.png"}
+{"kind":"slide","id":"sl/f6hbym","slide":4,"title":"华中农业大学 / 文献汇报","textShapes":26}
+{"kind":"textbox","id":"sh/a54bmpw7","slide":4,"text":"华中农业大学 / 文献汇报","textPreview":"华中农业大学 / 文献汇报","textChars":13,"textLines":1,"bbox":[64,31,500,22]}
+{"kind":"textbox","id":"sh/xsfuxkfy","slide":4,"text":"创新一：异质交互层分别建模两类关系","textPreview":"创新一：异质交互层分别建模两类关系","textChars":17,"textLines":1,"bbox":[64,60,1120,62]}
+{"kind":"shape","id":"sh/wr6tofed","slide":4,"bbox":[64,127,1114,2]}
+{"kind":"shape","id":"sh/n2dsraxg","slide":4,"bbox":[64,678,1114,1]}
+{"kind":"textbox","id":"sh/m14bi5wb","slide":4,"text":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textPreview":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textChars":38,"textLines":1,"bbox":[64,684,520,18]}
+{"kind":"textbox","id":"sh/94vutkfm","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1128,681,50,22]}
+{"kind":"shape","id":"sh/o3mtkfe1","slide":4,"bbox":[640,166,1,475]}
+{"kind":"textbox","id":"sh/7yxc3ex0","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,160,58,44]}
+{"kind":"textbox","id":"sh/6xobu9wf","slide":4,"text":"关系分通道建模","textPreview":"关系分通道建模","textChars":7,"textLines":1,"bbox":[125,158,430,48]}
+{"kind":"textbox","id":"sh/sfits3ap","slide":4,"text":"弥补的不足","textPreview":"弥补的不足","textChars":5,"textLines":1,"bbox":[66,221,120,24]}
+{"kind":"textbox","id":"sh/dgral8ra","slide":4,"text":"同质 GNN 把共价键与跨分子接触当成同一种关系，数量较多的非共价消息可能淹没分子内部结构。","textPreview":"同质 GNN 把共价键与跨分子接触当成同一种关系，数量较多的非共价消息可能淹没分子内部结构。","textChars":46,"textLines":1,"bbox":[66,250,520,68]}
+{"kind":"shape","id":"sh/qd0bqtsj","slide":4,"bbox":[66,326,520,1]}
+{"kind":"textbox","id":"sh/re9sjy94","slide":4,"text":"核心机制","textPreview":"核心机制","textChars":4,"textLines":1,"bbox":[66,342,120,24]}
+{"kind":"shape","id":"sh/4byto3at","slide":4,"bbox":[66,376,520,43]}
+{"kind":"textbox","id":"sh/5crah8by","slide":4,"text":"共价边  E⁽ᶜᵒᵛ⁾  →  求和聚合  mᵢ⁽ᶜᵒᵛ⁾  →  更新网络  U⁽ᶜᵒᵛ⁾","textPreview":"共价边  E⁽ᶜᵒᵛ⁾  →  求和聚合  mᵢ⁽ᶜᵒᵛ⁾  →  更新网络  U⁽ᶜᵒᵛ⁾","textChars":46,"textLines":1,"bbox":[82,383,488,28]}
+{"kind":"shape","id":"sh/i9gbmtsn","slide":4,"bbox":[66,427,520,43]}
+{"kind":"textbox","id":"sh/3apsfyt8","slide":4,"text":"非共价边  E⁽ⁿᶜᵒᵛ⁾  →  求和聚合  mᵢ⁽ⁿᶜᵒᵛ⁾  →  更新网络  U⁽ⁿᶜᵒᵛ⁾","textPreview":"非共价边  E⁽ⁿᶜᵒᵛ⁾  →  求和聚合  mᵢ⁽ⁿᶜᵒᵛ⁾  →  更新网络  U⁽ⁿᶜᵒᵛ⁾","textChars":50,"textLines":1,"bbox":[82,434,488,28]}
+{"kind":"textbox","id":"sh/gnytkjah","slide":4,"text":"hᵢ⁽ᵗ⁺¹⁾ = U⁽ᶜᵒᵛ⁾(hᵢ⁽ᵗ⁾, mᵢ⁽ᶜᵒᵛ⁾) + U⁽ⁿᶜᵒᵛ⁾(hᵢ⁽ᵗ⁾, mᵢ⁽ⁿᶜᵒᵛ⁾)","textPreview":"hᵢ⁽ᵗ⁺¹⁾ = U⁽ᶜᵒᵛ⁾(hᵢ⁽ᵗ⁾, mᵢ⁽ᶜᵒᵛ⁾) + U⁽ⁿᶜᵒᵛ⁾(hᵢ⁽ᵗ⁾, mᵢ⁽ⁿᶜᵒᵛ⁾)","textChars":59,"textLines":1,"bbox":[66,482,520,40]}
+{"kind":"textbox","id":"sh/ho7adob2","slide":4,"text":"作用","textPreview":"作用","textChars":2,"textLines":1,"bbox":[66,535,70,22]}
+{"kind":"textbox","id":"sh/xsfi1gzu","slide":4,"text":"保留化学骨架与跨分子接触的不同语义，减少两类消息过早混合。","textPreview":"保留化学骨架与跨分子接触的不同语义，减少两类消息过早混合。","textChars":29,"textLines":1,"bbox":[66,561,520,46]}
+{"kind":"textbox","id":"sh/cr6hsby9","slide":4,"text":"边界：两个分支内部仍采用相同的求和聚合。","textPreview":"边界：两个分支内部仍采用相同的求和聚合。","textChars":20,"textLines":1,"bbox":[66,620,520,24]}
+{"kind":"textbox","id":"sh/b6x0z6ho","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[682,160,58,44]}
+{"kind":"textbox","id":"sh/a5ozqlg3","slide":4,"text":"层内分工与参数独立","textPreview":"层内分工与参数独立","textChars":9,"textLines":1,"bbox":[743,158,430,48]}
+{"kind":"textbox","id":"sh/p4fixgzi","slide":4,"text":"关键区别","textPreview":"关键区别","textChars":4,"textLines":1,"bbox":[684,221,120,24]}
+{"kind":"textbox","id":"sh/o3mhobyx","slide":4,"text":"两个分支的消息形式和求和聚合相同，但邻居集合不同；更新函数 U⁽ᶜᵒᵛ⁾ 与 U⁽ⁿᶜᵒᵛ⁾ 分别学习。","textPreview":"两个分支的消息形式和求和聚合相同，但邻居集合不同；更新函数 U⁽ᶜᵒᵛ⁾ 与 U⁽ⁿᶜᵒᵛ⁾ 分别学习。","textChars":52,"textLines":1,"bbox":[684,250,500,68]}
+{"kind":"shape","id":"sh/n2d0v6hc","slide":4,"bbox":[684,326,500,1]}
+{"kind":"textbox","id":"sh/214zm1gr","slide":4,"text":"更新函数 U 是什么","textPreview":"更新函数 U 是什么","textChars":10,"textLines":1,"bbox":[684,342,180,24]}
+{"kind":"shape","id":"sh/90zi90zm","slide":4,"bbox":[684,376,500,43]}
+{"kind":"textbox","id":"sh/8zqh0vyh","slide":4,"text":"U⁽ᶜᵒᵛ⁾(hᵢ,mᵢ) 与 U⁽ⁿᶜᵒᵛ⁾(hᵢ,mᵢ)：两个独立 MLP","textPreview":"U⁽ᶜᵒᵛ⁾(hᵢ,mᵢ) 与 U⁽ⁿᶜᵒᵛ⁾(hᵢ,mᵢ)：两个独立 MLP","textChars":39,"textLines":1,"bbox":[700,383,468,28]}
+{"kind":"textbox","id":"sh/q5kfuxwj","slide":4,"text":"消息函数 → 求和聚合 → MLP 更新 → 两分支相加","textPreview":"消息函数 → 求和聚合 → MLP 更新 → 两分支相加","textChars":28,"textLines":1,"bbox":[684,435,500,36]}
+{"kind":"shape","id":"sh/r6tw32x4","slide":4,"bbox":[684,482,500,45]}
+{"kind":"textbox","id":"sh/s72xw7ep","slide":4,"text":"第1层 → 第2层 → 第3层：逐步扩大多跳感受野","textPreview":"第1层 → 第2层 → 第3层：逐步扩大多跳感受野","textChars":25,"textLines":1,"bbox":[700,489,468,30]}
+{"kind":"textbox","id":"sh/d8be5cfa","slide":4,"text":"作用","textPreview":"作用","textChars":2,"textLines":1,"bbox":[684,535,70,22]}
+{"kind":"textbox","id":"sh/i10fqxwn","slide":4,"text":"消息函数决定“从邻居取什么”；求和负责汇总；U 结合原状态与聚合消息完成更新。","textPreview":"消息函数决定“从邻居取什么”；求和负责汇总；U 结合原状态与聚合消息完成更新。","textChars":39,"textLines":1,"bbox":[684,561,500,46]}
+{"kind":"textbox","id":"sh/329wz2x8","slide":4,"text":"原文仅说明 U 由 MLP 实现；未展开内部结构，也未比较 2 / 3 / 4 层。","textPreview":"原文仅说明 U 由 MLP 实现；未展开内部结构，也未比较 2 / 3 / 4 层。","textChars":42,"textLines":1,"bbox":[684,620,500,24]}
+{"kind":"notes","id":"nt/f6hbym","slide":4,"text":"Equation 9 states that U(cov) and U(ncov) are implemented as MLPs. The paper does not specify their internal layer-by-layer structure in the main text and does not report a 2/3/4-layer comparison. Source: Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906"}
+{"kind":"slide","id":"sl/10k0qs","slide":5,"title":"华中农业大学 / 文献汇报","textShapes":34}
+{"kind":"textbox","id":"sh/c3u10v2l","slide":5,"text":"华中农业大学 / 文献汇报","textPreview":"华中农业大学 / 文献汇报","textChars":13,"textLines":1,"bbox":[64,31,500,22]}
+{"kind":"textbox","id":"sh/r2lk7q10","slide":5,"text":"创新二：RBF距离编码 + 哈达玛积","textPreview":"创新二：RBF距离编码 + 哈达玛积","textChars":18,"textLines":1,"bbox":[64,60,1120,62]}
+{"kind":"shape","id":"sh/q1cjylkv","slide":5,"bbox":[64,127,1114,2]}
+{"kind":"shape","id":"sh/18n2d0ji","slide":5,"bbox":[64,678,1114,1]}
+{"kind":"textbox","id":"sh/07e14v2x","slide":5,"text":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textPreview":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textChars":38,"textLines":1,"bbox":[64,684,520,18]}
+{"kind":"textbox","id":"sh/z65kbq1c","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1128,681,50,22]}
+{"kind":"textbox","id":"sh/e5wj25kr","slide":5,"text":"从三维坐标到距离调制消息","textPreview":"从三维坐标到距离调制消息","textChars":12,"textLines":1,"bbox":[64,151,470,32]}
+{"kind":"shape","id":"sh/9w72hkje","slide":5,"bbox":[64,201,145,82]}
+{"kind":"textbox","id":"sh/ovel8f2t","slide":5,"text":"坐标","textPreview":"坐标","textChars":2,"textLines":1,"bbox":[72,211,129,23]}
+{"kind":"textbox","id":"sh/6dcni9sf","slide":5,"text":"rᵢ，rⱼ","textPreview":"rᵢ，rⱼ","textChars":5,"textLines":1,"bbox":[72,243,129,25]}
+{"kind":"textbox","id":"sh/7eloret0","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[212,226,31,30]}
+{"kind":"shape","id":"sh/sfu5kjal","slide":5,"bbox":[242,201,180,82]}
+{"kind":"textbox","id":"sh/tg36tob6","slide":5,"text":"距离","textPreview":"距离","textChars":2,"textLines":1,"bbox":[250,211,164,23]}
+{"kind":"textbox","id":"sh/uhwnmtsr","slide":5,"text":"dⱼᵢ = ‖rⱼ−rᵢ‖₂","textPreview":"dⱼᵢ = ‖rⱼ−rᵢ‖₂","textChars":14,"textLines":1,"bbox":[250,243,164,25]}
+{"kind":"textbox","id":"sh/fi5ovetc","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[425,226,31,30]}
+{"kind":"shape","id":"sh/g3e5ojax","slide":5,"bbox":[456,201,145,82]}
+{"kind":"textbox","id":"sh/14n6xor2","slide":5,"text":"RBF","textPreview":"RBF","textChars":3,"textLines":1,"bbox":[464,211,129,23]}
+{"kind":"textbox","id":"sh/alsnapsn","slide":5,"text":"1维 → K维","textPreview":"1维 → K维","textChars":7,"textLines":1,"bbox":[464,243,129,25]}
+{"kind":"textbox","id":"sh/vm14juts","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[604,226,31,30]}
+{"kind":"shape","id":"sh/zqhkrq9k","slide":5,"bbox":[635,201,145,82]}
+{"kind":"textbox","id":"sh/ypo3il8f","slide":5,"text":"Linear","textPreview":"Linear","textChars":6,"textLines":1,"bbox":[643,211,129,23]}
+{"kind":"textbox","id":"sh/lsz2t0rq","slide":5,"text":"K维 → m维","textPreview":"K维 → m维","textChars":7,"textLines":1,"bbox":[643,243,129,25]}
+{"kind":"textbox","id":"sh/0rqlkvq5","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[783,226,31,30]}
+{"kind":"shape","id":"sh/bmxknq9o","slide":5,"bbox":[814,201,155,82]}
+{"kind":"textbox","id":"sh/qlojel83","slide":5,"text":"距离权重","textPreview":"距离权重","textChars":4,"textLines":1,"bbox":[822,211,139,23]}
+{"kind":"textbox","id":"sh/dof2pgru","slide":5,"text":"λ(dⱼᵢ)","textPreview":"λ(dⱼᵢ)","textChars":6,"textLines":1,"bbox":[822,243,139,25]}
+{"kind":"textbox","id":"sh/cn61gbq9","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[972,226,31,30]}
+{"kind":"shape","id":"sh/vi1kza9s","slide":5,"bbox":[1003,201,175,82]}
+{"kind":"textbox","id":"sh/ahs3q587","slide":5,"text":"消息","textPreview":"消息","textChars":2,"textLines":1,"bbox":[1011,211,159,23]}
+{"kind":"textbox","id":"sh/s32hk76p","slide":5,"text":"hⱼ⁽ᵗ⁾ ⊙ λ(dⱼᵢ)","textPreview":"hⱼ⁽ᵗ⁾ ⊙ λ(dⱼᵢ)","textChars":14,"textLines":1,"bbox":[1011,243,159,25]}
+{"kind":"textbox","id":"sh/tobidc7a","slide":5,"text":"5 Å 阈值只决定是否连边；RBF进一步编码已连边原子对在不同距离下应传递多少信息。","textPreview":"5 Å 阈值只决定是否连边；RBF进一步编码已连边原子对在不同距离下应传递多少信息。","textChars":42,"textLines":1,"bbox":[64,296,1114,26]}
+{"kind":"shape","id":"sh/61kzixoz","slide":5,"bbox":[64,345,350,229]}
+{"kind":"textbox","id":"sh/r2t0b2p4","slide":5,"text":"为什么不只用绝对距离？","textPreview":"为什么不只用绝对距离？","textChars":11,"textLines":1,"bbox":[84,365,310,30]}
+{"kind":"textbox","id":"sh/grmho761","slide":5,"text":"原始距离当然可以直接输入模型，但它只有一个标量。简单线性变换难以表达“过近排斥—合适最强—过远减弱”等非单调距离效应。","textPreview":"原始距离当然可以直接输入模型，但它只有一个标量。简单线性变换难以表达“过近排斥—合适最强—过远减弱”等非单调距离效应。","textChars":59,"textLines":1,"bbox":[84,410,310,72]}
+{"kind":"textbox","id":"sh/1svihc7m","slide":5,"text":"多个重叠高斯中心提供平滑的局部响应：相近距离得到相近编码，也更容易组合出复杂距离函数。","textPreview":"多个重叠高斯中心提供平滑的局部响应：相近距离得到相近编码，也更容易组合出复杂距离函数。","textChars":43,"textLines":1,"bbox":[84,500,310,54]}
+{"kind":"shape","id":"sh/epkzmhov","slide":5,"bbox":[431,345,350,229]}
+{"kind":"textbox","id":"sh/fqt0fmpg","slide":5,"text":"为什么使用哈达玛积？","textPreview":"为什么使用哈达玛积？","textChars":10,"textLines":1,"bbox":[451,365,310,30]}
+{"kind":"textbox","id":"sh/ovmhsr6x","slide":5,"text":"Linear 把 K 维 RBF 投影为与 hⱼ 相同的 m 维，λ(d) 因而可以逐通道调节邻居原子特征。","textPreview":"Linear 把 K 维 RBF 投影为与 hⱼ 相同的 m 维，λ(d) 因而可以逐通道调节邻居原子特征。","textChars":54,"textLines":1,"bbox":[451,410,310,66]}
+{"kind":"textbox","id":"sh/pwvilw7i","slide":5,"text":"它保留 m 维消息；不会像点积那样压成标量，也不会像直接乘距离标量那样统一缩放所有通道。","textPreview":"它保留 m 维消息；不会像点积那样压成标量，也不会像直接乘距离标量那样统一缩放所有通道。","textChars":44,"textLines":1,"bbox":[451,492,310,64]}
+{"kind":"shape","id":"sh/ps3qls7m","slide":5,"bbox":[798,345,380,229]}
+{"kind":"textbox","id":"sh/oru9cn61","slide":5,"text":"与拼接有什么区别？","textPreview":"与拼接有什么区别？","textChars":9,"textLines":1,"bbox":[818,365,340,30]}
+{"kind":"textbox","id":"sh/nql8jipg","slide":5,"text":"只拼接后接线性层：","textPreview":"只拼接后接线性层：","textChars":9,"textLines":1,"bbox":[818,410,340,22]}
+{"kind":"textbox","id":"sh/2pcradov","slide":5,"text":"W[hⱼ ∥ λ] = W_h hⱼ + W_d λ","textPreview":"W[hⱼ ∥ λ] = W_h hⱼ + W_d λ","textChars":26,"textLines":1,"bbox":[818,438,340,30]}
+{"kind":"textbox","id":"sh/1o3qh87a","slide":5,"text":"它分别加权两部分再相加，没有显式的输入乘法项。MLP可以学习更复杂交互，但参数与过拟合风险也会增加。","textPreview":"它分别加权两部分再相加，没有显式的输入乘法项。MLP可以学习更复杂交互，但参数与过拟合风险也会增加。","textChars":50,"textLines":1,"bbox":[818,482,340,61]}
+{"kind":"shape","id":"sh/0na9836p","slide":5,"bbox":[64,594,1114,48]}
+{"kind":"textbox","id":"sh/fm18fipk","slide":5,"text":"论文选择：提前计算 hⱼ ⊙ λ(d)，用较少参数加入“距离调节特征”的结构先验；拼接或混合方案可能更灵活，但本文未验证。","textPreview":"论文选择：提前计算 hⱼ ⊙ λ(d)，用较少参数加入“距离调节特征”的结构先验；拼接或混合方案可能更灵活，但本文未验证。","textChars":61,"textLines":1,"bbox":[82,605,1078,26]}
+{"kind":"notes","id":"nt/10k0qs","slide":5,"text":"The paper uses RBF distance expansion, a linear projection, and the Hadamard product as its message function. The comparison with concatenation is explanatory analysis rather than an ablation reported by the paper. Source: Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906"}
+{"kind":"slide","id":"sl/hzantf","slide":6,"title":"华中农业大学 / 文献汇报","textShapes":16}
+{"kind":"textbox","id":"sh/7uh832d0","slide":6,"text":"华中农业大学 / 文献汇报","textPreview":"华中农业大学 / 文献汇报","textChars":13,"textLines":1,"bbox":[64,31,500,22]}
+{"kind":"textbox","id":"sh/svq9c7ul","slide":6,"text":"研究结果：主基准性能与实验设置","textPreview":"研究结果：主基准性能与实验设置","textChars":15,"textLines":1,"bbox":[64,60,1120,62]}
+{"kind":"shape","id":"sh/tgzq5cv6","slide":6,"bbox":[64,127,1114,2]}
+{"kind":"shape","id":"sh/ipo76dcj","slide":6,"bbox":[64,678,1114,1]}
+{"kind":"textbox","id":"sh/jqx8zid4","slide":6,"text":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textPreview":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textChars":38,"textLines":1,"bbox":[64,684,520,18]}
+{"kind":"textbox","id":"sh/kr6p8nu9","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1128,681,50,22]}
+{"kind":"textbox","id":"sh/5szq1svu","slide":6,"text":"代表模型对比","textPreview":"代表模型对比","textChars":6,"textLines":1,"bbox":[64,150,460,34]}
+{"kind":"textbox","id":"sh/alo72dc7","slide":6,"text":"每格为 RMSE / Rₚ，分别越低 / 越高越好","textPreview":"每格为 RMSE / Rₚ，分别越低 / 越高越好","textChars":25,"textLines":1,"bbox":[64,187,790,27]}
+{"kind":"textbox","id":"sh/nqpgvup0","slide":6,"text":"实验如何比较","textPreview":"实验如何比较","textChars":6,"textLines":1,"bbox":[865,150,313,34]}
+{"kind":"textbox","id":"sh/25gzmp8f","slide":6,"text":"训练与验证","textPreview":"训练与验证","textChars":5,"textLines":1,"bbox":[865,201,315,28]}
+{"kind":"textbox","id":"sh/psryx476","slide":6,"text":"PDBbind 2016\n训练 11,904，验证 1,000\n各模型使用相同的数据划分","textPreview":"PDBbind 2016 | 训练 11,904，验证 1,000 | 各模型使用相同的数据划分","textChars":44,"textLines":3,"bbox":[865,237,315,83]}
+{"kind":"textbox","id":"sh/oryhozql","slide":6,"text":"评估方式","textPreview":"评估方式","textChars":4,"textLines":1,"bbox":[865,328,315,28]}
+{"kind":"textbox","id":"sh/bu90zupw","slide":6,"text":"3 个随机种子独立训练\n按验证集最低 RMSE 选模型\n表中展示 3 次运行的均值","textPreview":"3 个随机种子独立训练 | 按验证集最低 RMSE 选模型 | 表中展示 3 次运行的均值","textChars":41,"textLines":3,"bbox":[865,364,315,84]}
+{"kind":"textbox","id":"sh/at0zq98r","slide":6,"text":"2019 holdout 的意义","textPreview":"2019 holdout 的意义","textChars":16,"textLines":1,"bbox":[865,458,315,28]}
+{"kind":"textbox","id":"sh/xwri1472","slide":6,"text":"使用较新、未重叠的复合物，\n近似时间外推，比 core 更难。","textPreview":"使用较新、未重叠的复合物， | 近似时间外推，比 core 更难。","textChars":31,"textLines":2,"bbox":[865,494,315,61]}
+{"kind":"textbox","id":"sh/cvihszqh","slide":6,"text":"Rₚ 相对最佳基线 IGN 的绝对提升","textPreview":"Rₚ 相对最佳基线 IGN 的绝对提升","textChars":19,"textLines":1,"bbox":[64,552,420,25]}
+{"kind":"textbox","id":"sh/6xwze587","slide":6,"text":"主要结论","textPreview":"主要结论","textChars":4,"textLines":1,"bbox":[550,555,220,28]}
+{"kind":"textbox","id":"sh/ut4jmdsv","slide":6,"text":"GIGN 在三个测试集的两项指标均最优。\n2019 Rₚ 仍仅 0.641，提升幅度较小，外推能力仍有限。","textPreview":"GIGN 在三个测试集的两项指标均最优。 | 2019 Rₚ 仍仅 0.641，提升幅度较小，外推能力仍有限。","textChars":53,"textLines":2,"bbox":[550,592,628,63]}
+{"kind":"chart","id":"ch/f6h4nqp8","slide":6,"name":"","chartType":"bar","bbox":[61,580,450,81]}
+{"kind":"table","id":"tb/ytsjapcn","slide":6,"name":"","rows":8,"cols":4,"preview":"模型 | 2013 core N = 107 | 2016 core N = 285 | 2019 holdout N = 4,366","bbox":[64,224,760,300]}
+{"kind":"notes","id":"nt/hzantf","slide":6,"text":"Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906\n来源：Table 1 与 Data Set Preparation。表格选择6个代表基线，原表包含更多模型。主实验所有模型共用数据划分，报告三次运行均值。本页省略标准差以便比较，原文完整数值见Table 1。增量由GIGN均值减IGN均值计算，没有据此声称统计显著。复合物无重叠不等于蛋白质或配体无重叠。"}
+{"kind":"slide","id":"sl/e662i2","slide":7,"title":"华中农业大学 / 文献汇报","textShapes":15}
+{"kind":"textbox","id":"sh/m1gzads7","slide":7,"text":"华中农业大学 / 文献汇报","textPreview":"华中农业大学 / 文献汇报","textChars":13,"textLines":1,"bbox":[64,31,500,22]}
+{"kind":"textbox","id":"sh/94ri5sri","slide":7,"text":"研究结果：消融验证与泛化能力","textPreview":"研究结果：消融验证与泛化能力","textChars":14,"textLines":1,"bbox":[64,60,1120,62]}
+{"kind":"shape","id":"sh/o3ihwnad","slide":7,"bbox":[64,127,1114,2]}
+{"kind":"shape","id":"sh/bq907i9o","slide":7,"bbox":[64,678,1114,1]}
+{"kind":"textbox","id":"sh/a50zyds3","slide":7,"text":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textPreview":"华中农业大学   ·   GIGN 文献汇报   ·   JPCL 2023","textChars":38,"textLines":1,"bbox":[64,684,520,18]}
+{"kind":"textbox","id":"sh/xsri9sru","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1128,681,50,22]}
+{"kind":"textbox","id":"sh/wrih0na9","slide":7,"text":"消融实验：去掉什么，性能如何变化","textPreview":"消融实验：去掉什么，性能如何变化","textChars":16,"textLines":1,"bbox":[64,149,740,33]}
+{"kind":"textbox","id":"sh/jut0b290","slide":7,"text":"Pearson Rₚ（↑），均值 ± 标准差，3 次独立运行","textPreview":"Pearson Rₚ（↑），均值 ± 标准差，3 次独立运行","textChars":30,"textLines":1,"bbox":[64,187,755,26]}
+{"kind":"textbox","id":"sh/4nylcfu1","slide":7,"text":"两个设计得到支持","textPreview":"两个设计得到支持","textChars":8,"textLines":1,"bbox":[899,152,300,34]}
+{"kind":"textbox","id":"sh/5o725kvm","slide":7,"text":"关系分通道","textPreview":"关系分通道","textChars":5,"textLines":1,"bbox":[899,202,280,27]}
+{"kind":"textbox","id":"sh/ilg3apcb","slide":7,"text":"三组测试均优于同质传播，支持对两类消息分别建模。","textPreview":"三组测试均优于同质传播，支持对两类消息分别建模。","textChars":24,"textLines":1,"bbox":[899,237,280,70]}
+{"kind":"textbox","id":"sh/3mpk3udw","slide":7,"text":"平移、旋转不变性","textPreview":"平移、旋转不变性","textChars":8,"textLines":1,"bbox":[899,313,280,27]}
+{"kind":"textbox","id":"sh/srilgzud","slide":7,"text":"绝对坐标使性能下降。质心归一化有所恢复，完整模型最佳。","textPreview":"绝对坐标使性能下降。质心归一化有所恢复，完整模型最佳。","textChars":27,"textLines":1,"bbox":[899,349,280,70]}
+{"kind":"textbox","id":"sh/dsrm94vy","slide":7,"text":"进一步验证：模型能否推广到其他场景","textPreview":"进一步验证：模型能否推广到其他场景","textChars":17,"textLines":1,"bbox":[64,443,800,32]}
+{"kind":"textbox","id":"sh/rqp47uds","slide":7,"text":"适用范围与限制","textPreview":"适用范围与限制","textChars":7,"textLines":1,"bbox":[899,443,295,31]}
+{"kind":"textbox","id":"sh/0filkzu9","slide":7,"text":"蛋白质冷启动未保持领先：EGNN 的 Rₚ 为 0.579。","textPreview":"蛋白质冷启动未保持领先：EGNN 的 Rₚ 为 0.579。","textChars":30,"textLines":1,"bbox":[899,488,280,62]}
+{"kind":"textbox","id":"sh/1grmd4bu","slide":7,"text":"对接验证仅覆盖 RMSD < 2 Å 的近天然构象，不能代表任意错误位姿。","textPreview":"对接验证仅覆盖 RMSD < 2 Å 的近天然构象，不能代表任意错误位姿。","textChars":37,"textLines":1,"bbox":[899,569,280,84]}
+{"kind":"table","id":"tb/rad8zi5k","slide":7,"name":"","rows":5,"cols":5,"preview":"模型变体 | 改动 | 2013 | 2016 | 2019","bbox":[64,222,800,203]}
+{"kind":"table","id":"tb/9w7yt0zi","slide":7,"name":"","rows":5,"cols":4,"preview":"测试场景 | 条件 | RMSE ↓ | Rₚ ↑","bbox":[64,483,800,173]}
+{"kind":"notes","id":"nt/e662i2","slide":7,"text":"Yang et al., J. Phys. Chem. Lett. 2023, 14, 2020–2033. DOI: 10.1021/acs.jpclett.2c03906\n来源：Table 2, 3, 4 与 Redocked Structures 章节。冷启动从原11,904个训练样本重新按8:1:1划分，不与主基准直接混同。重对接取2016测试集中RMSD最低且小于2Å的构象。正文变体名VarTR/VarR与表格TRVar/RVar次序不同，本页采用Table 2名称。完整模型均值占优，不表示每项差异都经显著性检验。"}
