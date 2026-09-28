@@ -1,0 +1,472 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "63d9b98c881f7d4fb52631bd7f2ce5a15c2d971f2a6ec2e8e5a9803e25e12494",
+    "file_count": 16,
+    "files": [
+      {
+        "file": "authoring-svg-flat/slide_01.svg",
+        "sha256": "86bb11f542dc2dc8cd2402c19fd203d8227dc3f7aa0dba9feddb8222b9ec8612"
+      },
+      {
+        "file": "authoring-svg-flat/slide_02.svg",
+        "sha256": "9891a883da571904edc7c2cd2d89b32f0e6c1a6a8ce090988fb7df6e0bc715f1"
+      },
+      {
+        "file": "authoring-svg-flat/slide_03.svg",
+        "sha256": "2ebf36f5eae24e64a747289008b8903216dc7e91c6413440e3a6dbf3ccee8510"
+      },
+      {
+        "file": "authoring-svg-flat/slide_04.svg",
+        "sha256": "ea2d0d58aeda1456e7474201d57f5233ec4421edc578a22bd89b47ae8faac97a"
+      },
+      {
+        "file": "authoring-svg-flat/slide_05.svg",
+        "sha256": "64b2871d389e73d3d85e2612fba71a3e3d207d1b2ff729a9ace9e90c90d042f4"
+      },
+      {
+        "file": "authoring-svg-flat/slide_06.svg",
+        "sha256": "c45b970bb264e8f662c98e55b4c5365967469914a5c2b303893677c1f3cf19f4"
+      },
+      {
+        "file": "authoring-svg-flat/slide_07.svg",
+        "sha256": "9b4de2e37afd4d916e5b4ecdfcb998e80be6974b2a0423d7cb25cbd2e7dd263f"
+      },
+      {
+        "file": "authoring-svg-flat/slide_08.svg",
+        "sha256": "267f3d9efcfcd86ae691b2527eae5ec1ea810e3ca913000d58a8259367b7a11f"
+      },
+      {
+        "file": "authoring-svg-flat/slide_09.svg",
+        "sha256": "88fc6a8a337bbf5484ea04bef7dfd3eed26e3c41b527e2757153911b1d474f77"
+      },
+      {
+        "file": "authoring-svg-flat/slide_10.svg",
+        "sha256": "5f53e56660193abcafefcbed92010a66029d0805fc35dda7c27f47c7bba9367c"
+      },
+      {
+        "file": "authoring-svg-flat/slide_11.svg",
+        "sha256": "3be6b29265e77a4d119739c0d0e05e55b70e9de6f5c3ae1f9906edb4bf8b553c"
+      },
+      {
+        "file": "authoring-svg-flat/slide_12.svg",
+        "sha256": "5f8f784ee56b3eeb9d2a8d15be9c912c60635b53a073d3abf5ae0c0155f32834"
+      },
+      {
+        "file": "authoring-svg-flat/slide_13.svg",
+        "sha256": "bb6f085d22c7330f51d2725c6b3bf670f6e61667f48d58c69f47bc8981e69f85"
+      },
+      {
+        "file": "authoring-svg-flat/slide_14.svg",
+        "sha256": "b179dfc3fbdc066c805b520946c7add6f9babb98f6a8ce9470e54f7e786d4cc9"
+      },
+      {
+        "file": "authoring-svg-flat/slide_15.svg",
+        "sha256": "3522614992bdab82eb9fb0ecf73a1b74987b444e301abbd5dc75e1618dd879fb"
+      },
+      {
+        "file": "authoring-svg-flat/slide_16.svg",
+        "sha256": "daace7c2ab0dfd41b8f68f3d17cb0804fde5acfe22eadf5b62f365c9b3a19659"
+      }
+    ]
+  },
+  "summary": {
+    "total": 16,
+    "passed": 16,
+    "warnings": 0,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 0,
+      "issues": []
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {},
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 0,
+    "totals": {
+      "text_elements": 0,
+      "image_placements": 0,
+      "icons": 0,
+      "svg_geometry_elements": 0,
+      "preset_shapes": 0,
+      "page_frame_elements": 0,
+      "marker_uses": 0,
+      "inline_emphasis_runs": 0,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 0,
+      "icons": 0,
+      "presets": 0,
+      "charts": 0,
+      "tables": 0,
+      "formulas": 0,
+      "inline_emphasis_runs": 0,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "relationship_pages": null,
+    "geometry_elements": {},
+    "preset_names": {},
+    "native_objects": {},
+    "image_page_max_frame_share_range": []
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "slide_01.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_01.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 1,
+        "source_slide": 1,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 8,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "86bb11f542dc2dc8cd2402c19fd203d8227dc3f7aa0dba9feddb8222b9ec8612"
+    },
+    {
+      "file": "slide_02.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_02.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 2,
+        "source_slide": 2,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.024343525792428235,
+          "measured_unchanged": 14,
+          "positive_unchanged": 4
+        }
+      },
+      "passed": true,
+      "source_sha256": "9891a883da571904edc7c2cd2d89b32f0e6c1a6a8ce090988fb7df6e0bc715f1"
+    },
+    {
+      "file": "slide_03.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_03.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 3,
+        "source_slide": 3,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.06396472772277197,
+          "measured_unchanged": 22,
+          "positive_unchanged": 2
+        }
+      },
+      "passed": true,
+      "source_sha256": "2ebf36f5eae24e64a747289008b8903216dc7e91c6413440e3a6dbf3ccee8510"
+    },
+    {
+      "file": "slide_04.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_04.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 4,
+        "source_slide": 4,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 15,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "ea2d0d58aeda1456e7474201d57f5233ec4421edc578a22bd89b47ae8faac97a"
+    },
+    {
+      "file": "slide_05.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_05.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 5,
+        "source_slide": 5,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 20,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "64b2871d389e73d3d85e2612fba71a3e3d207d1b2ff729a9ace9e90c90d042f4"
+    },
+    {
+      "file": "slide_06.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_06.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 6,
+        "source_slide": 6,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0464144199346406,
+          "measured_unchanged": 15,
+          "positive_unchanged": 4
+        }
+      },
+      "passed": true,
+      "source_sha256": "c45b970bb264e8f662c98e55b4c5365967469914a5c2b303893677c1f3cf19f4"
+    },
+    {
+      "file": "slide_07.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_07.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 7,
+        "source_slide": 7,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.1,
+          "measured_unchanged": 7,
+          "positive_unchanged": 1
+        }
+      },
+      "passed": true,
+      "source_sha256": "9b4de2e37afd4d916e5b4ecdfcb998e80be6974b2a0423d7cb25cbd2e7dd263f"
+    },
+    {
+      "file": "slide_08.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_08.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 8,
+        "source_slide": 8,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 7,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "267f3d9efcfcd86ae691b2527eae5ec1ea810e3ca913000d58a8259367b7a11f"
+    },
+    {
+      "file": "slide_09.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_09.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 9,
+        "source_slide": 9,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.08519071560358434,
+          "measured_unchanged": 9,
+          "positive_unchanged": 2
+        }
+      },
+      "passed": true,
+      "source_sha256": "88fc6a8a337bbf5484ea04bef7dfd3eed26e3c41b527e2757153911b1d474f77"
+    },
+    {
+      "file": "slide_10.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_10.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 10,
+        "source_slide": 10,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.055369833948339206,
+          "measured_unchanged": 7,
+          "positive_unchanged": 1
+        }
+      },
+      "passed": true,
+      "source_sha256": "5f53e56660193abcafefcbed92010a66029d0805fc35dda7c27f47c7bba9367c"
+    },
+    {
+      "file": "slide_11.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_11.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 11,
+        "source_slide": 11,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 13,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "3be6b29265e77a4d119739c0d0e05e55b70e9de6f5c3ae1f9906edb4bf8b553c"
+    },
+    {
+      "file": "slide_12.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_12.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 12,
+        "source_slide": 12,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 8,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 1,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "5f8f784ee56b3eeb9d2a8d15be9c912c60635b53a073d3abf5ae0c0155f32834"
+    },
+    {
+      "file": "slide_13.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_13.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 13,
+        "source_slide": 13,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.05389321955719544,
+          "measured_unchanged": 8,
+          "positive_unchanged": 2
+        }
+      },
+      "passed": true,
+      "source_sha256": "bb6f085d22c7330f51d2725c6b3bf670f6e61667f48d58c69f47bc8981e69f85"
+    },
+    {
+      "file": "slide_14.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_14.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 14,
+        "source_slide": 14,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.1,
+          "measured_unchanged": 33,
+          "positive_unchanged": 9
+        }
+      },
+      "passed": true,
+      "source_sha256": "b179dfc3fbdc066c805b520946c7add6f9babb98f6a8ce9470e54f7e786d4cc9"
+    },
+    {
+      "file": "slide_15.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_15.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 15,
+        "source_slide": 15,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.05438684459750333,
+          "measured_unchanged": 24,
+          "positive_unchanged": 2
+        }
+      },
+      "passed": true,
+      "source_sha256": "3522614992bdab82eb9fb0ecf73a1b74987b444e301abbd5dc75e1618dd879fb"
+    },
+    {
+      "file": "slide_16.svg",
+      "path": "E:\\Obsidian\\paper\\论文\\projects\\ai_idp_chat_update_20260927\\authoring-svg-flat\\slide_16.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 16,
+        "source_slide": 16,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.1,
+          "measured_unchanged": 15,
+          "positive_unchanged": 6
+        }
+      },
+      "passed": true,
+      "source_sha256": "daace7c2ab0dfd41b8f68f3d17cb0804fde5acfe22eadf5b62f365c9b3a19659"
+    }
+  ]
+}

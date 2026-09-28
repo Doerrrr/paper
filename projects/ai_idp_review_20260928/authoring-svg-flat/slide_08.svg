@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-25" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:25">
+<g id="shape-22" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:22">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-23" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:23" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-24" data-pptx-object="shape" data-pptx-frame="1186.05 667.25 9.91 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:24" data-pptx-semantic-object="shape">
+<path d="M 1186.05 667.25 L 1195.95 667.25 L 1195.95 690.35 L 1186.05 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">9</text>
+</g>
+</g>
+<g id="shape-26" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:26" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">IDPFold：残基刚体扩散生成 ensemble</text>
+</g>
+<g id="shape-27" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:27" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-28" data-pptx-object="shape" data-pptx-frame="64.32 120.96 609.6 537.04" data-pptx-prst="rect" data-pptx-source-ref="slide:28" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 673.92 120.96 L 673.92 658 L 64.32 658 Z" fill="#FFFFFF" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-29" data-pptx-object="picture" data-pptx-frame="107.54 133.94 533.03 523.06" data-pptx-source-ref="slide:29">
+<image data-pptx-object="picture" data-pptx-frame="107.54 133.94 533.03 523.06" href="../images/image4.png" x="107.54" y="133.94" width="533.03" height="523.06" preserveAspectRatio="none" />
+</g>
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 170 1280 320" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 460 C 230 170 430 330 710 410 C 990 490 1080 270 1280 250" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.05" />
+</g>
+<g id="shape-32" data-pptx-object="shape" data-pptx-frame="696 137.38 520.32 101.87" data-pptx-prst="rect" data-pptx-source-ref="slide:32">
+
+<path d="M 696 137.38 L 1216.32 137.38 L 1216.32 239.24 L 696 239.24 Z" fill="none" />
+
+
+<text x="696" y="151.54" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">主要创新点：</text>
+<text x="696" y="176.91" text-anchor="start" xml:space="preserve" font-size="18.67" fill="#153A2A"><tspan>以往很多方法只能预测 回转半径、端到端距离等统计性质，或</tspan><tspan x="696" dy="20.53">者生成较粗粒度的构象。</tspan><tspan>IDPFold</tspan><tspan>直接从单条氨基酸序列出发，</tspan><tspan x="696" dy="20.53">生成残基主链级三维构象</tspan></text>
+</g>
+<g id="shape-33" data-pptx-object="shape" data-pptx-frame="696 281.78 520.32 117.06" data-pptx-prst="rect" data-pptx-source-ref="slide:33">
+
+<path d="M 696 281.78 L 1216.32 281.78 L 1216.32 398.84 L 696 398.84 Z" fill="none" />
+
+
+<text x="696" y="295.94" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">与 STARLING 的区别</text>
+<text x="696" y="321.31" text-anchor="start" xml:space="preserve" font-size="18.67" fill="#000000"><tspan>IDPFold</tspan><tspan>和</tspan><tspan>STARLING</tspan><tspan>都属于“</tspan><tspan>sequence → ensemble”</tspan><tspan>生成模型，</tspan><tspan x="696" dy="22.4">但二者解决问题的侧重点不同：</tspan></text>
+<text x="696" y="366.11" text-anchor="start" xml:space="preserve" font-size="18.67" fill="#000000"><tspan>IDPFold</tspan><tspan>强调主链级三维结构与局部几何；</tspan><tspan>STARLING</tspan><tspan>强调粗粒化</tspan><tspan x="696" dy="22.4">ensemble</tspan><tspan>的速度、分布覆盖和大规模应用。</tspan></text>
+</g>
+<g id="shape-34" data-pptx-object="shape" data-pptx-frame="696 451.42 520.32 162.02" data-pptx-prst="rect" data-pptx-source-ref="slide:34" data-pptx-semantic-object="shape">
+<path d="M 696 451.42 L 1216.32 451.42 L 1216.32 613.44 L 696 613.44 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="696" y="465.59" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.8"><tspan><tspan>共同局限</tspan></tspan><tspan fill="#153A2A" font-size="18"><tspan>1</tspan><tspan>）生成的都是模拟的</tspan><tspan>ensemble</tspan><tspan>不是真实的</tspan></tspan><tspan fill="#153A2A" font-size="18" data-paragraph-space-before="1.27"><tspan>2</tspan><tspan>）</tspan><tspan fill="#000000" font-size="18.67">生成的是平衡构象样本，不是动态轨迹</tspan></tspan><tspan fill="#153A2A" font-size="18.67" data-paragraph-space-before="2.7"><tspan>3</tspan><tspan>）</tspan><tspan fill="#000000">都不是完整的全原子模型</tspan></tspan><tspan fill="#153A2A" font-size="18.67" data-paragraph-space-before="2.13"><tspan>4</tspan><tspan>）</tspan><tspan>环境条件描述仍然有限</tspan></tspan></text>
+</g></svg>

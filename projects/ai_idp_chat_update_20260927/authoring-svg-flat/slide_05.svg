@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 170 1280 220" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 390 C 250 170 460 390 730 320 C 1000 250 1080 175 1280 330" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.045" />
+</g>
+<g id="shape-51" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:51">
+<g id="shape-48" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:48">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-49" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:49" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-50" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:50" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">5</text>
+</g>
+</g>
+<g id="shape-52" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:52" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">Benchmark：不是“再测一次”，而是统一条件下的盲测</text>
+</g>
+<g id="shape-53" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:53" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-54" data-pptx-object="shape" data-pptx-frame="64.32 120.96 1152 75.62" data-pptx-prst="rect" data-pptx-source-ref="slide:54" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 1216.32 120.96 L 1216.32 196.58 L 64.32 196.58 Z" fill="#F7FAF8" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-55" data-pptx-object="shape" data-pptx-frame="64.32 120.96 5.76 75.62" data-pptx-prst="rect" data-pptx-source-ref="slide:55" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 70.08 120.96 L 70.08 196.58 L 64.32 196.58 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-56" data-pptx-object="shape" data-pptx-frame="89.28 136.32 1102.08 44.9" data-pptx-prst="rect" data-pptx-source-ref="slide:56" data-pptx-semantic-object="shape">
+<path d="M 89.28 136.32 L 1191.36 136.32 L 1191.36 181.22 L 89.28 181.22 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="89.28" y="151.62" text-anchor="start" xml:space="preserve" font-size="18" fill="#153A2A" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.23"><tspan><tspan>定义｜固定靶标、环境条件、可观测量与评分规则，用未公开验证数据比较不同方法的真实泛化能力。</tspan></tspan><tspan font-size="15.33" fill="#5C6E63"><tspan>普通论文自测常使用不同数据、不同参考系综与不同指标，结果不能直接横向比较。</tspan></tspan></text>
+</g>
+<g id="shape-57" data-pptx-object="shape" data-pptx-frame="64.32 228.48 264.96 190.08" data-pptx-prst="rect" data-pptx-source-ref="slide:57" data-pptx-semantic-object="shape">
+<path d="M 64.32 228.48 L 329.28 228.48 L 329.28 418.56 L 64.32 418.56 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-58" data-pptx-object="shape" data-pptx-frame="81.6 245.76 30.72 30.72" data-pptx-prst="ellipse" data-pptx-source-ref="slide:58" data-pptx-semantic-object="shape">
+<path d="M 81.6 261.12 A 15.36 15.36 0 0 1 96.96 245.76 A 15.36 15.36 0 0 1 112.32 261.12 A 15.36 15.36 0 0 1 96.96 276.48 A 15.36 15.36 0 0 1 81.6 261.12 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+<text x="94.56" y="264.56" text-anchor="middle" xml:space="preserve" font-size="16" fill="#FFFFFF" font-weight="bold">1</text>
+</g>
+<g id="shape-59" data-pptx-object="shape" data-pptx-frame="120 246.72 195.84 28.8" data-pptx-prst="rect" data-pptx-source-ref="slide:59" data-pptx-semantic-object="shape">
+<path d="M 120 246.72 L 315.84 246.72 L 315.84 275.52 L 120 275.52 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="120" y="263.72" text-anchor="start" xml:space="preserve" font-size="20" fill="#153A2A" font-weight="bold">独立整理数据</text>
+</g>
+<g id="shape-60" data-pptx-object="shape" data-pptx-frame="83.52 291.84 226.56 73" data-pptx-prst="rect" data-pptx-source-ref="slide:60" data-pptx-semantic-object="shape">
+<path d="M 83.52 291.84 L 310.08 291.84 L 310.08 364.84 L 83.52 364.84 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="83.52" y="306.01" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.33"><tspan><tspan>多类 IDP / IDR</tspan></tspan><tspan><tspan>多种互补实验</tspan></tspan><tspan data-paragraph-space-before="0"><tspan>明确实验条件</tspan></tspan></text>
+</g>
+<g id="shape-61" data-pptx-object="shape" data-pptx-frame="329.28 307.2 30.72 30.72" data-pptx-prst="rect" data-pptx-source-ref="slide:61" data-pptx-semantic-object="shape">
+<path d="M 329.28 307.2 L 360 307.2 L 360 337.92 L 329.28 337.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="344.64" y="323.07" text-anchor="middle" xml:space="preserve" font-size="18.67" fill="#007A3D" font-weight="bold">→</text>
+</g>
+<g id="shape-62" data-pptx-object="shape" data-pptx-frame="360 228.48 264.96 190.08" data-pptx-prst="rect" data-pptx-source-ref="slide:62" data-pptx-semantic-object="shape">
+<path d="M 360 228.48 L 624.96 228.48 L 624.96 418.56 L 360 418.56 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-63" data-pptx-object="shape" data-pptx-frame="377.28 245.76 30.72 30.72" data-pptx-prst="ellipse" data-pptx-source-ref="slide:63" data-pptx-semantic-object="shape">
+<path d="M 377.28 261.12 A 15.36 15.36 0 0 1 392.64 245.76 A 15.36 15.36 0 0 1 408 261.12 A 15.36 15.36 0 0 1 392.64 276.48 A 15.36 15.36 0 0 1 377.28 261.12 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+<text x="390.24" y="264.56" text-anchor="middle" xml:space="preserve" font-size="16" fill="#FFFFFF" font-weight="bold">2</text>
+</g>
+<g id="shape-64" data-pptx-object="shape" data-pptx-frame="415.68 246.72 195.84 28.8" data-pptx-prst="rect" data-pptx-source-ref="slide:64" data-pptx-semantic-object="shape">
+<path d="M 415.68 246.72 L 611.52 246.72 L 611.52 275.52 L 415.68 275.52 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="415.68" y="263.72" text-anchor="start" xml:space="preserve" font-size="20" fill="#153A2A" font-weight="bold">提交 ensemble</text>
+</g>
+<g id="shape-65" data-pptx-object="shape" data-pptx-frame="379.2 291.84 226.56 73" data-pptx-prst="rect" data-pptx-source-ref="slide:65" data-pptx-semantic-object="shape">
+<path d="M 379.2 291.84 L 605.76 291.84 L 605.76 364.84 L 379.2 364.84 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="379.2" y="306.01" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.33"><tspan><tspan>统一输入格式</tspan></tspan><tspan><tspan>禁止查看盲测标签</tspan></tspan><tspan data-paragraph-space-before="0"><tspan>同时报告计算成本</tspan></tspan></text>
+</g>
+<g id="shape-66" data-pptx-object="shape" data-pptx-frame="624.96 307.2 30.72 30.72" data-pptx-prst="rect" data-pptx-source-ref="slide:66" data-pptx-semantic-object="shape">
+<path d="M 624.96 307.2 L 655.68 307.2 L 655.68 337.92 L 624.96 337.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="640.32" y="323.07" text-anchor="middle" xml:space="preserve" font-size="18.67" fill="#007A3D" font-weight="bold">→</text>
+</g>
+<g id="shape-67" data-pptx-object="shape" data-pptx-frame="655.68 228.48 264.96 190.08" data-pptx-prst="rect" data-pptx-source-ref="slide:67" data-pptx-semantic-object="shape">
+<path d="M 655.68 228.48 L 920.64 228.48 L 920.64 418.56 L 655.68 418.56 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-68" data-pptx-object="shape" data-pptx-frame="672.96 245.76 30.72 30.72" data-pptx-prst="ellipse" data-pptx-source-ref="slide:68" data-pptx-semantic-object="shape">
+<path d="M 672.96 261.12 A 15.36 15.36 0 0 1 688.32 245.76 A 15.36 15.36 0 0 1 703.68 261.12 A 15.36 15.36 0 0 1 688.32 276.48 A 15.36 15.36 0 0 1 672.96 261.12 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+<text x="685.92" y="264.56" text-anchor="middle" xml:space="preserve" font-size="16" fill="#FFFFFF" font-weight="bold">3</text>
+</g>
+<g id="shape-69" data-pptx-object="shape" data-pptx-frame="711.36 246.72 195.84 28.8" data-pptx-prst="rect" data-pptx-source-ref="slide:69" data-pptx-semantic-object="shape">
+<path d="M 711.36 246.72 L 907.2 246.72 L 907.2 275.52 L 711.36 275.52 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="711.36" y="263.72" text-anchor="start" xml:space="preserve" font-size="20" fill="#153A2A" font-weight="bold">统一自动评分</text>
+</g>
+<g id="shape-70" data-pptx-object="shape" data-pptx-frame="674.88 291.84 226.56 73" data-pptx-prst="rect" data-pptx-source-ref="slide:70" data-pptx-semantic-object="shape">
+<path d="M 674.88 291.84 L 901.44 291.84 L 901.44 364.84 L 674.88 364.84 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="674.88" y="306.01" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.33"><tspan><tspan>held-out 数据</tspan></tspan><tspan><tspan>全局 + 局部 + 分布</tspan></tspan><tspan data-paragraph-space-before="0"><tspan>不确定性与残差</tspan></tspan></text>
+</g>
+<g id="shape-71" data-pptx-object="shape" data-pptx-frame="920.64 307.2 30.72 30.72" data-pptx-prst="rect" data-pptx-source-ref="slide:71" data-pptx-semantic-object="shape">
+<path d="M 920.64 307.2 L 951.36 307.2 L 951.36 337.92 L 920.64 337.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="936" y="323.07" text-anchor="middle" xml:space="preserve" font-size="18.67" fill="#007A3D" font-weight="bold">→</text>
+</g>
+<g id="shape-72" data-pptx-object="shape" data-pptx-frame="951.36 228.48 264.96 190.08" data-pptx-prst="rect" data-pptx-source-ref="slide:72" data-pptx-semantic-object="shape">
+<path d="M 951.36 228.48 L 1216.32 228.48 L 1216.32 418.56 L 951.36 418.56 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-73" data-pptx-object="shape" data-pptx-frame="968.64 245.76 30.72 30.72" data-pptx-prst="ellipse" data-pptx-source-ref="slide:73" data-pptx-semantic-object="shape">
+<path d="M 968.64 261.12 A 15.36 15.36 0 0 1 984 245.76 A 15.36 15.36 0 0 1 999.36 261.12 A 15.36 15.36 0 0 1 984 276.48 A 15.36 15.36 0 0 1 968.64 261.12 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+<text x="981.6" y="264.56" text-anchor="middle" xml:space="preserve" font-size="16" fill="#FFFFFF" font-weight="bold">4</text>
+</g>
+<g id="shape-74" data-pptx-object="shape" data-pptx-frame="1007.04 246.72 195.84 28.8" data-pptx-prst="rect" data-pptx-source-ref="slide:74" data-pptx-semantic-object="shape">
+<path d="M 1007.04 246.72 L 1202.88 246.72 L 1202.88 275.52 L 1007.04 275.52 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="1007.04" y="263.72" text-anchor="start" xml:space="preserve" font-size="20" fill="#153A2A" font-weight="bold">持续公开结果</text>
+</g>
+<g id="shape-75" data-pptx-object="shape" data-pptx-frame="970.56 291.84 226.56 73" data-pptx-prst="rect" data-pptx-source-ref="slide:75" data-pptx-semantic-object="shape">
+<path d="M 970.56 291.84 L 1197.12 291.84 L 1197.12 364.84 L 970.56 364.84 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="970.56" y="306.01" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.33"><tspan><tspan>方法排名与指标剖面</tspan></tspan><tspan><tspan>失败案例可追踪</tspan></tspan><tspan data-paragraph-space-before="0"><tspan>新数据循环更新</tspan></tspan></text>
+</g>
+<g id="shape-76" data-pptx-object="shape" data-pptx-frame="64.32 435.84 1152 101.82" data-pptx-prst="rect" data-pptx-source-ref="slide:76" data-pptx-semantic-object="shape">
+<path d="M 64.32 435.84 L 1216.32 435.84 L 1216.32 537.66 L 64.32 537.66 Z" fill="#EAF4EE" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-77" data-pptx-object="shape" data-pptx-frame="64.32 435.84 5.76 101.82" data-pptx-prst="rect" data-pptx-source-ref="slide:77" data-pptx-semantic-object="shape">
+<path d="M 64.32 435.84 L 70.08 435.84 L 70.08 537.66 L 64.32 537.66 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-78" data-pptx-object="shape" data-pptx-frame="89.28 450.24 1102.08 73.02" data-pptx-prst="rect" data-pptx-source-ref="slide:78" data-pptx-semantic-object="shape">
+<path d="M 89.28 450.24 L 1191.36 450.24 L 1191.36 523.26 L 89.28 523.26 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="89.28" y="467.24" text-anchor="start" xml:space="preserve" font-size="20" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.5"><tspan><tspan>IDP-Bench 要控制的变量</tspan></tspan><tspan font-size="16.67"><tspan>同一靶标与条件　｜　同一实验观测　｜　同一 forward model 或明确版本　｜　同一评分代码　｜　盲测集不参与训练</tspan></tspan><tspan font-size="16" fill="#5C6E63" data-paragraph-space-before="1.1"><tspan>目标不是选出“万能冠军”，而是知道每种方法在哪类序列、尺度与观测上可靠或失效。</tspan></tspan></text>
+</g>
+<g id="shape-79" data-pptx-object="shape" data-pptx-frame="64.32 577.92 1056 16.8" data-pptx-prst="rect" data-pptx-source-ref="slide:79" data-pptx-semantic-object="shape">
+<path d="M 64.32 577.92 L 1120.32 577.92 L 1120.32 594.72 L 64.32 594.72 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="589.82" text-anchor="start" xml:space="preserve" font-size="14" fill="#5C6E63">依据：Towards a Unified Framework… 提出的 IDP-Bench 四阶段双年周期与盲测原则。</text>
+</g></svg>

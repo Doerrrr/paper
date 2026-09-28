@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 240 1300 350" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 520 C 260 390 560 590 850 430 C 1140 270 1130 350 1300 240" data-pptx-part="geometry" fill="none" stroke-width="76" stroke="#007A3D" stroke-opacity="0.1" />
+</g>
+<g id="shape-3" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:3" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">结论与讨论</text>
+</g>
+<g id="shape-4" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:4" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-5" data-pptx-object="shape" data-pptx-frame="64.32 122.88 580.8 389.76" data-pptx-prst="rect" data-pptx-source-ref="slide:5" data-pptx-semantic-object="shape">
+<path d="M 64.32 122.88 L 645.12 122.88 L 645.12 512.64 L 64.32 512.64 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-6" data-pptx-object="shape" data-pptx-frame="85.44 140.16 538.56 23.89" data-pptx-prst="rect" data-pptx-source-ref="slide:6" data-pptx-semantic-object="shape">
+<path d="M 85.44 140.16 L 624 140.16 L 624 164.05 L 85.44 164.05 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="158.29" text-anchor="start" xml:space="preserve" font-size="21.33" fill="#007A3D" font-weight="bold">三条结论</text>
+</g>
+<g id="shape-7" data-pptx-object="shape" data-pptx-frame="85.44 188.16 4.8 56.72" data-pptx-prst="rect" data-pptx-source-ref="slide:7" data-pptx-semantic-object="shape">
+<path d="M 85.44 188.16 L 90.24 188.16 L 90.24 244.88 L 85.44 244.88 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-8" data-pptx-object="shape" data-pptx-frame="100.8 184.32 538.56 64.4" data-pptx-prst="rect" data-pptx-source-ref="slide:8">
+
+<path d="M 100.8 184.32 L 639.36 184.32 L 639.36 248.72 L 100.8 248.72 Z" fill="none" />
+
+
+<text x="100.8" y="199.05" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#153A2A" font-weight="bold">1. 概念层面</text>
+<text x="100.8" y="220.22" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#5C6E63"><tspan>IDP / IDR 的“无序”指没有单一主导结构；描述它们必须用带统计权重的 </tspan><tspan x="100.8" dy="21.33">ensemble，而不是一条结构。</tspan></text>
+</g>
+<g id="shape-9" data-pptx-object="shape" data-pptx-frame="85.44 273.68 4.8 56.72" data-pptx-prst="rect" data-pptx-source-ref="slide:9" data-pptx-semantic-object="shape">
+<path d="M 85.44 273.68 L 90.24 273.68 L 90.24 330.4 L 85.44 330.4 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-10" data-pptx-object="shape" data-pptx-frame="100.8 269.84 538.56 64.4" data-pptx-prst="rect" data-pptx-source-ref="slide:10">
+
+<path d="M 100.8 269.84 L 639.36 269.84 L 639.36 334.24 L 100.8 334.24 Z" fill="none" />
+
+
+<text x="100.8" y="284.57" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#153A2A" font-weight="bold">2. 方法层面</text>
+<text x="100.8" y="305.74" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#5C6E63"><tspan>GOOSE、STARLING、IDPFold 已能生成序列与构象；但“生成得像”不等于</tspan><tspan x="100.8" dy="21.33">权重与动力学正确。</tspan></text>
+</g>
+<g id="shape-11" data-pptx-object="shape" data-pptx-frame="85.44 359.2 4.8 56.72" data-pptx-prst="rect" data-pptx-source-ref="slide:11" data-pptx-semantic-object="shape">
+<path d="M 85.44 359.2 L 90.24 359.2 L 90.24 415.92 L 85.44 415.92 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-12" data-pptx-object="shape" data-pptx-frame="100.8 355.36 538.56 64.4" data-pptx-prst="rect" data-pptx-source-ref="slide:12">
+
+<path d="M 100.8 355.36 L 639.36 355.36 L 639.36 419.76 L 100.8 419.76 Z" fill="none" />
+
+
+<text x="100.8" y="370.09" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#153A2A" font-weight="bold">3. 评价层面</text>
+<text x="100.8" y="391.26" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#5C6E63"><tspan>只有在统一靶标、条件与观测下的盲测，配合分布级指标，才能比较不同</tspan><tspan x="100.8" dy="21.33">方法。</tspan></text>
+</g>
+<g id="shape-13" data-pptx-object="shape" data-pptx-frame="669.12 122.88 547.2 389.76" data-pptx-prst="rect" data-pptx-source-ref="slide:13" data-pptx-semantic-object="shape">
+<path d="M 669.12 122.88 L 1216.32 122.88 L 1216.32 512.64 L 669.12 512.64 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-14" data-pptx-object="shape" data-pptx-frame="690.24 140.16 504.96 23.89" data-pptx-prst="rect" data-pptx-source-ref="slide:14" data-pptx-semantic-object="shape">
+<path d="M 690.24 140.16 L 1195.2 140.16 L 1195.2 164.05 L 690.24 164.05 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="690.24" y="158.29" text-anchor="start" xml:space="preserve" font-size="21.33" fill="#007A3D" font-weight="bold">建议与下一步</text>
+</g>
+<g id="shape-15" data-pptx-object="shape" data-pptx-frame="692.16 190.08 19.2 19.2" data-pptx-prst="ellipse" data-pptx-source-ref="slide:15" data-pptx-semantic-object="shape">
+<path d="M 692.16 199.68 A 9.6 9.6 0 0 1 701.76 190.08 A 9.6 9.6 0 0 1 711.36 199.68 A 9.6 9.6 0 0 1 701.76 209.28 A 9.6 9.6 0 0 1 692.16 199.68 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-16" data-pptx-object="shape" data-pptx-frame="720.96 184.32 474.24 42.67" data-pptx-prst="rect" data-pptx-source-ref="slide:16" data-pptx-semantic-object="shape">
+<path d="M 720.96 184.32 L 1195.2 184.32 L 1195.2 226.99 L 720.96 226.99 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="720.96" y="198.49" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="21.33"><tspan><tspan>· 最值得投入的切入点是“ensemble 是否提供额外信息”的严格</tspan></tspan><tspan data-paragraph-line-break="1">对照实验（M1 / M2 / M3）。</tspan></text>
+</g>
+<g id="shape-17" data-pptx-object="shape" data-pptx-frame="692.16 251.95 19.2 19.2" data-pptx-prst="ellipse" data-pptx-source-ref="slide:17" data-pptx-semantic-object="shape">
+<path d="M 692.16 261.55 A 9.6 9.6 0 0 1 701.76 251.95 A 9.6 9.6 0 0 1 711.36 261.55 A 9.6 9.6 0 0 1 701.76 271.15 A 9.6 9.6 0 0 1 692.16 261.55 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-18" data-pptx-object="shape" data-pptx-frame="720.96 246.19 474.24 42.67" data-pptx-prst="rect" data-pptx-source-ref="slide:18" data-pptx-semantic-object="shape">
+<path d="M 720.96 246.19 L 1195.2 246.19 L 1195.2 288.85 L 720.96 288.85 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="720.96" y="260.35" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="21.33"><tspan><tspan>· 优先统一数据与评价口径：按蛋白划分、跨环境测试、跨生成</tspan></tspan><tspan data-paragraph-line-break="1">器消融。</tspan></text>
+</g>
+<g id="shape-19" data-pptx-object="shape" data-pptx-frame="692.16 313.81 19.2 19.2" data-pptx-prst="ellipse" data-pptx-source-ref="slide:19" data-pptx-semantic-object="shape">
+<path d="M 692.16 323.41 A 9.6 9.6 0 0 1 701.76 313.81 A 9.6 9.6 0 0 1 711.36 323.41 A 9.6 9.6 0 0 1 701.76 333.01 A 9.6 9.6 0 0 1 692.16 323.41 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-20" data-pptx-object="shape" data-pptx-frame="720.96 308.05 474.24 42.67" data-pptx-prst="rect" data-pptx-source-ref="slide:20" data-pptx-semantic-object="shape">
+<path d="M 720.96 308.05 L 1195.2 308.05 L 1195.2 350.72 L 720.96 350.72 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="720.96" y="322.22" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="21.33"><tspan><tspan>· 设计类任务（binder、界面肽）验证成本最高，建议先建立评</tspan></tspan><tspan data-paragraph-line-break="1">测基线再进入。</tspan></text>
+</g>
+<g id="shape-21" data-pptx-object="shape" data-pptx-frame="692.16 375.68 19.2 19.2" data-pptx-prst="ellipse" data-pptx-source-ref="slide:21" data-pptx-semantic-object="shape">
+<path d="M 692.16 385.28 A 9.6 9.6 0 0 1 701.76 375.68 A 9.6 9.6 0 0 1 711.36 385.28 A 9.6 9.6 0 0 1 701.76 394.88 A 9.6 9.6 0 0 1 692.16 385.28 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-22" data-pptx-object="shape" data-pptx-frame="720.96 369.92 474.24 42.67" data-pptx-prst="rect" data-pptx-source-ref="slide:22" data-pptx-semantic-object="shape">
+<path d="M 720.96 369.92 L 1195.2 369.92 L 1195.2 412.59 L 720.96 412.59 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="720.96" y="384.09" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="21.33"><tspan><tspan>· 需要外部实验合作，才能把“分布正确”从计算结论推进到可检</tspan></tspan><tspan data-paragraph-line-break="1">验结论。</tspan></text>
+</g>
+<g id="shape-23" data-pptx-object="shape" data-pptx-frame="64.32 531.84 1152 94.08" data-pptx-prst="rect" data-pptx-source-ref="slide:23" data-pptx-semantic-object="shape">
+<path d="M 64.32 531.84 L 1216.32 531.84 L 1216.32 625.92 L 64.32 625.92 Z" fill="#EAF4EE" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-24" data-pptx-object="shape" data-pptx-frame="64.32 531.84 5.76 94.08" data-pptx-prst="rect" data-pptx-source-ref="slide:24" data-pptx-semantic-object="shape">
+<path d="M 64.32 531.84 L 70.08 531.84 L 70.08 625.92 L 64.32 625.92 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-25" data-pptx-object="shape" data-pptx-frame="93.12 547.2 480 39.07" data-pptx-prst="rect" data-pptx-source-ref="slide:25" data-pptx-semantic-object="shape">
+<path d="M 93.12 547.2 L 573.12 547.2 L 573.12 586.27 L 93.12 586.27 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="93.12" y="576.67" text-anchor="start" xml:space="preserve" font-size="34.67" fill="#007A3D" font-weight="bold">谢谢！</text>
+</g>
+<g id="shape-26" data-pptx-object="shape" data-pptx-frame="93.12 589.44 624 20.8" data-pptx-prst="rect" data-pptx-source-ref="slide:26" data-pptx-semantic-object="shape">
+<path d="M 93.12 589.44 L 717.12 589.44 L 717.12 610.24 L 93.12 610.24 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="93.12" y="604.17" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#5C6E63">欢迎老师与同学批评指正。</text>
+</g>
+<g id="shape-27" data-pptx-object="picture" data-pptx-frame="871.39 541.44 244.41 74.88" data-pptx-source-ref="slide:27">
+<image data-pptx-object="picture" data-pptx-frame="871.39 541.44 244.41 74.88" href="../images/image8.png" x="871.39" y="541.44" width="244.41" height="74.88" preserveAspectRatio="none" />
+</g></svg>

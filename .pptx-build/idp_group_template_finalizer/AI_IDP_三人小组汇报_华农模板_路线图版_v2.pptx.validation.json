@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "presentation-finalization.v1",
+  "finalSha256": "8f491a189fd31fa7710cc232a964333ad418821d319c92464260e4bd4ab5ca0c",
+  "byteCount": 148464,
+  "packageIntegrity": {
+    "chart_count": 0,
+    "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+    "finding_count": 0,
+    "findings": [],
+    "notes_parts_skipped": 20,
+    "relationship_part_count": 46,
+    "slide_count": 20,
+    "status": "pass",
+    "exitCode": 0,
+    "findingCount": 0,
+    "warnings": []
+  },
+  "presentationLayout": {
+    "finding_count": 0,
+    "findings": [],
+    "font_policy": {
+      "checked_text_script_count": 363,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial",
+        "Microsoft YaHei",
+        "Times New Roman"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 22,
+        "Microsoft YaHei": 339,
+        "Times New Roman": 2
+      },
+      "passed": true,
+      "performed": true
+    },
+    "slide_count": 20,
+    "slide_size_in": [
+      13.3333,
+      7.5
+    ],
+    "warning_count": 0,
+    "warnings": [],
+    "exitCode": 0,
+    "findingCount": 0,
+    "fontPolicy": {
+      "checked_text_script_count": 363,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial",
+        "Microsoft YaHei",
+        "Times New Roman"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 22,
+        "Microsoft YaHei": 339,
+        "Times New Roman": 2
+      },
+      "passed": true,
+      "performed": true
+    }
+  },
+  "fontSelection": {
+    "basis": "reference",
+    "approvedFamilies": [
+      "Microsoft YaHei",
+      "Arial",
+      "Times New Roman"
+    ],
+    "scriptFonts": {},
+    "referenceSha256": "34593a23d70a33c7cbb253aa408e847c3e7daa968918b3611eff7ea4b2f78641",
+    "referenceFontsVerifiedInEncodedText": true,
+    "checked_text_script_count": 363,
+    "native_font_rendering_verified": false,
+    "observed_font_families": [
+      "Arial",
+      "Microsoft YaHei",
+      "Times New Roman"
+    ],
+    "observed_font_use_counts": {
+      "Arial": 22,
+      "Microsoft YaHei": 339,
+      "Times New Roman": 2
+    },
+    "passed": true,
+    "performed": true
+  },
+  "firstPartyImport": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 20,
+    "sha256": "8f491a189fd31fa7710cc232a964333ad418821d319c92464260e4bd4ab5ca0c",
+    "runtimeNodeModules": "C:\\Users\\23127\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules",
+    "nodeExecutable": "C:\\Users\\23127\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+  },
+  "nativeTableArithmetic": {
+    "performed": true,
+    "checked_column_count": 0,
+    "checks": [],
+    "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+    "eligible_table_count": 0,
+    "finding_count": 0,
+    "findings": [],
+    "native_table_count": 2,
+    "passed": true,
+    "schema_version": "presentation-native-table-arithmetic.v1",
+    "skipped_tables": [
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 8,
+        "table": 1
+      },
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 16,
+        "table": 1
+      }
+    ],
+    "slide_count": 20,
+    "warning_count": 0,
+    "warnings": []
+  },
+  "nativeChartTitles": {
+    "performed": true,
+    "checks": [],
+    "finding_count": 0,
+    "findings": [],
+    "native_chart_count": 0,
+    "native_powerpoint_verified": false,
+    "passed": true,
+    "presentation_sha256": "8f491a189fd31fa7710cc232a964333ad418821d319c92464260e4bd4ab5ca0c",
+    "schema_version": "presentation-native-chart-titles.v1",
+    "slide_count": 20,
+    "source_text_emitted": false,
+    "unresolved_linked_title_count": 0
+  },
+  "sourceDerivedPolicyFlags": [
+    "--expected-slide-size-emu",
+    "12192000,6858000",
+    "--validate-bullet-geometry",
+    "--validate-heading-fit",
+    "--require-native-table-slide",
+    "8",
+    "--require-native-table-slide",
+    "16",
+    "--cover-role",
+    "none",
+    "--expected-slide-count",
+    "20",
+    "--approved-font-family",
+    "Microsoft YaHei",
+    "--approved-font-family",
+    "Arial",
+    "--approved-font-family",
+    "Times New Roman"
+  ],
+  "nativeChartValidation": {
+    "detectedOwnerSlides": [],
+    "detectedChartCount": 0,
+    "targetApplication": "portable",
+    "sourceChartOwnersExplicitlyDeclared": true,
+    "validatorRan": false,
+    "passed": true
+  }
+}

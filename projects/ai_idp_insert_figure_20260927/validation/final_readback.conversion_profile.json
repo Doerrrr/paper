@@ -1,0 +1,28 @@
+{
+  "schema": "ppt-master.source_to_md.profile.v1",
+  "converter": "ppt_to_md.py",
+  "conversion_type": "pptx",
+  "source": {
+    "path": "E:/Obsidian/paper/论文/projects/ai_idp_insert_figure_20260927/exports/ai_idp_insert_figure_20260927_20260927_105452.pptx",
+    "name": "ai_idp_insert_figure_20260927_20260927_105452.pptx",
+    "suffix": ".pptx",
+    "kind": "file",
+    "exists": true,
+    "size_bytes": 4335695
+  },
+  "outputs": {
+    "markdown": "final_readback.md",
+    "asset_dir": "final_readback_files",
+    "image_manifest": "final_readback_files/image_manifest.json",
+    "image_count": 8
+  },
+  "markdown": {
+    "line_count": 646,
+    "char_count": 11179,
+    "heading_count": 33,
+    "table_count": 0,
+    "image_ref_count": 22,
+    "link_count": 0
+  },
+  "warnings": []
+}

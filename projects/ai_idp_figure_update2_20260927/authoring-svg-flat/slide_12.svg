@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 45 1280 340" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 230 C 220 160 420 385 700 215 C 980 45 1080 280 1280 325" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.055" />
+</g>
+<g id="shape-31" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:31">
+<g id="shape-28" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:28">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-29" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:29" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-30" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:30" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">12</text>
+</g>
+</g>
+<g id="shape-32" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:32" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">柔性 IDR binder 设计：输入、联合搜索与验证</text>
+</g>
+<g id="shape-33" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:33" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-34" data-pptx-object="shape" data-pptx-frame="64.32 120.96 746.34 492.48" data-pptx-prst="rect" data-pptx-source-ref="slide:34" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 810.66 120.96 L 810.66 613.44 L 64.32 613.44 Z" fill="#FFFFFF" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-9" data-pptx-object="group" data-pptx-frame="84 139 718.4 474.44" data-pptx-source-ref="slide:9">
+<g id="shape-8" data-pptx-object="picture" data-pptx-frame="84 139 718.4 474.44" data-pptx-source-ref="slide:8">
+<image data-pptx-object="picture" data-pptx-frame="84 139 718.4 474.44" href="../images/figure12_updated.png" x="84" y="139" width="718.4" height="474.44" preserveAspectRatio="none" />
+</g>
+</g>
+<g id="shape-37" data-pptx-object="shape" data-pptx-frame="826.68 131.31 352 82" data-pptx-prst="rect" data-pptx-source-ref="slide:37">
+
+<path d="M 826.68 131.31 L 1178.68 131.31 L 1178.68 213.31 L 826.68 213.31 Z" fill="none" stroke="none" />
+
+
+<text x="826.68" y="145.48" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">输入与生成对象</text>
+<text x="826.68" y="167.51" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A"><tspan>Target 输入：sequence（可选 SS labels）</tspan><tspan x="826.68" dy="19.2">扩散输出：结合态、binder 主链、binding mode</tspan><tspan x="826.68" dy="19.2">ProteinMPNN 再设计 binder sequence</tspan></text>
+</g>
+<g id="shape-22" data-pptx-object="group" data-pptx-frame="826.01 231.24 352.67 98" data-pptx-source-ref="slide:22">
+<g id="shape-11" data-pptx-object="shape" data-pptx-frame="826.68 231.24 352 98" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:11" data-pptx-semantic-object="shape">
+<path d="M 826.68 231.24 L 1178.68 231.24 L 1178.68 329.24 L 826.68 329.24 Z" data-pptx-part="geometry" fill="none" stroke="none" />
+</g>
+<g id="shape-12" data-pptx-object="shape" data-pptx-frame="826.01 231.24 72 25.67" data-pptx-prst="rect" data-pptx-source-ref="slide:12" data-pptx-semantic-object="shape">
+<path d="M 826.01 231.24 L 898.01 231.24 L 898.01 256.91 L 826.01 256.91 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="826.01" y="245.41" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">方法贡献</text>
+</g>
+<g id="shape-21" data-pptx-object="shape" data-pptx-frame="826.04 254.81 299.16 65.44" data-pptx-prst="rect" data-pptx-source-ref="slide:21" data-pptx-semantic-object="shape">
+<path d="M 826.04 254.81 L 1125.2 254.81 L 1125.2 320.25 L 826.04 320.25 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="826.04" y="268.41" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.2"><tspan><tspan>Sequence-input：不需要 target 三维坐标</tspan></tspan><tspan data-paragraph-line-break="1">SS specification：限定类型，不固定坐标</tspan><tspan data-paragraph-line-break="1">Two-sided partial diffusion：共同优化界面</tspan></text>
+</g>
+</g>
+<g id="shape-16" data-pptx-object="group" data-pptx-frame="825.96 352.24 352.72 98" data-pptx-source-ref="slide:16">
+<g id="shape-13" data-pptx-object="shape" data-pptx-frame="826.45 352.24 352.23 98" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:13" data-pptx-semantic-object="shape">
+<path d="M 826.45 352.24 L 1178.68 352.24 L 1178.68 450.24 L 826.45 450.24 Z" data-pptx-part="geometry" fill="none" stroke="none" />
+</g>
+<g id="shape-14" data-pptx-object="shape" data-pptx-frame="826 352.24 352 25.67" data-pptx-prst="rect" data-pptx-source-ref="slide:14" data-pptx-semantic-object="shape">
+<path d="M 826 352.24 L 1178 352.24 L 1178 377.91 L 826 377.91 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="826" y="366.41" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">关键实验证据</text>
+</g>
+<g id="shape-15" data-pptx-object="shape" data-pptx-frame="825.96 375.91 352.72 72" data-pptx-prst="rect" data-pptx-source-ref="slide:15" data-pptx-semantic-object="shape">
+<path d="M 825.96 375.91 L 1178.68 375.91 L 1178.68 447.91 L 825.96 447.91 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="825.96" y="389.21" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.2"><tspan><tspan>多个 IDP / IDR 靶标获得 nM 级 binder</tspan></tspan><tspan data-paragraph-line-break="1">3 个晶体结构：1.8 / 2.0 / 2.4 Å</tspan><tspan data-paragraph-line-break="1">晶体结构、特异性与功能实验相互验证</tspan></text>
+</g>
+</g>
+<g id="shape-20" data-pptx-object="group" data-pptx-frame="825.96 476.57 352.23 122.01" data-pptx-source-ref="slide:20">
+<g id="shape-17" data-pptx-object="shape" data-pptx-frame="826.45 476.58 351.74 122" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:17" data-pptx-semantic-object="shape">
+<path d="M 826.45 476.58 L 1178.19 476.58 L 1178.19 598.58 L 826.45 598.58 Z" data-pptx-part="geometry" fill="none" stroke="none" />
+</g>
+<g id="shape-18" data-pptx-object="shape" data-pptx-frame="826 476.57 352 25.67" data-pptx-prst="rect" data-pptx-source-ref="slide:18" data-pptx-semantic-object="shape">
+<path d="M 826 476.57 L 1178 476.57 L 1178 502.24 L 826 502.24 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="826" y="490.74" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">定位与边界</text>
+</g>
+<g id="shape-19" data-pptx-object="shape" data-pptx-frame="825.96 500.24 352.23 72" data-pptx-prst="rect" data-pptx-source-ref="slide:19" data-pptx-semantic-object="shape">
+<path d="M 825.96 500.24 L 1178.19 500.24 L 1178.19 572.24 L 825.96 572.24 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="825.96" y="513.54" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.2"><tspan><tspan>核心 denoiser 继承 RFdiffusion</tspan></tspan><tspan data-paragraph-line-break="1">创新重心：柔性靶标问题定义与联合搜索</tspan><tspan data-paragraph-line-break="1">输出为结合态，不是自由态 ensemble</tspan></text>
+</g>
+</g></svg>

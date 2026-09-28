@@ -1,0 +1,28 @@
+{
+  "schema": "ppt-master.source_to_md.profile.v1",
+  "converter": "ppt_to_md.py",
+  "conversion_type": "pptx",
+  "source": {
+    "path": "E:/Obsidian/paper/论文/projects/ai_idp_chat_update_20260927/sources/source.pptx",
+    "name": "source.pptx",
+    "suffix": ".pptx",
+    "kind": "file",
+    "exists": true,
+    "size_bytes": 4487550
+  },
+  "outputs": {
+    "markdown": "source_readback.md",
+    "asset_dir": "source_readback_files",
+    "image_manifest": "source_readback_files/image_manifest.json",
+    "image_count": 8
+  },
+  "markdown": {
+    "line_count": 652,
+    "char_count": 11514,
+    "heading_count": 33,
+    "table_count": 0,
+    "image_ref_count": 22,
+    "link_count": 0
+  },
+  "warnings": []
+}

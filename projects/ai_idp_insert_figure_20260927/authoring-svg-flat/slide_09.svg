@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 170 1280 320" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 460 C 230 170 430 330 710 410 C 990 490 1080 270 1280 250" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.05" />
+</g>
+<g id="shape-25" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:25">
+<g id="shape-22" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:22">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-23" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:23" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-24" data-pptx-object="shape" data-pptx-frame="1186.05 667.25 9.91 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:24" data-pptx-semantic-object="shape">
+<path d="M 1186.05 667.25 L 1195.95 667.25 L 1195.95 690.35 L 1186.05 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">9</text>
+</g>
+</g>
+<g id="shape-26" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:26" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">IDPFold：残基刚体扩散生成 ensemble</text>
+</g>
+<g id="shape-27" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:27" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-28" data-pptx-object="shape" data-pptx-frame="64.32 120.96 609.6 475.2" data-pptx-prst="rect" data-pptx-source-ref="slide:28" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 673.92 120.96 L 673.92 596.16 L 64.32 596.16 Z" fill="#FFFFFF" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-29" data-pptx-object="picture" data-pptx-frame="159.28 134.4 419.69 411.84" data-pptx-source-ref="slide:29">
+<image data-pptx-object="picture" data-pptx-frame="159.28 134.4 419.69 411.84" href="../images/image4.png" x="159.28" y="134.4" width="419.69" height="411.84" preserveAspectRatio="none" />
+</g>
+<g id="shape-30" data-pptx-object="shape" data-pptx-frame="77.76 555.84 582.72 14.57" data-pptx-prst="rect" data-pptx-source-ref="slide:30" data-pptx-semantic-object="shape">
+<path d="M 77.76 555.84 L 660.48 555.84 L 660.48 570.41 L 77.76 570.41 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="566.61" text-anchor="start" xml:space="preserve" font-size="12.67" fill="#5C6E63">Figure 1｜IDPFold 的扩散去噪框架与主链输出（源自原文）</text>
+</g>
+<g id="shape-31" data-pptx-object="shape" data-pptx-frame="696 124.8 520.32 101.87" data-pptx-prst="rect" data-pptx-source-ref="slide:31" data-pptx-semantic-object="shape">
+<path d="M 696 124.8 L 1216.32 124.8 L 1216.32 226.67 L 696 226.67 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="696" y="138.97" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.8"><tspan><tspan>输入、输出与证据</tspan></tspan><tspan fill="#153A2A" font-size="18"><tspan>输入：氨基酸序列。</tspan></tspan><tspan fill="#153A2A" font-size="18" data-paragraph-space-before="1.26"><tspan>输出：多次采样的主链构象与扭转角。</tspan></tspan><tspan fill="#153A2A" font-size="18" data-paragraph-space-before="1.27"><tspan>证据：同时检查全局尺寸与局部结构。</tspan></tspan></text>
+</g>
+<g id="shape-32" data-pptx-object="shape" data-pptx-frame="696 284.18 520.32 49.73" data-pptx-prst="rect" data-pptx-source-ref="slide:32" data-pptx-semantic-object="shape">
+<path d="M 696 284.18 L 1216.32 284.18 L 1216.32 333.91 L 696 333.91 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="696" y="298.34" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.8"><tspan><tspan>汇报边界</tspan></tspan><tspan fill="#153A2A" font-size="18"><tspan>样本不提供状态转换速率，也不能自动解释为真实平衡权重。</tspan></tspan></text>
+</g>
+<g id="shape-33" data-pptx-object="shape" data-pptx-frame="696 391.42 520.32 73.13" data-pptx-prst="rect" data-pptx-source-ref="slide:33">
+
+<path d="M 696 391.42 L 1216.32 391.42 L 1216.32 464.56 L 696 464.56 Z" fill="none" />
+
+
+<text x="696" y="405.59" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">与 STARLING 的区别</text>
+<text x="696" y="430.39" text-anchor="start" xml:space="preserve" font-size="18" fill="#153A2A"><tspan>STARLING 强调快速采样与距离表示；IDPFold 强调残基刚体、主</tspan><tspan x="696" dy="23.4">链几何与扩散生成。</tspan></text>
+</g>
+<g id="shape-34" data-pptx-object="shape" data-pptx-frame="696 522.07 520.32 73.13" data-pptx-prst="rect" data-pptx-source-ref="slide:34">
+
+<path d="M 696 522.07 L 1216.32 522.07 L 1216.32 595.2 L 696 595.2 Z" fill="none" />
+
+
+<text x="696" y="536.23" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">共同局限</text>
+<text x="696" y="561.03" text-anchor="start" xml:space="preserve" font-size="18" fill="#153A2A"><tspan>都依赖参考 ensemble / 模拟分布，“生成得像”不等于“真实权重</tspan><tspan x="696" dy="23.4">与动力学正确”。</tspan></text>
+</g></svg>

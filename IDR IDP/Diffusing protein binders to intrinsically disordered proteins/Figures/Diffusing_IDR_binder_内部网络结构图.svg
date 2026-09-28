@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FBF9"/>
+      <stop offset="1" stop-color="#F1F6F3"/>
+    </linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#006D39"/>
+      <stop offset="1" stop-color="#16945B"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#17382A" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4F665D"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2E6FA3"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#7255A3"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#007A3D"/>
+    </marker>
+    <marker id="arrGold" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#C88B16"/>
+    </marker>
+    <style>
+      .cn { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; }
+      .title { font-size: 34px; font-weight: 700; fill: #153A2A; }
+      .subtitle { font-size: 17px; fill: #577067; }
+      .section { font-size: 14px; font-weight: 700; letter-spacing: 1.1px; fill: #007A3D; }
+      .h1 { font-size: 23px; font-weight: 700; fill: #17382A; }
+      .h2 { font-size: 18px; font-weight: 700; fill: #213F33; }
+      .body { font-size: 15px; fill: #304C40; }
+      .small { font-size: 13px; fill: #5A7067; }
+      .micro { font-size: 12px; fill: #657A72; }
+      .formula { font-family: "Cambria Math", "Times New Roman", serif; font-size: 18px; font-style: italic; fill: #1E3B30; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="10" fill="url(#head)"/>
+
+  <g class="cn">
+    <text x="52" y="62" class="title">Flexible-target RFdiffusion：内部网络结构</text>
+    <text x="52" y="94" class="subtitle">Diffusing protein binders to intrinsically disordered proteins · 按 RoseTTAFold 三轨网络与公开实现重建</text>
+    <g transform="translate(1627,38)">
+      <rect width="240" height="42" rx="21" fill="#E4F3EA" stroke="#79BA96"/>
+      <text x="120" y="27" text-anchor="middle" font-size="15" font-weight="700" fill="#007A3D">内部模型图 · 非工作流图</text>
+    </g>
+
+    <!-- section labels -->
+    <text x="52" y="144" class="section">INPUT FEATURES</text>
+    <text x="430" y="144" class="section">INPUT EMBEDDING</text>
+    <text x="790" y="144" class="section">ROSETTAFOLD THREE-TRACK DENOISER</text>
+    <text x="1590" y="144" class="section">DIFFUSION UPDATE</text>
+
+    <!-- INPUT COLUMN -->
+    <g filter="url(#shadow)"><rect x="48" y="165" width="330" height="806" rx="20" fill="#FFFFFF"/></g>
+    <text x="72" y="205" class="h1">模型在第 t 步接收什么？</text>
+
+    <!-- seq input -->
+    <rect x="72" y="235" width="282" height="132" rx="14" fill="#EAF4FA" stroke="#9DC5DE"/>
+    <circle cx="96" cy="260" r="14" fill="#2E6FA3"/>
+    <text x="96" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="120" y="266" class="h2">序列 / MASK</text>
+    <text x="91" y="296" class="body">target：已知氨基酸 one-hot</text>
+    <text x="91" y="323" class="body">binder：未知序列 MASK token</text>
+    <text x="91" y="349" class="small">形成单序列的 MSA-like 输入</text>
+
+    <!-- 1D conditioning -->
+    <rect x="72" y="387" width="282" height="168" rx="14" fill="#FFF7E6" stroke="#E2B858" stroke-width="1.5"/>
+    <rect x="238" y="399" width="101" height="25" rx="12" fill="#F4B43C"/>
+    <text x="288" y="417" text-anchor="middle" font-size="12" font-weight="700" fill="#4C370C">本文条件</text>
+    <circle cx="96" cy="412" r="14" fill="#C88B16"/>
+    <text x="96" y="418" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="120" y="418" class="h2">1D 条件 t1d</text>
+    <text x="91" y="450" class="body">时间特征：1 − t / T</text>
+    <text x="91" y="478" class="body">target 序列身份 / MASK 状态</text>
+    <text x="91" y="506" class="body">可选二级结构：H / E / L / MASK</text>
+    <text x="91" y="535" class="small">二级结构被追加到每个残基的 1D 特征</text>
+
+    <!-- geometry -->
+    <rect x="72" y="575" width="282" height="173" rx="14" fill="#EBF6EF" stroke="#86BE9D"/>
+    <circle cx="96" cy="600" r="14" fill="#007A3D"/>
+    <text x="96" y="606" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="120" y="606" class="h2">带噪三维结构 X<tspan baseline-shift="sub" font-size="12">t</tspan></text>
+    <text x="91" y="640" class="body">每个残基：刚体框架 (R<tspan baseline-shift="sub" font-size="11">t</tspan>, T<tspan baseline-shift="sub" font-size="11">t</tspan>)</text>
+    <text x="91" y="668" class="body">target 与 binder 坐标共同带噪</text>
+    <text x="91" y="696" class="body">→ 距离 / 方向 / RBF 几何特征</text>
+    <text x="91" y="725" class="small">T 时为随机框架；partial diffusion 时为部分加噪复合物</text>
+
+    <!-- pair/control input -->
+    <rect x="72" y="768" width="282" height="129" rx="14" fill="#F2EEFA" stroke="#B9A6D8"/>
+    <circle cx="96" cy="793" r="14" fill="#7255A3"/>
+    <text x="96" y="799" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="120" y="799" class="h2">2D / 拓扑条件</text>
+    <text x="91" y="831" class="body">残基索引、链断点、序列间隔</text>
+    <text x="91" y="859" class="body">可选 block adjacency</text>
+    <text x="91" y="883" class="small">追加到残基对特征 t2d</text>
+
+    <rect x="72" y="918" width="282" height="35" rx="10" fill="#F5F7F6"/>
+    <text x="213" y="941" text-anchor="middle" class="small">L = target 残基数 + binder 残基数</text>
+
+    <!-- INPUT EMBEDDING COLUMN -->
+    <g filter="url(#shadow)"><rect x="420" y="165" width="320" height="806" rx="20" fill="#FFFFFF"/></g>
+    <text x="444" y="205" class="h1">初始表示</text>
+
+    <rect x="448" y="245" width="264" height="117" rx="15" fill="#EAF4FA" stroke="#9DC5DE"/>
+    <text x="580" y="276" text-anchor="middle" class="h2">MSA / sequence embedding</text>
+    <text x="580" y="306" text-anchor="middle" class="formula">M<tspan baseline-shift="sub" font-size="13">0</tspan> ∈ ℝ<tspan baseline-shift="super" font-size="12">L×dₘ</tspan></text>
+    <text x="580" y="338" text-anchor="middle" class="small">逐残基序列表示（蓝色轨）</text>
+
+    <rect x="448" y="405" width="264" height="134" rx="15" fill="#F2EEFA" stroke="#B9A6D8"/>
+    <text x="580" y="437" text-anchor="middle" class="h2">Pair + template embedding</text>
+    <text x="580" y="468" text-anchor="middle" class="formula">Z<tspan baseline-shift="sub" font-size="13">0</tspan> ∈ ℝ<tspan baseline-shift="super" font-size="12">L×L×d₂</tspan></text>
+    <text x="580" y="496" text-anchor="middle" class="small">t2d 几何 + adjacency + 序列间隔</text>
+    <text x="580" y="519" text-anchor="middle" class="small">残基—残基关系（紫色轨）</text>
+
+    <rect x="448" y="584" width="264" height="149" rx="15" fill="#EBF6EF" stroke="#86BE9D"/>
+    <text x="580" y="616" text-anchor="middle" class="h2">Structure / state embedding</text>
+    <text x="580" y="650" text-anchor="middle" class="formula">X<tspan baseline-shift="sub" font-size="13">t</tspan> ∈ SE(3)<tspan baseline-shift="super" font-size="12">L</tspan></text>
+    <text x="580" y="682" text-anchor="middle" class="formula">S<tspan baseline-shift="sub" font-size="13">0</tspan> ∈ ℝ<tspan baseline-shift="super" font-size="12">L×dₛ</tspan></text>
+    <text x="580" y="713" text-anchor="middle" class="small">残基刚体框架 + 单残基状态（绿色轨）</text>
+
+    <rect x="448" y="786" width="264" height="130" rx="15" fill="#FFF7E6" stroke="#E2B858"/>
+    <text x="580" y="818" text-anchor="middle" class="h2">结构 self-conditioning</text>
+    <text x="580" y="850" text-anchor="middle" class="formula">X̂<tspan baseline-shift="sub" font-size="13">0</tspan><tspan baseline-shift="super" font-size="12">t+1</tspan> → t2d</text>
+    <text x="580" y="879" text-anchor="middle" class="small">上一步的干净结构预测转成模板几何</text>
+    <text x="580" y="901" text-anchor="middle" class="small">加入本步 pair / template 表示</text>
+
+    <!-- input to embedding arrows -->
+    <path d="M354 300 C390 300 396 300 438 300" fill="none" stroke="#2E6FA3" stroke-width="3" marker-end="url(#arrBlue)"/>
+    <path d="M354 473 C395 473 400 470 438 470" fill="none" stroke="#C88B16" stroke-width="3" marker-end="url(#arrGold)"/>
+    <path d="M354 653 C396 653 400 654 438 654" fill="none" stroke="#007A3D" stroke-width="3" marker-end="url(#arrGreen)"/>
+    <path d="M354 833 C395 833 404 500 438 484" fill="none" stroke="#7255A3" stroke-width="2.5" marker-end="url(#arrPurple)"/>
+
+    <!-- NETWORK PANEL -->
+    <g filter="url(#shadow)"><rect x="780" y="165" width="750" height="806" rx="20" fill="#FFFFFF"/></g>
+    <text x="806" y="205" class="h1">IterativeSimulator：三条表示反复交换信息</text>
+    <rect x="1298" y="182" width="204" height="32" rx="16" fill="#E4F3EA"/>
+    <text x="1400" y="203" text-anchor="middle" font-size="13" font-weight="700" fill="#007A3D">IterBlock 重复 N 次</text>
+
+    <!-- track left labels -->
+    <rect x="805" y="251" width="110" height="70" rx="14" fill="#2E6FA3"/>
+    <text x="860" y="279" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">M<tspan baseline-shift="sub" font-size="12">l</tspan></text>
+    <text x="860" y="303" text-anchor="middle" font-size="12" fill="#E8F4FB">1D / MSA</text>
+
+    <rect x="805" y="431" width="110" height="70" rx="14" fill="#7255A3"/>
+    <text x="860" y="459" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">Z<tspan baseline-shift="sub" font-size="12">l</tspan></text>
+    <text x="860" y="483" text-anchor="middle" font-size="12" fill="#F3EEFC">2D / pair</text>
+
+    <rect x="805" y="646" width="110" height="88" rx="14" fill="#007A3D"/>
+    <text x="860" y="678" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">X<tspan baseline-shift="sub" font-size="12">l</tspan>, S<tspan baseline-shift="sub" font-size="12">l</tspan></text>
+    <text x="860" y="703" text-anchor="middle" font-size="12" fill="#DDF3E7">3D frames</text>
+    <text x="860" y="722" text-anchor="middle" font-size="12" fill="#DDF3E7">+ state</text>
+
+    <!-- MSA update -->
+    <path d="M920 286 L968 286" stroke="#2E6FA3" stroke-width="3" marker-end="url(#arrBlue)"/>
+    <rect x="978" y="240" width="260" height="92" rx="15" fill="#EAF4FA" stroke="#80B4D2" stroke-width="1.5"/>
+    <text x="1108" y="270" text-anchor="middle" class="h2">MSA update</text>
+    <text x="1108" y="296" text-anchor="middle" class="small">MSA attention + feed-forward</text>
+    <text x="1108" y="317" text-anchor="middle" class="micro">以 Z<tspan baseline-shift="sub">l</tspan>、RBF(X<tspan baseline-shift="sub">l</tspan>)、S<tspan baseline-shift="sub">l</tspan> 为偏置</text>
+    <path d="M1238 286 L1282 286" stroke="#2E6FA3" stroke-width="3" marker-end="url(#arrBlue)"/>
+    <rect x="1292" y="251" width="112" height="70" rx="14" fill="#DCECF6" stroke="#80B4D2"/>
+    <text x="1348" y="280" text-anchor="middle" font-size="17" font-weight="700" fill="#245E88">M<tspan baseline-shift="sub" font-size="12">l+1</tspan></text>
+    <text x="1348" y="303" text-anchor="middle" class="micro">residual</text>
+
+    <!-- MSA to Pair -->
+    <path d="M1108 333 L1108 386" stroke="#2E6FA3" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+    <rect x="1004" y="384" width="208" height="49" rx="12" fill="#F5F8FA" stroke="#ABC7D8"/>
+    <text x="1108" y="414" text-anchor="middle" class="body">Outer product  M ⊗ M</text>
+    <path d="M1000 408 C958 408 957 466 924 466" fill="none" stroke="#2E6FA3" stroke-width="2.3" marker-end="url(#arrBlue)"/>
+
+    <!-- pair update -->
+    <path d="M920 466 L968 466" stroke="#7255A3" stroke-width="3" marker-end="url(#arrPurple)"/>
+    <rect x="978" y="440" width="260" height="104" rx="15" fill="#F2EEFA" stroke="#A996CF" stroke-width="1.5"/>
+    <text x="1108" y="469" text-anchor="middle" class="h2">Pair update</text>
+    <text x="1108" y="495" text-anchor="middle" class="small">加入 MSA outer-product update</text>
+    <text x="1108" y="518" text-anchor="middle" class="small">row / column attention + FFN</text>
+    <text x="1108" y="538" text-anchor="middle" class="micro">同时读取 RBF(X<tspan baseline-shift="sub">l</tspan>)</text>
+    <path d="M1238 492 L1282 492" stroke="#7255A3" stroke-width="3" marker-end="url(#arrPurple)"/>
+    <rect x="1292" y="457" width="112" height="70" rx="14" fill="#E9E1F5" stroke="#A996CF"/>
+    <text x="1348" y="486" text-anchor="middle" font-size="17" font-weight="700" fill="#664B91">Z<tspan baseline-shift="sub" font-size="12">l+1</tspan></text>
+    <text x="1348" y="509" text-anchor="middle" class="micro">residual</text>
+
+    <!-- cross inputs to structure -->
+    <path d="M1348 326 C1348 579 1210 588 1188 623" fill="none" stroke="#2E6FA3" stroke-width="2.3" marker-end="url(#arrBlue)"/>
+    <path d="M1348 532 C1348 588 1260 594 1232 624" fill="none" stroke="#7255A3" stroke-width="2.3" marker-end="url(#arrPurple)"/>
+    <path d="M920 690 L968 690" stroke="#007A3D" stroke-width="3" marker-end="url(#arrGreen)"/>
+
+    <!-- structure update -->
+    <rect x="978" y="625" width="300" height="137" rx="15" fill="#EBF6EF" stroke="#67AC85" stroke-width="1.5"/>
+    <text x="1128" y="655" text-anchor="middle" class="h2">SE(3)-Transformer structure update</text>
+    <text x="1128" y="682" text-anchor="middle" class="small">节点：M<tspan baseline-shift="sub">l+1</tspan> + S<tspan baseline-shift="sub">l</tspan>　边：Z<tspan baseline-shift="sub">l+1</tspan> + 几何</text>
+    <text x="1128" y="709" text-anchor="middle" class="body">预测 ΔR<tspan baseline-shift="sub">l</tspan>、ΔT<tspan baseline-shift="sub">l</tspan>、S<tspan baseline-shift="sub">l+1</tspan></text>
+    <text x="1128" y="737" text-anchor="middle" class="small">更新残基刚体框架，并预测主链/侧链扭转角</text>
+    <path d="M1278 694 L1313 694" stroke="#007A3D" stroke-width="3" marker-end="url(#arrGreen)"/>
+    <rect x="1323" y="650" width="132" height="88" rx="14" fill="#DDF2E6" stroke="#67AC85"/>
+    <text x="1389" y="680" text-anchor="middle" font-size="17" font-weight="700" fill="#006D39">X<tspan baseline-shift="sub" font-size="12">l+1</tspan>, S<tspan baseline-shift="sub" font-size="12">l+1</tspan></text>
+    <text x="1389" y="706" text-anchor="middle" class="micro">R<tspan baseline-shift="sub">l+1</tspan>=ΔR·R<tspan baseline-shift="sub">l</tspan></text>
+    <text x="1389" y="726" text-anchor="middle" class="micro">T<tspan baseline-shift="sub">l+1</tspan>=T<tspan baseline-shift="sub">l</tspan>+ΔT</text>
+
+    <!-- block sequencing -->
+    <rect x="805" y="806" width="650" height="118" rx="16" fill="#F5F8F6" stroke="#B8CBC1"/>
+    <text x="829" y="837" class="h2">完整 trunk 的层次</text>
+    <rect x="829" y="857" width="154" height="43" rx="12" fill="#E8EEF1"/>
+    <text x="906" y="884" text-anchor="middle" class="body">Extra blocks</text>
+    <path d="M987 878 L1025 878" stroke="#4F665D" stroke-width="2.5" marker-end="url(#arr)"/>
+    <rect x="1035" y="857" width="154" height="43" rx="12" fill="#E6F1F7"/>
+    <text x="1112" y="884" text-anchor="middle" class="body">Main blocks</text>
+    <path d="M1193 878 L1231 878" stroke="#4F665D" stroke-width="2.5" marker-end="url(#arr)"/>
+    <rect x="1241" y="857" width="190" height="43" rx="12" fill="#E4F3EA"/>
+    <text x="1336" y="884" text-anchor="middle" class="body">SE(3) refinement</text>
+    <text x="829" y="916" class="micro">公开 base 配置通常为 4 / 32 / 4；具体 checkpoint 以训练配置为准。</text>
+
+    <!-- embedding to network arrows -->
+    <path d="M712 304 L770 286" stroke="#2E6FA3" stroke-width="3" marker-end="url(#arrBlue)"/>
+    <path d="M712 472 L770 466" stroke="#7255A3" stroke-width="3" marker-end="url(#arrPurple)"/>
+    <path d="M712 656 L770 690" stroke="#007A3D" stroke-width="3" marker-end="url(#arrGreen)"/>
+    <path d="M712 851 C748 851 753 500 770 487" fill="none" stroke="#C88B16" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#arrGold)"/>
+
+    <!-- OUTPUT / DIFFUSION UPDATE -->
+    <g filter="url(#shadow)"><rect x="1570" y="165" width="302" height="806" rx="20" fill="#FFFFFF"/></g>
+    <text x="1594" y="205" class="h1">从网络输出到下一步</text>
+
+    <path d="M1458 694 C1510 694 1514 300 1558 300" fill="none" stroke="#007A3D" stroke-width="3" marker-end="url(#arrGreen)"/>
+    <rect x="1595" y="246" width="252" height="122" rx="15" fill="#DDF2E6" stroke="#67AC85" stroke-width="1.5"/>
+    <text x="1721" y="280" text-anchor="middle" class="h2">干净结构预测</text>
+    <text x="1721" y="317" text-anchor="middle" font-size="22" font-weight="700" fill="#006D39">pX0 = X̂<tspan baseline-shift="sub" font-size="14">0</tspan><tspan baseline-shift="super" font-size="13">t</tspan></text>
+    <text x="1721" y="345" text-anchor="middle" class="small">target + binder 的完整主链框架</text>
+
+    <rect x="1595" y="408" width="252" height="108" rx="15" fill="#F3F6F4" stroke="#BBCAC3"/>
+    <text x="1721" y="438" text-anchor="middle" class="h2">辅助输出</text>
+    <text x="1721" y="467" text-anchor="middle" class="body">torsion angles · pLDDT</text>
+    <text x="1721" y="494" text-anchor="middle" class="small">用于构建原子坐标与置信度</text>
+
+    <path d="M1848 307 C1861 307 1861 644 1848 644" fill="none" stroke="#007A3D" stroke-width="3" marker-end="url(#arrGreen)"/>
+    <rect x="1595" y="565" width="252" height="158" rx="15" fill="#FFF7E6" stroke="#E2B858" stroke-width="1.5"/>
+    <text x="1721" y="598" text-anchor="middle" class="h2">外部 Denoiser 更新</text>
+    <text x="1721" y="631" text-anchor="middle" class="formula">(X<tspan baseline-shift="sub" font-size="13">t</tspan>, X̂<tspan baseline-shift="sub" font-size="13">0</tspan><tspan baseline-shift="super" font-size="12">t</tspan>, t)</text>
+    <text x="1721" y="660" text-anchor="middle" class="body">平移 + 旋转的反向扩散</text>
+    <path d="M1721 675 L1721 695" stroke="#C88B16" stroke-width="2.5" marker-end="url(#arrGold)"/>
+    <text x="1721" y="711" text-anchor="middle" font-size="21" font-weight="700" fill="#8A5C08">X<tspan baseline-shift="sub" font-size="13">t−1</tspan></text>
+
+    <path d="M1721 725 L1721 757" stroke="#C88B16" stroke-width="2.5" marker-end="url(#arrGold)"/>
+
+    <rect x="1595" y="768" width="252" height="115" rx="15" fill="#EAF4FA" stroke="#9DC5DE"/>
+    <text x="1721" y="801" text-anchor="middle" class="h2">进入下一轮</text>
+    <text x="1721" y="831" text-anchor="middle" class="body">X<tspan baseline-shift="sub">t−1</tspan> 作为新的带噪结构</text>
+    <text x="1721" y="858" text-anchor="middle" class="small">t → t−1，直至得到 X<tspan baseline-shift="sub">0</tspan></text>
+
+    <!-- loop back -->
+    <path d="M1590 824 C1508 824 1540 1008 1012 1008 L290 1008 C132 1008 30 908 30 653 L62 653" fill="none" stroke="#4F665D" stroke-width="2.6" stroke-dasharray="8 6" marker-end="url(#arr)"/>
+    <text x="1040" y="1036" text-anchor="middle" class="small">扩散时间循环：每一步都使用同一套三轨去噪网络参数</text>
+
+    <!-- self-conditioning loop -->
+    <path d="M1595 306 C1535 306 1535 945 724 945" fill="none" stroke="#C88B16" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrGold)"/>
+    <text x="1510" y="934" text-anchor="end" class="micro" fill="#8A5C08">X̂₀ᵗ 供下一步 self-conditioning</text>
+
+    <!-- footer legend -->
+    <g transform="translate(51,1020)">
+      <rect width="14" height="14" rx="3" fill="#2E6FA3"/><text x="22" y="12" class="micro">1D / sequence</text>
+      <rect x="125" width="14" height="14" rx="3" fill="#7255A3"/><text x="147" y="12" class="micro">2D / pair</text>
+      <rect x="233" width="14" height="14" rx="3" fill="#007A3D"/><text x="255" y="12" class="micro">3D / structure</text>
+      <rect x="374" width="14" height="14" rx="3" fill="#F4B43C"/><text x="396" y="12" class="micro">本文新增或强调的条件输入</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#30343B"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#477FA8"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#7650A2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#198754"/>
+    </marker>
+    <style>
+      .sans { font-family: Arial, "Microsoft YaHei", sans-serif; }
+      .panel { font-size: 34px; font-weight: 700; fill: #111111; }
+      .label { font-size: 18px; font-weight: 700; fill: #20242A; }
+      .body { font-size: 15px; fill: #30343B; }
+      .small { font-size: 13px; fill: #555C65; }
+      .math { font-family: "Cambria Math", "Times New Roman", serif; font-size: 19px; font-style: italic; fill: #20242A; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="1000" fill="#FFFFFF"/>
+
+  <g class="sans">
+    <!-- PANEL A: diffusion trajectory -->
+    <text x="35" y="55" class="panel">A</text>
+    <text x="92" y="52" class="label">Flexible-target diffusion</text>
+
+    <circle cx="145" cy="135" r="38" fill="#F4F5F6" stroke="#555C65" stroke-width="2"/>
+    <path d="M122 135 C132 111,151 160,170 125" fill="none" stroke="#9AA0A6" stroke-width="3"/>
+    <text x="145" y="194" text-anchor="middle" class="math">X<tspan baseline-shift="sub" font-size="13">T</tspan> ~ p<tspan baseline-shift="sub" font-size="13">T</tspan></text>
+
+    <path d="M188 135 L242 135" stroke="#30343B" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <circle cx="286" cy="135" r="38" fill="#FFFFFF" stroke="#555C65" stroke-width="2"/>
+    <path d="M264 140 C275 116,293 153,307 126" fill="none" stroke="#777D84" stroke-width="3"/>
+    <text x="286" y="194" text-anchor="middle" class="math">X<tspan baseline-shift="sub" font-size="13">t</tspan></text>
+
+    <path d="M329 135 L389 135" stroke="#30343B" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <rect x="400" y="95" width="205" height="80" rx="13" fill="#F6EAF2" stroke="#C65B91" stroke-width="2"/>
+    <text x="502" y="126" text-anchor="middle" class="label" fill="#8F2C61">Three-track</text>
+    <text x="502" y="151" text-anchor="middle" class="label" fill="#8F2C61">RFdiffusion</text>
+
+    <path d="M610 135 L669 135" stroke="#30343B" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <circle cx="714" cy="135" r="38" fill="#FFFFFF" stroke="#198754" stroke-width="2.2"/>
+    <text x="714" y="142" text-anchor="middle" class="math" fill="#126A43">X̂<tspan baseline-shift="sub" font-size="13">0</tspan><tspan baseline-shift="super" font-size="12">t</tspan></text>
+    <text x="714" y="194" text-anchor="middle" class="small">predicted clean structure</text>
+
+    <path d="M757 135 L813 135" stroke="#30343B" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <rect x="824" y="98" width="194" height="74" rx="12" fill="#FFF6E6" stroke="#E5A33A" stroke-width="2"/>
+    <text x="921" y="127" text-anchor="middle" class="label">SE(3) diffusion</text>
+    <text x="921" y="151" text-anchor="middle" class="body">update (X<tspan baseline-shift="sub" font-size="11">t</tspan>, X̂<tspan baseline-shift="sub" font-size="11">0</tspan><tspan baseline-shift="super" font-size="10">t</tspan>, t)</text>
+
+    <path d="M1023 135 L1080 135" stroke="#30343B" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <circle cx="1125" cy="135" r="38" fill="#FFFFFF" stroke="#555C65" stroke-width="2"/>
+    <text x="1125" y="142" text-anchor="middle" class="math">X<tspan baseline-shift="sub" font-size="13">t−1</tspan></text>
+
+    <path d="M1168 135 L1208 135" stroke="#30343B" stroke-width="2.2" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+    <circle cx="1252" cy="135" r="38" fill="#FFFFFF" stroke="#555C65" stroke-width="2"/>
+    <text x="1252" y="142" text-anchor="middle" class="math">X<tspan baseline-shift="sub" font-size="13">0</tspan></text>
+
+    <!-- stylized bound complex -->
+    <path d="M1327 111 C1350 75,1382 95,1374 127 C1367 156,1407 169,1427 142 C1442 121,1434 91,1411 83" fill="none" stroke="#6A98CC" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+    <path d="M1333 150 C1360 173,1380 142,1401 153 C1420 163,1440 153,1445 131" fill="none" stroke="#E5A33A" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+    <text x="1387" y="195" text-anchor="middle" class="label">bound complex</text>
+
+    <!-- recurrence arrows -->
+    <path d="M1125 92 C1050 32 363 31 286 91" fill="none" stroke="#8A8F95" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="704" y="25" text-anchor="middle" class="small">repeat for t = T, …, 1</text>
+    <path d="M714 91 C714 61 654 61 605 90" fill="none" stroke="#E5A33A" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+    <text x="660" y="70" text-anchor="middle" class="small" fill="#9A6817">self-conditioning</text>
+
+    <!-- conditioning entering network -->
+    <rect x="420" y="209" width="166" height="35" rx="17" fill="#FFF6E6" stroke="#E5A33A"/>
+    <text x="503" y="232" text-anchor="middle" class="small">sequence / SS / t</text>
+    <path d="M503 207 L503 182" stroke="#E5A33A" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+    <line x1="35" y1="270" x2="1465" y2="270" stroke="#D7DADD" stroke-width="1.5"/>
+
+    <!-- PANEL B: conditional inputs -->
+    <text x="35" y="325" class="panel">B</text>
+    <text x="88" y="322" class="label">Conditional inputs and initialization</text>
+
+    <rect x="45" y="355" width="382" height="596" rx="14" fill="none" stroke="#E16B3F" stroke-width="2" stroke-dasharray="7 6"/>
+
+    <!-- sequence branch -->
+    <text x="69" y="390" class="label">Target sequence + binder MASK</text>
+    <text x="69" y="422" font-size="18" font-weight="700" fill="#E16B3F">E C G P N E V F · · ·  |  X X X X · · ·</text>
+    <path d="M235 437 L235 470" stroke="#30343B" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="120" y="478" width="230" height="58" rx="10" fill="#EDF5FA" stroke="#6EA6C9" stroke-width="1.7"/>
+    <text x="235" y="513" text-anchor="middle" class="label">Sequence embedding</text>
+    <path d="M235 539 L235 574" stroke="#477FA8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <rect x="91" y="582" width="288" height="54" rx="10" fill="#E4F0F7"/>
+    <text x="235" y="616" text-anchor="middle" class="math" fill="#477FA8">M<tspan baseline-shift="sub" font-size="13">0</tspan>  (single / MSA representation)</text>
+
+    <!-- condition branch -->
+    <rect x="69" y="670" width="144" height="77" rx="10" fill="#FFF6E6" stroke="#E5A33A"/>
+    <text x="141" y="699" text-anchor="middle" class="body">timestep t / T</text>
+    <text x="141" y="726" text-anchor="middle" class="body">target SS (optional)</text>
+    <rect x="257" y="670" width="145" height="77" rx="10" fill="#F2ECF8" stroke="#9D80BA"/>
+    <text x="330" y="699" text-anchor="middle" class="body">chain / residue index</text>
+    <text x="330" y="726" text-anchor="middle" class="body">block adjacency</text>
+    <path d="M141 751 L141 775 L290 775 L290 790" fill="none" stroke="#E5A33A" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M330 751 L330 790" stroke="#7650A2" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+    <!-- geometry branch -->
+    <rect x="69" y="799" width="144" height="80" rx="10" fill="#E9F5EE" stroke="#5FAE83"/>
+    <text x="141" y="829" text-anchor="middle" class="body">noisy frames X<tspan baseline-shift="sub" font-size="11">t</tspan></text>
+    <text x="141" y="855" text-anchor="middle" class="body">previous X̂<tspan baseline-shift="sub" font-size="11">0</tspan></text>
+    <rect x="257" y="799" width="145" height="80" rx="10" fill="#F2ECF8" stroke="#9D80BA"/>
+    <text x="330" y="829" text-anchor="middle" class="body">t1d / t2d</text>
+    <text x="330" y="855" text-anchor="middle" class="body">geometry features</text>
+    <path d="M213 839 L247 839" stroke="#30343B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- init output -->
+    <path d="M141 884 L141 908 L235 908" fill="none" stroke="#198754" stroke-width="2"/>
+    <path d="M330 884 L330 908 L235 908" fill="none" stroke="#7650A2" stroke-width="2"/>
+    <path d="M235 908 L235 922" stroke="#30343B" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="235" y="943" text-anchor="middle" class="math">M<tspan baseline-shift="sub" font-size="13">0</tspan>, Z<tspan baseline-shift="sub" font-size="13">0</tspan>, S<tspan baseline-shift="sub" font-size="13">0</tspan>, X<tspan baseline-shift="sub" font-size="13">t</tspan></text>
+
+    <!-- PANEL C: denoising block -->
+    <text x="470" y="325" class="panel">C</text>
+    <text x="523" y="322" class="label">Three-track denoising block</text>
+    <rect x="480" y="355" width="985" height="596" rx="14" fill="none" stroke="#7650A2" stroke-width="2" stroke-dasharray="7 6"/>
+    <rect x="1268" y="372" width="164" height="34" rx="17" fill="#F2ECF8"/>
+    <text x="1350" y="395" text-anchor="middle" class="small" fill="#7650A2">IterBlock × N</text>
+
+    <!-- incoming dashed connectors from B -->
+    <path d="M379 609 C454 609 461 472 511 472" fill="none" stroke="#477FA8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowBlue)"/>
+    <path d="M402 839 C462 839 465 644 511 644" fill="none" stroke="#7650A2" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowPurple)"/>
+    <path d="M360 936 C470 936 470 834 511 834" fill="none" stroke="#198754" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowGreen)"/>
+
+    <!-- representation labels -->
+    <rect x="520" y="438" width="116" height="68" rx="10" fill="#E4F0F7" stroke="#6EA6C9"/>
+    <text x="578" y="466" text-anchor="middle" class="math" fill="#477FA8">M<tspan baseline-shift="sub" font-size="13">l</tspan></text>
+    <text x="578" y="490" text-anchor="middle" class="small">sequence / MSA</text>
+
+    <rect x="520" y="610" width="116" height="68" rx="10" fill="#EEE7F5" stroke="#9D80BA"/>
+    <text x="578" y="638" text-anchor="middle" class="math" fill="#7650A2">Z<tspan baseline-shift="sub" font-size="13">l</tspan></text>
+    <text x="578" y="662" text-anchor="middle" class="small">pair</text>
+
+    <rect x="520" y="793" width="116" height="82" rx="10" fill="#E2F2E9" stroke="#5FAE83"/>
+    <text x="578" y="824" text-anchor="middle" class="math" fill="#198754">X<tspan baseline-shift="sub" font-size="13">l</tspan>, S<tspan baseline-shift="sub" font-size="13">l</tspan></text>
+    <text x="578" y="850" text-anchor="middle" class="small">frames + state</text>
+
+    <!-- msa update -->
+    <path d="M641 472 L704 472" stroke="#477FA8" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+    <rect x="715" y="422" width="210" height="101" rx="12" fill="#EDF5FA" stroke="#6EA6C9" stroke-width="1.7"/>
+    <text x="820" y="454" text-anchor="middle" class="label">MSA Update</text>
+    <text x="820" y="482" text-anchor="middle" class="body">MSA attention + FFN</text>
+    <text x="820" y="507" text-anchor="middle" class="small">conditioned by Z<tspan baseline-shift="sub">l</tspan>, X<tspan baseline-shift="sub">l</tspan>, S<tspan baseline-shift="sub">l</tspan></text>
+    <path d="M930 472 L993 472" stroke="#477FA8" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+    <rect x="1004" y="438" width="116" height="68" rx="10" fill="#E4F0F7" stroke="#6EA6C9"/>
+    <text x="1062" y="479" text-anchor="middle" class="math" fill="#477FA8">M<tspan baseline-shift="sub" font-size="13">l+1</tspan></text>
+
+    <!-- outer product -->
+    <path d="M820 528 L820 562" stroke="#477FA8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <rect x="723" y="570" width="194" height="49" rx="10" fill="#F7F9FA" stroke="#A9B7C0"/>
+    <text x="820" y="601" text-anchor="middle" class="body">Outer product  M ⊗ M</text>
+    <path d="M723 594 C682 594 680 644 641 644" fill="none" stroke="#477FA8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- pair update -->
+    <path d="M641 644 L704 644" stroke="#7650A2" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+    <rect x="715" y="622" width="210" height="98" rx="12" fill="#F2ECF8" stroke="#9D80BA" stroke-width="1.7"/>
+    <text x="820" y="653" text-anchor="middle" class="label">Pair Update</text>
+    <text x="820" y="681" text-anchor="middle" class="body">row / column attention</text>
+    <text x="820" y="705" text-anchor="middle" class="small">+ outer-product + RBF(X<tspan baseline-shift="sub">l</tspan>)</text>
+    <path d="M930 671 L993 671" stroke="#7650A2" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+    <rect x="1004" y="637" width="116" height="68" rx="10" fill="#EEE7F5" stroke="#9D80BA"/>
+    <text x="1062" y="678" text-anchor="middle" class="math" fill="#7650A2">Z<tspan baseline-shift="sub" font-size="13">l+1</tspan></text>
+
+    <!-- structure update -->
+    <path d="M641 834 L704 834" stroke="#198754" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <rect x="715" y="773" width="267" height="123" rx="12" fill="#E9F5EE" stroke="#5FAE83" stroke-width="1.7"/>
+    <text x="848" y="807" text-anchor="middle" class="label">SE(3)-Transformer</text>
+    <text x="848" y="837" text-anchor="middle" class="body">node: M<tspan baseline-shift="sub" font-size="11">l+1</tspan> + S<tspan baseline-shift="sub" font-size="11">l</tspan></text>
+    <text x="848" y="864" text-anchor="middle" class="body">edge: Z<tspan baseline-shift="sub" font-size="11">l+1</tspan> + geometry</text>
+    <text x="848" y="887" text-anchor="middle" class="small">predict ΔR<tspan baseline-shift="sub">l</tspan>, ΔT<tspan baseline-shift="sub">l</tspan>, torsions</text>
+
+    <!-- cross-track arrows -->
+    <path d="M1062 512 C1062 735 963 748 934 767" fill="none" stroke="#477FA8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path d="M1062 711 C1062 746 1005 754 967 776" fill="none" stroke="#7650A2" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+    <!-- frame update -->
+    <path d="M987 834 L1048 834" stroke="#198754" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <rect x="1059" y="785" width="160" height="98" rx="12" fill="#F1FAF5" stroke="#5FAE83"/>
+    <text x="1139" y="817" text-anchor="middle" class="label">Frame Update</text>
+    <text x="1139" y="846" text-anchor="middle" class="small">R<tspan baseline-shift="sub">l+1</tspan> = ΔR<tspan baseline-shift="sub">l</tspan>R<tspan baseline-shift="sub">l</tspan></text>
+    <text x="1139" y="869" text-anchor="middle" class="small">T<tspan baseline-shift="sub">l+1</tspan> = T<tspan baseline-shift="sub">l</tspan> + ΔT<tspan baseline-shift="sub">l</tspan></text>
+    <path d="M1224 834 L1271 834" stroke="#198754" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+    <rect x="1282" y="793" width="143" height="82" rx="10" fill="#E2F2E9" stroke="#5FAE83"/>
+    <text x="1353" y="826" text-anchor="middle" class="math" fill="#198754">X<tspan baseline-shift="sub" font-size="13">l+1</tspan>, S<tspan baseline-shift="sub" font-size="13">l+1</tspan></text>
+    <text x="1353" y="852" text-anchor="middle" class="small">updated frames</text>
+
+    <!-- block output -->
+    <path d="M1353 879 L1353 912" stroke="#198754" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <text x="1353" y="937" text-anchor="middle" class="math" fill="#198754">final block → X̂<tspan baseline-shift="sub" font-size="13">0</tspan><tspan baseline-shift="super" font-size="12">t</tspan></text>
+
+    <!-- minimal legend -->
+    <rect x="500" y="966" width="12" height="12" rx="2" fill="#6EA6C9"/><text x="520" y="977" class="small">sequence / MSA</text>
+    <rect x="670" y="966" width="12" height="12" rx="2" fill="#9D80BA"/><text x="690" y="977" class="small">pair</text>
+    <rect x="760" y="966" width="12" height="12" rx="2" fill="#5FAE83"/><text x="780" y="977" class="small">structure</text>
+    <rect x="882" y="966" width="12" height="12" rx="2" fill="#E5A33A"/><text x="902" y="977" class="small">conditioning / diffusion</text>
+  </g>
+</svg>

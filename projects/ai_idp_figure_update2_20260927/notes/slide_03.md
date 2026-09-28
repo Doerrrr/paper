@@ -1,0 +1,1 @@
+在概念统一后再看整个 AI–IDP 研究链。GOOSE 主要做性质约束下的序列生成；STARLING 和 IDPFold 做 sequence 到 ensemble；LLPSense 处理 sequence、environment 与 LLPS 行为；binder 和 interface peptide 工作进一步走向功能分子设计。这里并不是说六篇论文已经组成完整端到端系统，而是把它们放到同一张地图上，后文分别检查三个连接是否成立：生成是否可信、ensemble 是否增加功能信息、以及设计是否得到真实实验验证。

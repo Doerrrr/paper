@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 45 1280 340" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 230 C 220 160 420 385 700 215 C 980 45 1080 280 1280 325" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.055" />
+</g>
+<g id="shape-31" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:31">
+<g id="shape-28" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:28">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-29" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:29" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-30" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:30" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">12</text>
+</g>
+</g>
+<g id="shape-32" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:32" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">柔性 IDR 靶标的 binder 设计：方法、证据与边界</text>
+</g>
+<g id="shape-33" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:33" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-34" data-pptx-object="shape" data-pptx-frame="64.32 120.96 609.6 475.2" data-pptx-prst="rect" data-pptx-source-ref="slide:34" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 673.92 120.96 L 673.92 596.16 L 64.32 596.16 Z" fill="#FFFFFF" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-35" data-pptx-object="picture" data-pptx-frame="84 139 570 380" data-pptx-source-ref="slide:35">
+<image data-pptx-object="picture" data-pptx-frame="84 139 570 380" href="../images/figure1_style_flexible_target_RFdiffusion.png" x="84" y="139" width="570" height="380" preserveAspectRatio="xMidYMid meet" />
+</g>
+<g id="shape-36" data-pptx-object="shape" data-pptx-frame="77.76 555.84 582.72 14.57" data-pptx-prst="rect" data-pptx-source-ref="slide:36" data-pptx-semantic-object="shape">
+<path d="M 77.76 555.84 L 660.48 555.84 L 660.48 570.41 L 77.76 570.41 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="566.61" text-anchor="start" xml:space="preserve" font-size="12.67" fill="#5C6E63">Figure 1｜Flexible-target RFdiffusion 的条件输入与三轨去噪网络（重绘）</text>
+</g>
+<g id="shape-37" data-pptx-object="shape" data-pptx-frame="696 124.8 520.32 49.73" data-pptx-prst="rect" data-pptx-source-ref="slide:37" data-pptx-semantic-object="shape">
+<path d="M 696 124.8 L 1216.32 124.8 L 1216.32 174.53 L 696 174.53 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="696" y="138.97" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold"><tspan>核心思路</tspan><tspan x="696" dy="24.8" font-size="18" fill="#153A2A" font-weight="normal">联合生成 target 结合构象与 binder 主链。</tspan></text>
+</g>
+<g id="shape-38" data-pptx-object="shape" data-pptx-frame="696 240.73 520.32 75.8" data-pptx-prst="rect" data-pptx-source-ref="slide:38" data-pptx-semantic-object="shape">
+<path d="M 696 240.73 L 1216.32 240.73 L 1216.32 316.53 L 696 316.53 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="696" y="254.9" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold"><tspan>创新点 1｜Sequence-input RFdiffusion</tspan><tspan x="696" dy="24.8" font-size="18" fill="#153A2A" font-weight="normal">不提供 target 三维坐标，仅输入靶序列；</tspan><tspan x="696" dy="23.4" font-size="18" fill="#153A2A" font-weight="normal">target 与 binder 在扩散过程中共同成形。</tspan></text>
+</g>
+<g id="shape-39" data-pptx-object="shape" data-pptx-frame="696 382.73 520.32 73.13" data-pptx-prst="rect" data-pptx-source-ref="slide:39">
+
+<path d="M 696 382.73 L 1216.32 382.73 L 1216.32 455.87 L 696 455.87 Z" fill="none" />
+
+
+<text x="696" y="396.9" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">创新点 2｜二级结构条件</text>
+<text x="696" y="421.7" text-anchor="start" xml:space="preserve" font-size="18" fill="#153A2A"><tspan>可指定 helix、β-strand 或 loop，</tspan><tspan x="696" dy="23.4">但不固定 target 的精确三维坐标。</tspan></text>
+</g>
+<g id="shape-40" data-pptx-object="shape" data-pptx-frame="696 522.07 520.32 73.13" data-pptx-prst="rect" data-pptx-source-ref="slide:40">
+
+<path d="M 696 522.07 L 1216.32 522.07 L 1216.32 595.2 L 696 595.2 Z" fill="none" />
+
+
+<text x="696" y="536.23" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold">创新点 3｜Two-sided partial diffusion</text>
+<text x="696" y="561.03" text-anchor="start" xml:space="preserve" font-size="18" fill="#153A2A"><tspan>对 target 与 binder 同时部分加噪，</tspan><tspan x="696" dy="23.4">在初始命中附近共同优化结合界面。</tspan></text>
+</g></svg>

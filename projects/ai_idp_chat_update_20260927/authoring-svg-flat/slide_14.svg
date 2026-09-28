@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 170 1280 220" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 350 C 260 170 430 390 720 320 C 1010 250 1080 190 1280 330" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.04" />
+</g>
+<g id="shape-57" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:57">
+<g id="shape-54" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:54">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-55" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:55" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-56" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:56" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">14</text>
+</g>
+</g>
+<g id="shape-58" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:58" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">从六篇论文得到的证据、缺口与可做任务</text>
+</g>
+<g id="shape-59" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:59" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-60" data-pptx-object="shape" data-pptx-frame="64.32 120.96 1152 40.32" data-pptx-prst="rect" data-pptx-source-ref="slide:60" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 1216.32 120.96 L 1216.32 161.28 L 64.32 161.28 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-61" data-pptx-object="shape" data-pptx-frame="77.76 127.68 159.36 26.88" data-pptx-prst="rect" data-pptx-source-ref="slide:61" data-pptx-semantic-object="shape">
+<path d="M 77.76 127.68 L 237.12 127.68 L 237.12 154.56 L 77.76 154.56 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="141.85" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">研究环节</text>
+</g>
+<g id="shape-62" data-pptx-object="shape" data-pptx-frame="256.32 127.68 157.44 26.88" data-pptx-prst="rect" data-pptx-source-ref="slide:62" data-pptx-semantic-object="shape">
+<path d="M 256.32 127.68 L 413.76 127.68 L 413.76 154.56 L 256.32 154.56 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="256.32" y="141.85" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">代表工作</text>
+</g>
+<g id="shape-63" data-pptx-object="shape" data-pptx-frame="432.96 127.68 245.76 26.88" data-pptx-prst="rect" data-pptx-source-ref="slide:63" data-pptx-semantic-object="shape">
+<path d="M 432.96 127.68 L 678.72 127.68 L 678.72 154.56 L 432.96 154.56 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="432.96" y="141.85" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">已经证明</text>
+</g>
+<g id="shape-64" data-pptx-object="shape" data-pptx-frame="697.92 127.68 232.32 26.88" data-pptx-prst="rect" data-pptx-source-ref="slide:64" data-pptx-semantic-object="shape">
+<path d="M 697.92 127.68 L 930.24 127.68 L 930.24 154.56 L 697.92 154.56 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="697.92" y="141.85" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">仍未证明</text>
+</g>
+<g id="shape-65" data-pptx-object="shape" data-pptx-frame="949.44 127.68 261.12 26.88" data-pptx-prst="rect" data-pptx-source-ref="slide:65" data-pptx-semantic-object="shape">
+<path d="M 949.44 127.68 L 1210.56 127.68 L 1210.56 154.56 L 949.44 154.56 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="949.44" y="141.85" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">可做任务</text>
+</g>
+<g id="shape-66" data-pptx-object="shape" data-pptx-frame="64.32 161.28 1152 82.56" data-pptx-prst="rect" data-pptx-source-ref="slide:66" data-pptx-semantic-object="shape">
+<path d="M 64.32 161.28 L 1216.32 161.28 L 1216.32 243.84 L 64.32 243.84 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-67" data-pptx-object="shape" data-pptx-frame="77.76 173.76 155.52 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:67" data-pptx-semantic-object="shape">
+<path d="M 77.76 173.76 L 233.28 173.76 L 233.28 231.36 L 77.76 231.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="187.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" font-weight="bold">性质 → 序列</text>
+</g>
+<g id="shape-68" data-pptx-object="shape" data-pptx-frame="256.32 173.76 153.6 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:68" data-pptx-semantic-object="shape">
+<path d="M 256.32 173.76 L 409.92 173.76 L 409.92 231.36 L 256.32 231.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="256.32" y="186.79" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A">GOOSE</text>
+</g>
+<g id="shape-69" data-pptx-object="shape" data-pptx-frame="432.96 173.76 241.92 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:69" data-pptx-semantic-object="shape">
+<path d="M 432.96 173.76 L 674.88 173.76 L 674.88 231.36 L 432.96 231.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="432.96" y="187.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.84"><tspan><tspan>可按长度、电荷、疏水性等性质生</tspan></tspan><tspan data-paragraph-line-break="1">成多样 IDR 序列</tspan></text>
+</g>
+<g id="shape-70" data-pptx-object="shape" data-pptx-frame="697.92 173.76 228.48 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:70" data-pptx-semantic-object="shape">
+<path d="M 697.92 173.76 L 926.4 173.76 L 926.4 231.36 L 697.92 231.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="697.92" y="187.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">目标性质是否转化为真实功能</text>
+</g>
+<g id="shape-71" data-pptx-object="shape" data-pptx-frame="949.44 173.76 257.28 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:71" data-pptx-semantic-object="shape">
+<path d="M 949.44 173.76 L 1206.72 173.76 L 1206.72 231.36 L 949.44 231.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="949.44" y="187.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D">加入 ensemble 或功能奖励</text>
+</g>
+<g id="shape-72" data-pptx-object="shape" data-pptx-frame="64.32 243.84 1152 82.56" data-pptx-prst="rect" data-pptx-source-ref="slide:72" data-pptx-semantic-object="shape">
+<path d="M 64.32 243.84 L 1216.32 243.84 L 1216.32 326.4 L 64.32 326.4 Z" fill="#FFFFFF" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-73" data-pptx-object="shape" data-pptx-frame="77.76 256.32 155.52 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:73" data-pptx-semantic-object="shape">
+<path d="M 77.76 256.32 L 233.28 256.32 L 233.28 313.92 L 77.76 313.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="269.92" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" font-weight="bold">序列 → ensemble</text>
+</g>
+<g id="shape-74" data-pptx-object="shape" data-pptx-frame="256.32 256.32 153.6 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:74" data-pptx-semantic-object="shape">
+<path d="M 256.32 256.32 L 409.92 256.32 L 409.92 313.92 L 256.32 313.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="256.32" y="269.35" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A">STARLING / IDPFold</text>
+</g>
+<g id="shape-75" data-pptx-object="shape" data-pptx-frame="432.96 256.32 241.92 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:75" data-pptx-semantic-object="shape">
+<path d="M 432.96 256.32 L 674.88 256.32 L 674.88 313.92 L 432.96 313.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="432.96" y="269.92" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.84"><tspan><tspan>可快速生成大量构象，覆盖全局与</tspan></tspan><tspan data-paragraph-line-break="1">局部统计</tspan></text>
+</g>
+<g id="shape-76" data-pptx-object="shape" data-pptx-frame="697.92 256.32 228.48 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:76" data-pptx-semantic-object="shape">
+<path d="M 697.92 256.32 L 926.4 256.32 L 926.4 313.92 L 697.92 313.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="697.92" y="269.92" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">真实平衡权重、动力学及跨条件迁移</text>
+</g>
+<g id="shape-77" data-pptx-object="shape" data-pptx-frame="949.44 256.32 257.28 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:77" data-pptx-semantic-object="shape">
+<path d="M 949.44 256.32 L 1206.72 256.32 L 1206.72 313.92 L 949.44 313.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="949.44" y="269.92" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D">统一数据与实验约束下的模型评测</text>
+</g>
+<g id="shape-78" data-pptx-object="shape" data-pptx-frame="64.32 326.4 1152 82.56" data-pptx-prst="rect" data-pptx-source-ref="slide:78" data-pptx-semantic-object="shape">
+<path d="M 64.32 326.4 L 1216.32 326.4 L 1216.32 408.96 L 64.32 408.96 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-79" data-pptx-object="shape" data-pptx-frame="77.76 338.88 155.52 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:79" data-pptx-semantic-object="shape">
+<path d="M 77.76 338.88 L 233.28 338.88 L 233.28 396.48 L 77.76 396.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="352.48" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" font-weight="bold">环境 → LLPS</text>
+</g>
+<g id="shape-80" data-pptx-object="shape" data-pptx-frame="256.32 338.88 153.6 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:80" data-pptx-semantic-object="shape">
+<path d="M 256.32 338.88 L 409.92 338.88 L 409.92 396.48 L 256.32 396.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="256.32" y="351.91" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A">LLPSense</text>
+</g>
+<g id="shape-81" data-pptx-object="shape" data-pptx-frame="432.96 338.88 241.92 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:81" data-pptx-semantic-object="shape">
+<path d="M 432.96 338.88 L 674.88 338.88 L 674.88 396.48 L 432.96 396.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="432.96" y="352.48" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">环境信息有助于预测相分离相关行为</text>
+</g>
+<g id="shape-82" data-pptx-object="shape" data-pptx-frame="697.92 338.88 228.48 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:82" data-pptx-semantic-object="shape">
+<path d="M 697.92 338.88 L 926.4 338.88 L 926.4 396.48 L 697.92 396.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="697.92" y="352.48" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.84"><tspan><tspan>ensemble 是否提供额外且可迁</tspan></tspan><tspan data-paragraph-line-break="1">移的信息</tspan></text>
+</g>
+<g id="shape-83" data-pptx-object="shape" data-pptx-frame="949.44 338.88 257.28 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:83" data-pptx-semantic-object="shape">
+<path d="M 949.44 338.88 L 1206.72 338.88 L 1206.72 396.48 L 949.44 396.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="949.44" y="352.48" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D">M1 / M2 / M3 严格对照与跨环境测试</text>
+</g>
+<g id="shape-84" data-pptx-object="shape" data-pptx-frame="64.32 408.96 1152 82.56" data-pptx-prst="rect" data-pptx-source-ref="slide:84" data-pptx-semantic-object="shape">
+<path d="M 64.32 408.96 L 1216.32 408.96 L 1216.32 491.52 L 64.32 491.52 Z" fill="#FFFFFF" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-85" data-pptx-object="shape" data-pptx-frame="77.76 421.44 155.52 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:85" data-pptx-semantic-object="shape">
+<path d="M 77.76 421.44 L 233.28 421.44 L 233.28 479.04 L 77.76 479.04 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="435.04" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" font-weight="bold">IDR → binder</text>
+</g>
+<g id="shape-86" data-pptx-object="shape" data-pptx-frame="256.32 421.44 153.6 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:86" data-pptx-semantic-object="shape">
+<path d="M 256.32 421.44 L 409.92 421.44 L 409.92 479.04 L 256.32 479.04 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="256.32" y="434.47" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.01"><tspan><tspan>Diffusing protein </tspan></tspan><tspan data-paragraph-line-break="1">binders</tspan></text>
+</g>
+<g id="shape-87" data-pptx-object="shape" data-pptx-frame="432.96 421.44 241.92 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:87" data-pptx-semantic-object="shape">
+<path d="M 432.96 421.44 L 674.88 421.44 L 674.88 479.04 L 432.96 479.04 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="432.96" y="435.04" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.84"><tspan><tspan>可生成稳定 binder 并识别兼容结</tspan></tspan><tspan data-paragraph-line-break="1">合构象</tspan></text>
+</g>
+<g id="shape-88" data-pptx-object="shape" data-pptx-frame="697.92 421.44 228.48 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:88" data-pptx-semantic-object="shape">
+<path d="M 697.92 421.44 L 926.4 421.44 L 926.4 479.04 L 697.92 479.04 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="697.92" y="435.04" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">是否覆盖多状态与动态靶向需求</text>
+</g>
+<g id="shape-89" data-pptx-object="shape" data-pptx-frame="949.44 421.44 257.28 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:89" data-pptx-semantic-object="shape">
+<path d="M 949.44 421.44 L 1206.72 421.44 L 1206.72 479.04 L 949.44 479.04 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="949.44" y="435.04" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D">多构象条件设计与鲁棒性筛选</text>
+</g>
+<g id="shape-90" data-pptx-object="shape" data-pptx-frame="64.32 491.52 1152 82.56" data-pptx-prst="rect" data-pptx-source-ref="slide:90" data-pptx-semantic-object="shape">
+<path d="M 64.32 491.52 L 1216.32 491.52 L 1216.32 574.08 L 64.32 574.08 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-91" data-pptx-object="shape" data-pptx-frame="77.76 504 155.52 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:91" data-pptx-semantic-object="shape">
+<path d="M 77.76 504 L 233.28 504 L 233.28 561.6 L 77.76 561.6 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="77.76" y="517.6" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" font-weight="bold">凝聚体 → 定位肽</text>
+</g>
+<g id="shape-92" data-pptx-object="shape" data-pptx-frame="256.32 504 153.6 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:92" data-pptx-semantic-object="shape">
+<path d="M 256.32 504 L 409.92 504 L 409.92 561.6 L 256.32 561.6 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="256.32" y="517.03" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="19.01"><tspan><tspan>interface peptide </tspan></tspan><tspan data-paragraph-line-break="1">design</tspan></text>
+</g>
+<g id="shape-93" data-pptx-object="shape" data-pptx-frame="432.96 504 241.92 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:93" data-pptx-semantic-object="shape">
+<path d="M 432.96 504 L 674.88 504 L 674.88 561.6 L 432.96 561.6 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="432.96" y="517.6" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">可设计界面富集的短肽分子</text>
+</g>
+<g id="shape-94" data-pptx-object="shape" data-pptx-frame="697.92 504 228.48 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:94" data-pptx-semantic-object="shape">
+<path d="M 697.92 504 L 926.4 504 L 926.4 561.6 L 697.92 561.6 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="697.92" y="517.6" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">跨凝聚体泛化与机制可解释性</text>
+</g>
+<g id="shape-95" data-pptx-object="shape" data-pptx-frame="949.44 504 257.28 57.6" data-pptx-prst="rect" data-pptx-source-ref="slide:95" data-pptx-semantic-object="shape">
+<path d="M 949.44 504 L 1206.72 504 L 1206.72 561.6 L 949.44 561.6 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="949.44" y="517.6" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D">环境依赖的功能设计与多目标设计</text>
+</g>
+<g id="shape-96" data-pptx-object="shape" data-pptx-frame="64.32 591.36 1152 57.89" data-pptx-prst="rect" data-pptx-source-ref="slide:96" data-pptx-semantic-object="shape">
+<path d="M 64.32 591.36 L 1216.32 591.36 L 1216.32 649.25 L 64.32 649.25 Z" fill="#EAF4EE" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-97" data-pptx-object="shape" data-pptx-frame="64.32 591.36 5.76 57.89" data-pptx-prst="rect" data-pptx-source-ref="slide:97" data-pptx-semantic-object="shape">
+<path d="M 64.32 591.36 L 70.08 591.36 L 70.08 649.25 L 64.32 649.25 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-98" data-pptx-object="shape" data-pptx-frame="93.12 608.64 1094.4 23.33" data-pptx-prst="rect" data-pptx-source-ref="slide:98" data-pptx-semantic-object="shape">
+<path d="M 93.12 608.64 L 1187.52 608.64 L 1187.52 631.97 L 93.12 631.97 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="93.12" y="624.51" text-anchor="start" xml:space="preserve" font-size="18.67" fill="#153A2A">综合判断：论文已解决局部任务，但 “ensemble → function” 的可迁移连接仍是最清楚的研究缺口。</text>
+</g></svg>
