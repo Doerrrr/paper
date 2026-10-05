@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="250" viewBox="0 0 1600 250">
+  <defs>
+    <style>
+      .font { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; }
+      .paper { font-size: 19px; font-weight: 500; fill: #007A43; }
+      .stage { font-size: 24px; font-weight: 700; fill: #183D30; }
+      .question { font-size: 17px; font-weight: 700; fill: #C7651B; }
+      .foot { font-size: 14px; font-weight: 500; fill: #7A8C83; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="250" fill="#FFFFFF"/>
+
+  <!-- Subtle footer wave, matching the existing deck -->
+  <path d="M0,224 C170,180 300,190 430,220 C590,255 750,250 900,218 C1070,182 1210,180 1360,211 C1460,232 1535,226 1600,205 L1600,250 L0,250 Z"
+        fill="#F0F7F3"/>
+
+  <!-- Research-map baseline: organizational line, not a causal arrow -->
+  <line x1="72" y1="112" x2="636" y2="112" stroke="#A4BFB1" stroke-width="4"/>
+  <line x1="684" y1="112" x2="906" y2="112" stroke="#E58A38" stroke-width="4" stroke-dasharray="11 9"/>
+  <line x1="954" y1="112" x2="1528" y2="112" stroke="#A4BFB1" stroke-width="4"/>
+
+  <!-- Method / paper names -->
+  <g class="font">
+    <text x="72" y="39" text-anchor="middle" class="paper">GOOSE</text>
+    <text x="350" y="39" text-anchor="middle" class="paper">STARLING / IDPFold</text>
+    <text x="660" y="39" text-anchor="middle" class="paper">Forward model</text>
+    <text x="930" y="39" text-anchor="middle" class="paper">LLPSense</text>
+    <text x="1220" y="39" text-anchor="middle" class="paper">IDR binder</text>
+    <text x="1520" y="39" text-anchor="middle" class="paper">Interface peptide</text>
+
+    <text x="795" y="82" text-anchor="middle" class="question">待验证：ensemble 是否提供额外信息？</text>
+  </g>
+
+  <!-- Nodes -->
+  <g fill="#008247">
+    <circle cx="72" cy="112" r="29"/>
+    <circle cx="350" cy="112" r="29"/>
+    <circle cx="660" cy="112" r="29"/>
+    <circle cx="930" cy="112" r="29"/>
+    <circle cx="1220" cy="112" r="29"/>
+    <circle cx="1520" cy="112" r="29"/>
+  </g>
+
+  <!-- Stage labels -->
+  <g class="font">
+    <text x="72" y="177" text-anchor="middle" class="stage">序列设计</text>
+    <text x="350" y="177" text-anchor="middle" class="stage">构象生成</text>
+    <text x="660" y="177" text-anchor="middle" class="stage">ensemble验证</text>
+    <text x="930" y="177" text-anchor="middle" class="stage">功能预测 / LLPS</text>
+    <text x="1220" y="177" text-anchor="middle" class="stage">结合态设计</text>
+    <text x="1520" y="177" text-anchor="middle" class="stage">工程应用</text>
+
+    <text x="800" y="232" text-anchor="middle" class="foot">研究主题由左至右排列，不表示各论文已形成严格上下游</text>
+  </g>
+</svg>

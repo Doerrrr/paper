@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 150 1280 240" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 390 C 250 150 430 380 720 330 C 1010 280 1080 180 1280 310" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.045" />
+</g>
+<g id="shape-36" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:36">
+<g id="shape-33" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:33">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-34" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:34" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-35" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:35" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">11</text>
+</g>
+</g>
+<g id="shape-37" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:37" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">如何验证 ensemble 是否提供额外信息</text>
+</g>
+<g id="shape-38" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:38" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-39" data-pptx-object="shape" data-pptx-frame="64.32 124.8 590.4 23.15" data-pptx-prst="rect" data-pptx-source-ref="slide:39" data-pptx-semantic-object="shape">
+<path d="M 64.32 124.8 L 654.72 124.8 L 654.72 147.95 L 64.32 147.95 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="142.37" text-anchor="start" xml:space="preserve" font-size="20.67" fill="#007A3D" font-weight="bold">一、固定数据与划分，只改变模型输入</text>
+</g>
+<g id="shape-40" data-pptx-object="shape" data-pptx-frame="64.32 165.12 590.4 68.41" data-pptx-prst="rect" data-pptx-source-ref="slide:40" data-pptx-semantic-object="shape">
+<path d="M 64.32 165.12 L 654.72 165.12 L 654.72 233.53 L 64.32 233.53 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-41" data-pptx-object="shape" data-pptx-frame="64.32 165.12 5.28 68.41" data-pptx-prst="rect" data-pptx-source-ref="slide:41" data-pptx-semantic-object="shape">
+<path d="M 64.32 165.12 L 69.6 165.12 L 69.6 233.53 L 64.32 233.53 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-42" data-pptx-object="shape" data-pptx-frame="85.44 177.6 561.6 43.45" data-pptx-prst="rect" data-pptx-source-ref="slide:42" data-pptx-semantic-object="shape">
+<path d="M 85.44 177.6 L 647.04 177.6 L 647.04 221.05 L 85.44 221.05 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="192.33" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="22.8"><tspan><tspan>M1　仅序列　　sequence → LLPS</tspan></tspan><tspan font-size="16" fill="#5C6E63"><tspan>回答：序列本身能做到什么程度？</tspan></tspan></text>
+</g>
+<g id="shape-43" data-pptx-object="shape" data-pptx-frame="64.32 248.89 590.4 68.41" data-pptx-prst="rect" data-pptx-source-ref="slide:43" data-pptx-semantic-object="shape">
+<path d="M 64.32 248.89 L 654.72 248.89 L 654.72 317.31 L 64.32 317.31 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-44" data-pptx-object="shape" data-pptx-frame="64.32 248.89 5.28 68.41" data-pptx-prst="rect" data-pptx-source-ref="slide:44" data-pptx-semantic-object="shape">
+<path d="M 64.32 248.89 L 69.6 248.89 L 69.6 317.31 L 64.32 317.31 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-45" data-pptx-object="shape" data-pptx-frame="85.44 261.37 561.6 43.45" data-pptx-prst="rect" data-pptx-source-ref="slide:45" data-pptx-semantic-object="shape">
+<path d="M 85.44 261.37 L 647.04 261.37 L 647.04 304.83 L 85.44 304.83 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="276.11" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="22.8"><tspan><tspan>M2　序列 + 环境　　sequence + condition → LLPS</tspan></tspan><tspan font-size="16" fill="#5C6E63"><tspan>回答：盐、温度、浓度等条件是否带来增益？</tspan></tspan></text>
+</g>
+<g id="shape-46" data-pptx-object="shape" data-pptx-frame="64.32 332.67 590.4 68.41" data-pptx-prst="rect" data-pptx-source-ref="slide:46" data-pptx-semantic-object="shape">
+<path d="M 64.32 332.67 L 654.72 332.67 L 654.72 401.08 L 64.32 401.08 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-47" data-pptx-object="shape" data-pptx-frame="64.32 332.67 5.28 68.41" data-pptx-prst="rect" data-pptx-source-ref="slide:47" data-pptx-semantic-object="shape">
+<path d="M 64.32 332.67 L 69.6 332.67 L 69.6 401.08 L 64.32 401.08 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-48" data-pptx-object="shape" data-pptx-frame="85.44 345.15 561.6 43.45" data-pptx-prst="rect" data-pptx-source-ref="slide:48" data-pptx-semantic-object="shape">
+<path d="M 85.44 345.15 L 647.04 345.15 L 647.04 388.6 L 85.44 388.6 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="359.88" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="22.8"><tspan><tspan>M3　序列 + 环境 + ensemble　　加入构象统计特征</tspan></tspan><tspan font-size="16" fill="#5C6E63"><tspan>回答：在公平对照下，ensemble 是否仍提供额外信息？</tspan></tspan></text>
+</g>
+<g id="shape-49" data-pptx-object="shape" data-pptx-frame="696 124.8 520.32 23.15" data-pptx-prst="rect" data-pptx-source-ref="slide:49" data-pptx-semantic-object="shape">
+<path d="M 696 124.8 L 1216.32 124.8 L 1216.32 147.95 L 696 147.95 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="696" y="142.37" text-anchor="start" xml:space="preserve" font-size="20.67" fill="#007A3D" font-weight="bold">二、避免“看起来提升”的四项检查</text>
+</g>
+<g id="shape-50" data-pptx-object="shape" data-pptx-frame="696 172.8 4.8 30.4" data-pptx-prst="rect" data-pptx-source-ref="slide:50" data-pptx-semantic-object="shape">
+<path d="M 696 172.8 L 700.8 172.8 L 700.8 203.2 L 696 203.2 Z" fill="#7FA992" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-51" data-pptx-object="shape" data-pptx-frame="711.36 167.04 504.96 40" data-pptx-prst="rect" data-pptx-source-ref="slide:51" data-pptx-semantic-object="shape">
+<path d="M 711.36 167.04 L 1216.32 167.04 L 1216.32 207.04 L 711.36 207.04 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="711.36" y="181.21" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.66"><tspan><tspan>数据划分</tspan></tspan><tspan fill="#153A2A"><tspan>按蛋白而不是按样本随机划分</tspan></tspan></text>
+</g>
+<g id="shape-52" data-pptx-object="shape" data-pptx-frame="696 227.2 4.8 30.4" data-pptx-prst="rect" data-pptx-source-ref="slide:52" data-pptx-semantic-object="shape">
+<path d="M 696 227.2 L 700.8 227.2 L 700.8 257.6 L 696 257.6 Z" fill="#7FA992" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-53" data-pptx-object="shape" data-pptx-frame="711.36 221.44 504.96 40" data-pptx-prst="rect" data-pptx-source-ref="slide:53" data-pptx-semantic-object="shape">
+<path d="M 711.36 221.44 L 1216.32 221.44 L 1216.32 261.44 L 711.36 261.44 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="711.36" y="235.61" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.66"><tspan><tspan>跨环境</tspan></tspan><tspan fill="#153A2A"><tspan>训练条件之外测试泛化</tspan></tspan></text>
+</g>
+<g id="shape-54" data-pptx-object="shape" data-pptx-frame="696 281.6 4.8 30.4" data-pptx-prst="rect" data-pptx-source-ref="slide:54" data-pptx-semantic-object="shape">
+<path d="M 696 281.6 L 700.8 281.6 L 700.8 312 L 696 312 Z" fill="#7FA992" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-55" data-pptx-object="shape" data-pptx-frame="711.36 275.84 504.96 40" data-pptx-prst="rect" data-pptx-source-ref="slide:55" data-pptx-semantic-object="shape">
+<path d="M 711.36 275.84 L 1216.32 275.84 L 1216.32 315.84 L 711.36 315.84 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="711.36" y="290.01" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.66"><tspan><tspan>消融实验</tspan></tspan><tspan fill="#153A2A"><tspan>去掉 Rg、接触或局部结构特征</tspan></tspan></text>
+</g>
+<g id="shape-56" data-pptx-object="shape" data-pptx-frame="696 336 4.8 30.4" data-pptx-prst="rect" data-pptx-source-ref="slide:56" data-pptx-semantic-object="shape">
+<path d="M 696 336 L 700.8 336 L 700.8 366.4 L 696 366.4 Z" fill="#7FA992" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-57" data-pptx-object="shape" data-pptx-frame="711.36 330.24 504.96 40" data-pptx-prst="rect" data-pptx-source-ref="slide:57" data-pptx-semantic-object="shape">
+<path d="M 711.36 330.24 L 1216.32 330.24 L 1216.32 370.24 L 711.36 370.24 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="711.36" y="344.41" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.66"><tspan><tspan>跨生成器</tspan></tspan><tspan fill="#153A2A"><tspan>更换 STARLING / IDPFold / CALVADOS</tspan></tspan></text>
+</g>
+<g id="shape-58" data-pptx-object="shape" data-pptx-frame="696 390.4 4.8 30.4" data-pptx-prst="rect" data-pptx-source-ref="slide:58" data-pptx-semantic-object="shape">
+<path d="M 696 390.4 L 700.8 390.4 L 700.8 420.8 L 696 420.8 Z" fill="#7FA992" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-59" data-pptx-object="shape" data-pptx-frame="711.36 384.64 504.96 40" data-pptx-prst="rect" data-pptx-source-ref="slide:59" data-pptx-semantic-object="shape">
+<path d="M 711.36 384.64 L 1216.32 384.64 L 1216.32 424.64 L 711.36 424.64 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="711.36" y="398.81" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.66"><tspan><tspan>评价</tspan></tspan><tspan fill="#153A2A"><tspan>预测性能、校准、跨条件稳定性</tspan></tspan></text>
+</g>
+<g id="shape-60" data-pptx-object="shape" data-pptx-frame="64.32 529.92 1152 103.39" data-pptx-prst="rect" data-pptx-source-ref="slide:60" data-pptx-semantic-object="shape">
+<path d="M 64.32 529.92 L 1216.32 529.92 L 1216.32 633.31 L 64.32 633.31 Z" fill="#F7FAF8" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-61" data-pptx-object="shape" data-pptx-frame="64.32 529.92 5.76 103.39" data-pptx-prst="rect" data-pptx-source-ref="slide:61" data-pptx-semantic-object="shape">
+<path d="M 64.32 529.92 L 70.08 529.92 L 70.08 633.31 L 64.32 633.31 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-62" data-pptx-object="shape" data-pptx-frame="89.28 545.28 1102.08 72.67" data-pptx-prst="rect" data-pptx-source-ref="slide:62" data-pptx-semantic-object="shape">
+<path d="M 89.28 545.28 L 1191.36 545.28 L 1191.36 617.95 L 89.28 617.95 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="89.28" y="562.28" text-anchor="start" xml:space="preserve" font-size="20" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="24.5"><tspan><tspan>判定标准</tspan></tspan><tspan font-size="16.67"><tspan>支持：M3 在蛋白级划分、跨环境和跨生成器测试中仍稳定优于 M2。</tspan></tspan><tspan font-size="16.67" fill="#5C6E63" data-paragraph-space-before="0.17"><tspan>不支持：提升只来自数据泄漏、某个生成器偏差，或加入序列长度等简单特征后消失。</tspan></tspan></text>
+</g></svg>

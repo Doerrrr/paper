@@ -1,0 +1,4 @@
+GOOSE 主要做性质约束下的序列生成；STARLING 和 IDPFold 做 sequence 到 ensemble；LLPSense 处理 sequence、environment 与 LLPS 行为；binder 和 interface peptide 工作进一步走向功能分子设计。这里不是说六篇论文已经组成完整系统，而是把它们放到一条序列上讲一下。
+第一个问题是“生成是否可信”。模型能够生成很多外观合理的蛋白结构，并不代表这些结构会在真实条件下以明显概率存在。我们需要分别检查单个构象的几何合理性、整个ensemble的分布和权重，以及它能否解释独立实验数据。因此，这一步解决的是模型是否近似了真实的构象概率分布，而不只是生成了几张合理的结构图。
+第二个问题是“ensemble是否真的有用”。ensemble本身由sequence和environment决定，因此加入ensemble特征后预测性能提高，也可能只是重复利用了序列长度、电荷或疏水性等已有信息。需要比较sequence、sequence加environment，以及进一步加入ensemble的三组模型。只有加入ensemble后，在功能预测等等测试中仍带来稳定增益，才能说明它包含额外的功能信息。
+第三个问题是“能否走向设计”。如果前两步已经建立了sequence、ensemble和function之间的可靠关系，就可以反过来设计满足目标的IDR序列、binder或凝聚体定位肽。但设计不能只优化一个预测分数，还要考虑多个构象、不同环境、脱靶结合和聚集风险。纯计算研究可以完成候选生成和筛选，但在没有实验验证时，结论应限定为in design candidates。

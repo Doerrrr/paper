@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 170 1280 220" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 390 C 250 170 460 390 730 320 C 1000 250 1080 175 1280 330" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.045" />
+</g>
+<g id="shape-51" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:51">
+<g id="shape-48" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:48">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-49" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:49" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-50" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:50" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">5</text>
+</g>
+</g>
+<g id="shape-52" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:52" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">不同方法怎样进行公平、可复现的比较？</text>
+</g>
+<g id="shape-53" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:53" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-54" data-pptx-object="shape" data-pptx-frame="64.32 120.96 1152 51.39" data-pptx-prst="rect" data-pptx-source-ref="slide:54" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 1216.32 120.96 L 1216.32 172.35 L 64.32 172.35 Z" fill="#F7FAF8" stroke-width="1.33333" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-55" data-pptx-object="shape" data-pptx-frame="64.32 120.96 5.76 51.39" data-pptx-prst="rect" data-pptx-source-ref="slide:55" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 70.08 120.96 L 70.08 172.35 L 64.32 172.35 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-56" data-pptx-object="shape" data-pptx-frame="91.2 136.32 1098.24 20.67" data-pptx-prst="rect" data-pptx-source-ref="slide:56" data-pptx-semantic-object="shape">
+<path d="M 91.2 136.32 L 1189.44 136.32 L 1189.44 156.99 L 91.2 156.99 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="91.2" y="150.49" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#007A3D" font-weight="bold"><tspan>比较对象｜</tspan><tspan fill="#153A2A">STARLING 深度生成、快速采样　·　IDPFold 残基刚体扩散生成主链　·　CALVADOS 物理粗粒化模拟基线</tspan></text>
+</g>
+<g id="shape-57" data-pptx-object="shape" data-pptx-frame="64.32 197.31 561.6 293.76" data-pptx-prst="rect" data-pptx-source-ref="slide:57" data-pptx-semantic-object="shape">
+<path d="M 64.32 197.31 L 625.92 197.31 L 625.92 491.07 L 64.32 491.07 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-58" data-pptx-object="shape" data-pptx-frame="64.32 197.31 4.8 293.76" data-pptx-prst="rect" data-pptx-source-ref="slide:58" data-pptx-semantic-object="shape">
+<path d="M 64.32 197.31 L 69.12 197.31 L 69.12 491.07 L 64.32 491.07 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-59" data-pptx-object="shape" data-pptx-frame="85.44 208.83 519.36 24.96" data-pptx-prst="rect" data-pptx-source-ref="slide:59" data-pptx-semantic-object="shape">
+<path d="M 85.44 208.83 L 604.8 208.83 L 604.8 233.79 L 85.44 233.79 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="223.56" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#007A3D" font-weight="bold">数据设计</text>
+</g>
+<g id="shape-60" data-pptx-object="connector" data-pptx-frame="85.44 239.55 519.36 0" data-pptx-prst="line" data-pptx-source-ref="slide:60" data-pptx-semantic-object="shape">
+<path d="M 85.44 239.55 L 604.8 239.55" stroke-width="1" stroke="#C9D9CF" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-61" data-pptx-object="shape" data-pptx-frame="85.44 249.15 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:61" data-pptx-semantic-object="shape">
+<path d="M 85.44 249.15 L 604.8 249.15 L 604.8 287.12 L 85.44 287.12 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="262.18" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>公开序列与实验数据</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>记录序列、长度、温度 / pH / 离子强度与可用观测</tspan></tspan></text>
+</g>
+<g id="shape-62" data-pptx-object="shape" data-pptx-frame="85.44 296.77 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:62" data-pptx-semantic-object="shape">
+<path d="M 85.44 296.77 L 604.8 296.77 L 604.8 334.75 L 85.44 334.75 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="309.81" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>蛋白级划分</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>同一蛋白的构象不拆到不同集合</tspan></tspan></text>
+</g>
+<g id="shape-63" data-pptx-object="shape" data-pptx-frame="85.44 344.4 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:63" data-pptx-semantic-object="shape">
+<path d="M 85.44 344.4 L 604.8 344.4 L 604.8 382.37 L 85.44 382.37 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="357.43" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>同源序列隔离</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>高度相似序列归入同一集合</tspan></tspan></text>
+</g>
+<g id="shape-64" data-pptx-object="shape" data-pptx-frame="85.44 392.03 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:64" data-pptx-semantic-object="shape">
+<path d="M 85.44 392.03 L 604.8 392.03 L 604.8 430 L 85.44 430 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="405.06" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>Development set</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>确定 forward model、评分代码与参数</tspan></tspan></text>
+</g>
+<g id="shape-65" data-pptx-object="shape" data-pptx-frame="85.44 439.65 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:65" data-pptx-semantic-object="shape">
+<path d="M 85.44 439.65 L 604.8 439.65 L 604.8 477.63 L 85.44 477.63 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="85.44" y="452.69" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>Held-out test set</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>只做最终评分，不回头调参</tspan></tspan></text>
+</g>
+<g id="shape-66" data-pptx-object="shape" data-pptx-frame="654.72 197.31 561.6 293.76" data-pptx-prst="rect" data-pptx-source-ref="slide:66" data-pptx-semantic-object="shape">
+<path d="M 654.72 197.31 L 1216.32 197.31 L 1216.32 491.07 L 654.72 491.07 Z" fill="#F7FAF8" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-67" data-pptx-object="shape" data-pptx-frame="654.72 197.31 4.8 293.76" data-pptx-prst="rect" data-pptx-source-ref="slide:67" data-pptx-semantic-object="shape">
+<path d="M 654.72 197.31 L 659.52 197.31 L 659.52 491.07 L 654.72 491.07 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-68" data-pptx-object="shape" data-pptx-frame="675.84 208.83 519.36 24.96" data-pptx-prst="rect" data-pptx-source-ref="slide:68" data-pptx-semantic-object="shape">
+<path d="M 675.84 208.83 L 1195.2 208.83 L 1195.2 233.79 L 675.84 233.79 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="675.84" y="223.56" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#007A3D" font-weight="bold">公平协议</text>
+</g>
+<g id="shape-69" data-pptx-object="connector" data-pptx-frame="675.84 239.55 519.36 0" data-pptx-prst="line" data-pptx-source-ref="slide:69" data-pptx-semantic-object="shape">
+<path d="M 675.84 239.55 L 1195.2 239.55" stroke-width="1" stroke="#C9D9CF" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-70" data-pptx-object="shape" data-pptx-frame="675.84 249.15 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:70" data-pptx-semantic-object="shape">
+<path d="M 675.84 249.15 L 1195.2 249.15 L 1195.2 287.12 L 675.84 287.12 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="675.84" y="262.18" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>统一采样规模</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>相同有效构象数、相同随机种子数</tspan></tspan></text>
+</g>
+<g id="shape-71" data-pptx-object="shape" data-pptx-frame="675.84 296.77 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:71" data-pptx-semantic-object="shape">
+<path d="M 675.84 296.77 L 1195.2 296.77 L 1195.2 334.75 L 675.84 334.75 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="675.84" y="309.81" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>统一 forward model</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>同一版本、同一后处理与过滤规则</tspan></tspan></text>
+</g>
+<g id="shape-72" data-pptx-object="shape" data-pptx-frame="675.84 344.4 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:72" data-pptx-semantic-object="shape">
+<path d="M 675.84 344.4 L 1195.2 344.4 L 1195.2 382.37 L 675.84 382.37 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="675.84" y="357.43" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>Fixed-sample</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>各方法生成相同数量的有效构象</tspan></tspan></text>
+</g>
+<g id="shape-73" data-pptx-object="shape" data-pptx-frame="675.84 392.03 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:73" data-pptx-semantic-object="shape">
+<path d="M 675.84 392.03 L 1195.2 392.03 L 1195.2 430 L 675.84 430 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="675.84" y="405.06" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>Fixed-budget</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>各方法使用相同运行时间或算力</tspan></tspan></text>
+</g>
+<g id="shape-74" data-pptx-object="shape" data-pptx-frame="675.84 439.65 519.36 37.97" data-pptx-prst="rect" data-pptx-source-ref="slide:74" data-pptx-semantic-object="shape">
+<path d="M 675.84 439.65 L 1195.2 439.65 L 1195.2 477.63 L 675.84 477.63 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="675.84" y="452.69" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.22"><tspan><tspan>成本记录</tspan></tspan><tspan font-size="14.67" fill="#5C6E63"><tspan>GPU / CPU 型号、运行时间、显存、每千构象成本</tspan></tspan></text>
+</g>
+<g id="shape-75" data-pptx-object="shape" data-pptx-frame="64.32 514.11 1152 49.73" data-pptx-prst="rect" data-pptx-source-ref="slide:75" data-pptx-semantic-object="shape">
+<path d="M 64.32 514.11 L 1216.32 514.11 L 1216.32 563.84 L 64.32 563.84 Z" fill="#EAF4EE" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-76" data-pptx-object="shape" data-pptx-frame="64.32 514.11 5.76 49.73" data-pptx-prst="rect" data-pptx-source-ref="slide:76" data-pptx-semantic-object="shape">
+<path d="M 64.32 514.11 L 70.08 514.11 L 70.08 563.84 L 64.32 563.84 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-77" data-pptx-object="shape" data-pptx-frame="91.2 529.47 1098.24 19.01" data-pptx-prst="rect" data-pptx-source-ref="slide:77" data-pptx-semantic-object="shape">
+<path d="M 91.2 529.47 L 1189.44 529.47 L 1189.44 548.48 L 91.2 548.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="91.2" y="542.5" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#007A3D" font-weight="bold"><tspan>泛化分组｜</tspan><tspan fill="#153A2A">短 / 中 / 长 IDR　·　高 / 低电荷　·　扩张 / 紧缩　·　低复杂度 / 普通　·　不同离子强度与温度　·　seen / unseen</tspan></text>
+</g>
+<g id="shape-78" data-pptx-object="shape" data-pptx-frame="64.32 586.88 1152 53.79" data-pptx-prst="rect" data-pptx-source-ref="slide:78" data-pptx-semantic-object="shape">
+<path d="M 64.32 586.88 L 1216.32 586.88 L 1216.32 640.67 L 64.32 640.67 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-79" data-pptx-object="shape" data-pptx-frame="93.12 603.2 1094.4 21.15" data-pptx-prst="rect" data-pptx-source-ref="slide:79" data-pptx-semantic-object="shape">
+<path d="M 93.12 603.2 L 1187.52 603.2 L 1187.52 624.35 L 93.12 624.35 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="93.12" y="617.93" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#FFFFFF">本页结论｜benchmark 的目标不是选出一个永久最好的模型，而是在统一条件下确定不同方法的可靠范围与失败边界。</text>
+</g></svg>

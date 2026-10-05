@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="0 155 1280 275" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 0 430 C 260 155 440 395 720 350 C 1000 305 1080 190 1280 320" data-pptx-part="geometry" fill="none" stroke-width="34" stroke="#007A3D" stroke-opacity="0.045" />
+</g>
+<g id="shape-37" data-pptx-object="group" data-pptx-frame="64 657 1144 34" data-pptx-source-ref="slide:37">
+<g id="shape-34" data-pptx-object="picture" data-pptx-frame="64 658 28 28" data-pptx-source-ref="slide:34">
+<image data-pptx-object="picture" data-pptx-frame="64 658 28 28" href="../images/image1.jpg" x="64" y="658" width="28" height="28" preserveAspectRatio="none" />
+</g>
+<g id="shape-35" data-pptx-object="shape" data-pptx-frame="1174 657 34 34" data-pptx-prst="rect" data-pptx-source-ref="slide:35" data-pptx-semantic-object="shape">
+<path d="M 1174 657 L 1208 657 L 1208 691 L 1174 691 Z" fill="#007A3D" stroke="none" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-36" data-pptx-object="shape" data-pptx-frame="1181.69 667.25 18.61 23.1" data-pptx-prst="rect" data-pptx-source-ref="slide:36" data-pptx-semantic-object="shape">
+<path d="M 1181.69 667.25 L 1200.31 667.25 L 1200.31 690.35 L 1181.69 690.35 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1191" y="679.72" text-anchor="middle" xml:space="preserve" font-size="14.67" fill="#FFFFFF" font-weight="bold">6</text>
+</g>
+</g>
+<g id="shape-38" data-pptx-object="shape" data-pptx-frame="64.32 36.48 1152 61.44" data-pptx-prst="rect" data-pptx-source-ref="slide:38" data-pptx-semantic-object="shape">
+<path d="M 64.32 36.48 L 1216.32 36.48 L 1216.32 97.92 L 64.32 97.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="79.15" text-anchor="start" xml:space="preserve" font-size="37.33" fill="#153A2A" font-weight="bold">用哪些指标评分，什么结果才能支持结论？</text>
+</g>
+<g id="shape-39" data-pptx-object="connector" data-pptx-frame="64.32 106.56 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:39" data-pptx-semantic-object="shape">
+<path d="M 64.32 106.56 L 1216.32 106.56" stroke-width="1.66667" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-40" data-pptx-object="shape" data-pptx-frame="64.32 120.96 1152 38.4" data-pptx-prst="rect" data-pptx-source-ref="slide:40" data-pptx-semantic-object="shape">
+<path d="M 64.32 120.96 L 1216.32 120.96 L 1216.32 159.36 L 64.32 159.36 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-41" data-pptx-object="shape" data-pptx-frame="79.68 120.96 170.88 38.4" data-pptx-prst="rect" data-pptx-source-ref="slide:41" data-pptx-semantic-object="shape">
+<path d="M 79.68 120.96 L 250.56 120.96 L 250.56 159.36 L 79.68 159.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="79.68" y="145.16" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">评价层次</text>
+</g>
+<g id="shape-42" data-pptx-object="shape" data-pptx-frame="281.28 120.96 353.28 38.4" data-pptx-prst="rect" data-pptx-source-ref="slide:42" data-pptx-semantic-object="shape">
+<path d="M 281.28 120.96 L 634.56 120.96 L 634.56 159.36 L 281.28 159.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="281.28" y="145.16" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">代表指标</text>
+</g>
+<g id="shape-43" data-pptx-object="shape" data-pptx-frame="665.28 120.96 247.68 38.4" data-pptx-prst="rect" data-pptx-source-ref="slide:43" data-pptx-semantic-object="shape">
+<path d="M 665.28 120.96 L 912.96 120.96 L 912.96 159.36 L 665.28 159.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="665.28" y="145.16" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">回答的问题</text>
+</g>
+<g id="shape-44" data-pptx-object="shape" data-pptx-frame="943.68 120.96 257.28 38.4" data-pptx-prst="rect" data-pptx-source-ref="slide:44" data-pptx-semantic-object="shape">
+<path d="M 943.68 120.96 L 1200.96 120.96 L 1200.96 159.36 L 943.68 159.36 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="943.68" y="145.16" text-anchor="start" xml:space="preserve" font-size="16.67" fill="#FFFFFF" font-weight="bold">结论边界</text>
+</g>
+<g id="shape-45" data-pptx-object="shape" data-pptx-frame="64.32 159.36 1152 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:45" data-pptx-semantic-object="shape">
+<path d="M 64.32 159.36 L 1216.32 159.36 L 1216.32 224.64 L 64.32 224.64 Z" fill="#F7FAF8" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-46" data-pptx-object="connector" data-pptx-frame="64.32 159.36 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:46" data-pptx-semantic-object="shape">
+<path d="M 64.32 159.36 L 1216.32 159.36" stroke-width="1" stroke="#C9D9CF" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-47" data-pptx-object="shape" data-pptx-frame="79.68 159.36 170.88 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:47" data-pptx-semantic-object="shape">
+<path d="M 79.68 159.36 L 250.56 159.36 L 250.56 224.64 L 79.68 224.64 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="79.68" y="195.52" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D" font-weight="bold">几何有效性</text>
+</g>
+<g id="shape-48" data-pptx-object="shape" data-pptx-frame="281.28 159.36 353.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:48" data-pptx-semantic-object="shape">
+<path d="M 281.28 159.36 L 634.56 159.36 L 634.56 224.64 L 281.28 224.64 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="281.28" y="185.44" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="20.16"><tspan><tspan>主链连续性、键长 / 键角 / 扭转角、原子碰撞、</tspan></tspan><tspan data-paragraph-line-break="1">链断裂</tspan></text>
+</g>
+<g id="shape-49" data-pptx-object="shape" data-pptx-frame="665.28 159.36 247.68 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:49" data-pptx-semantic-object="shape">
+<path d="M 665.28 159.36 L 912.96 159.36 L 912.96 224.64 L 665.28 224.64 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="665.28" y="195.52" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">构象是否基本合理</text>
+</g>
+<g id="shape-50" data-pptx-object="shape" data-pptx-frame="943.68 159.36 257.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:50" data-pptx-semantic-object="shape">
+<path d="M 943.68 159.36 L 1200.96 159.36 L 1200.96 224.64 L 943.68 224.64 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="943.68" y="195.52" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">不能证明分布正确</text>
+</g>
+<g id="shape-51" data-pptx-object="connector" data-pptx-frame="64.32 224.64 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:51" data-pptx-semantic-object="shape">
+<path d="M 64.32 224.64 L 1216.32 224.64" stroke-width="1" stroke="#C9D9CF" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-52" data-pptx-object="shape" data-pptx-frame="79.68 224.64 170.88 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:52" data-pptx-semantic-object="shape">
+<path d="M 79.68 224.64 L 250.56 224.64 L 250.56 289.92 L 79.68 289.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="79.68" y="260.8" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D" font-weight="bold">分布覆盖</text>
+</g>
+<g id="shape-53" data-pptx-object="shape" data-pptx-frame="281.28 224.64 353.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:53" data-pptx-semantic-object="shape">
+<path d="M 281.28 224.64 L 634.56 224.64 L 634.56 289.92 L 281.28 289.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="281.28" y="250.72" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="20.16"><tspan><tspan>Rg、Ree、残基接触概率、残基对距离、二级结构</tspan></tspan><tspan data-paragraph-line-break="1">倾向；JS / Wasserstein 比较完整分布</tspan></text>
+</g>
+<g id="shape-54" data-pptx-object="shape" data-pptx-frame="665.28 224.64 247.68 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:54" data-pptx-semantic-object="shape">
+<path d="M 665.28 224.64 L 912.96 224.64 L 912.96 289.92 L 665.28 289.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="665.28" y="250.72" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="20.16"><tspan><tspan>是否覆盖多个状态，有无 mode </tspan></tspan><tspan data-paragraph-line-break="1">collapse</tspan></text>
+</g>
+<g id="shape-55" data-pptx-object="shape" data-pptx-frame="943.68 224.64 257.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:55" data-pptx-semantic-object="shape">
+<path d="M 943.68 224.64 L 1200.96 224.64 L 1200.96 289.92 L 943.68 289.92 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="943.68" y="260.8" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">相似只说明学到了参考分布</text>
+</g>
+<g id="shape-56" data-pptx-object="shape" data-pptx-frame="64.32 289.92 1152 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:56" data-pptx-semantic-object="shape">
+<path d="M 64.32 289.92 L 1216.32 289.92 L 1216.32 355.2 L 64.32 355.2 Z" fill="#F7FAF8" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-57" data-pptx-object="connector" data-pptx-frame="64.32 289.92 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:57" data-pptx-semantic-object="shape">
+<path d="M 64.32 289.92 L 1216.32 289.92" stroke-width="1" stroke="#C9D9CF" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-58" data-pptx-object="shape" data-pptx-frame="79.68 289.92 170.88 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:58" data-pptx-semantic-object="shape">
+<path d="M 79.68 289.92 L 250.56 289.92 L 250.56 355.2 L 79.68 355.2 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="79.68" y="326.08" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D" font-weight="bold">实验一致性</text>
+</g>
+<g id="shape-59" data-pptx-object="shape" data-pptx-frame="281.28 289.92 353.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:59" data-pptx-semantic-object="shape">
+<path d="M 281.28 289.92 L 634.56 289.92 L 634.56 355.2 L 281.28 355.2 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="281.28" y="316" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="20.16"><tspan><tspan>SAXS χ²、PRE RMSE、NMR 局部倾向、FRET 距离</tspan></tspan><tspan data-paragraph-line-break="1">分布</tspan></text>
+</g>
+<g id="shape-60" data-pptx-object="shape" data-pptx-frame="665.28 289.92 247.68 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:60" data-pptx-semantic-object="shape">
+<path d="M 665.28 289.92 L 912.96 289.92 L 912.96 355.2 L 665.28 355.2 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="665.28" y="326.08" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">能否解释独立获得的真实观测</text>
+</g>
+<g id="shape-61" data-pptx-object="shape" data-pptx-frame="943.68 289.92 257.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:61" data-pptx-semantic-object="shape">
+<path d="M 943.68 289.92 L 1200.96 289.92 L 1200.96 355.2 L 943.68 355.2 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="943.68" y="326.08" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">不同 ensemble 可给出相似观测</text>
+</g>
+<g id="shape-62" data-pptx-object="connector" data-pptx-frame="64.32 355.2 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:62" data-pptx-semantic-object="shape">
+<path d="M 64.32 355.2 L 1216.32 355.2" stroke-width="1" stroke="#C9D9CF" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-63" data-pptx-object="shape" data-pptx-frame="79.68 355.2 170.88 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:63" data-pptx-semantic-object="shape">
+<path d="M 79.68 355.2 L 250.56 355.2 L 250.56 420.48 L 79.68 420.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="79.68" y="391.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D" font-weight="bold">稳健性与效率</text>
+</g>
+<g id="shape-64" data-pptx-object="shape" data-pptx-frame="281.28 355.2 353.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:64" data-pptx-semantic-object="shape">
+<path d="M 281.28 355.2 L 634.56 355.2 L 634.56 420.48 L 281.28 420.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="281.28" y="381.28" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A" data-pptx-text-model="lines" data-paragraph-line-height="20.16"><tspan><tspan>种子一致性、采样收敛、长度 / 组成敏感性、每</tspan></tspan><tspan data-paragraph-line-break="1">千构象耗时与显存</tspan></text>
+</g>
+<g id="shape-65" data-pptx-object="shape" data-pptx-frame="665.28 355.2 247.68 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:65" data-pptx-semantic-object="shape">
+<path d="M 665.28 355.2 L 912.96 355.2 L 912.96 420.48 L 665.28 420.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="665.28" y="391.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">是否可重复、可扩展</text>
+</g>
+<g id="shape-66" data-pptx-object="shape" data-pptx-frame="943.68 355.2 257.28 65.28" data-pptx-prst="rect" data-pptx-source-ref="slide:66" data-pptx-semantic-object="shape">
+<path d="M 943.68 355.2 L 1200.96 355.2 L 1200.96 420.48 L 943.68 420.48 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="943.68" y="391.36" text-anchor="start" xml:space="preserve" font-size="16" fill="#153A2A">不代表生物准确性</text>
+</g>
+<g id="shape-67" data-pptx-object="connector" data-pptx-frame="64.32 420.48 1152 0" data-pptx-prst="line" data-pptx-source-ref="slide:67" data-pptx-semantic-object="shape">
+<path d="M 64.32 420.48 L 1216.32 420.48" stroke-width="1.33333" stroke="#7FA992" fill="none" data-pptx-part="geometry" />
+
+</g>
+<g id="shape-68" data-pptx-object="shape" data-pptx-frame="64.32 447.36 1152 24.96" data-pptx-prst="rect" data-pptx-source-ref="slide:68" data-pptx-semantic-object="shape">
+<path d="M 64.32 447.36 L 1216.32 447.36 L 1216.32 472.32 L 64.32 472.32 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="64.32" y="460.96" text-anchor="start" xml:space="preserve" font-size="16" fill="#007A3D" font-weight="bold">综合判定口径｜证据等级决定结论强度</text>
+</g>
+<g id="shape-69" data-pptx-object="shape" data-pptx-frame="64.32 480 270.72 72.96" data-pptx-prst="rect" data-pptx-source-ref="slide:69" data-pptx-semantic-object="shape">
+<path d="M 64.32 480 L 335.04 480 L 335.04 552.96 L 64.32 552.96 Z" fill="#EAF4EE" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-70" data-pptx-object="shape" data-pptx-frame="79.68 490.56 240 51.84" data-pptx-prst="rect" data-pptx-source-ref="slide:70" data-pptx-semantic-object="shape">
+<path d="M 79.68 490.56 L 319.68 490.56 L 319.68 542.4 L 79.68 542.4 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="79.68" y="510.79" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.28"><tspan><tspan>仅通过几何检查</tspan></tspan><tspan font-size="14.67" fill="#007A3D"><tspan>只能说：构象几何合理</tspan></tspan></text>
+</g>
+<g id="shape-71" data-pptx-object="shape" data-pptx-frame="358.08 480 270.72 72.96" data-pptx-prst="rect" data-pptx-source-ref="slide:71" data-pptx-semantic-object="shape">
+<path d="M 358.08 480 L 628.8 480 L 628.8 552.96 L 358.08 552.96 Z" fill="#EAF4EE" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-72" data-pptx-object="shape" data-pptx-frame="373.44 490.56 240 51.84" data-pptx-prst="rect" data-pptx-source-ref="slide:72" data-pptx-semantic-object="shape">
+<path d="M 373.44 490.56 L 613.44 490.56 L 613.44 542.4 L 373.44 542.4 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="373.44" y="510.79" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.28"><tspan><tspan>能复现参考模拟</tspan></tspan><tspan font-size="14.67" fill="#007A3D"><tspan>只能说：近似某力场 / 训练分布</tspan></tspan></text>
+</g>
+<g id="shape-73" data-pptx-object="shape" data-pptx-frame="651.84 480 270.72 72.96" data-pptx-prst="rect" data-pptx-source-ref="slide:73" data-pptx-semantic-object="shape">
+<path d="M 651.84 480 L 922.56 480 L 922.56 552.96 L 651.84 552.96 Z" fill="#EAF4EE" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-74" data-pptx-object="shape" data-pptx-frame="667.2 490.56 240 51.84" data-pptx-prst="rect" data-pptx-source-ref="slide:74" data-pptx-semantic-object="shape">
+<path d="M 667.2 490.56 L 907.2 490.56 L 907.2 542.4 L 667.2 542.4 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="667.2" y="510.79" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.28"><tspan><tspan>能预测 held-out 实验</tspan></tspan><tspan font-size="14.67" fill="#007A3D"><tspan>才可说：与独立观测一致</tspan></tspan></text>
+</g>
+<g id="shape-75" data-pptx-object="shape" data-pptx-frame="945.6 480 270.72 72.96" data-pptx-prst="rect" data-pptx-source-ref="slide:75" data-pptx-semantic-object="shape">
+<path d="M 945.6 480 L 1216.32 480 L 1216.32 552.96 L 945.6 552.96 Z" fill="#EAF4EE" stroke-width="1" stroke="#C9D9CF" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-76" data-pptx-object="shape" data-pptx-frame="960.96 490.56 240 51.84" data-pptx-prst="rect" data-pptx-source-ref="slide:76" data-pptx-semantic-object="shape">
+<path d="M 960.96 490.56 L 1200.96 490.56 L 1200.96 542.4 L 960.96 542.4 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="960.96" y="510.79" text-anchor="start" xml:space="preserve" font-size="15.33" fill="#153A2A" font-weight="bold" data-pptx-text-model="paragraphs" data-paragraph-line-height="19.28"><tspan><tspan>跨序列、跨条件稳定</tspan></tspan><tspan font-size="14.67" fill="#007A3D"><tspan>才可说：具备泛化能力</tspan></tspan></text>
+</g>
+<g id="shape-77" data-pptx-object="shape" data-pptx-frame="64.32 577.92 1152 53.79" data-pptx-prst="rect" data-pptx-source-ref="slide:77" data-pptx-semantic-object="shape">
+<path d="M 64.32 577.92 L 1216.32 577.92 L 1216.32 631.71 L 64.32 631.71 Z" fill="#007A3D" stroke="none" stroke-width="1" data-pptx-part="geometry" />
+
+
+</g>
+<g id="shape-78" data-pptx-object="shape" data-pptx-frame="93.12 594.24 1094.4 21.15" data-pptx-prst="rect" data-pptx-source-ref="slide:78" data-pptx-semantic-object="shape">
+<path d="M 93.12 594.24 L 1187.52 594.24 L 1187.52 615.39 L 93.12 615.39 Z" fill="none" data-pptx-part="geometry" />
+
+
+<text x="93.12" y="608.97" text-anchor="start" xml:space="preserve" font-size="17.33" fill="#FFFFFF">本页结论｜评价结论必须与证据等级匹配，不能从“结构合理”直接推导出“ensemble 真实”。</text>
+</g></svg>

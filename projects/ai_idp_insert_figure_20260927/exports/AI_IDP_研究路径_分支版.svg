@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="470" viewBox="0 0 1600 470">
+  <defs>
+    <style>
+      .font { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; }
+      .method { font-size: 18px; font-weight: 500; fill: #007A43; }
+      .stage { font-size: 22px; font-weight: 700; fill: #173E30; }
+      .small { font-size: 14px; font-weight: 500; fill: #73867D; }
+      .branch { font-size: 16px; font-weight: 700; fill: #506B5F; letter-spacing: .5px; }
+      .question { font-size: 17px; font-weight: 700; fill: #C7651B; }
+    </style>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#7DA894"/>
+    </marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#E58A38"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="470" fill="#FFFFFF"/>
+  <path d="M0,420 C190,365 340,380 520,420 C720,463 920,452 1090,409 C1270,365 1435,377 1600,415 L1600,470 L0,470 Z" fill="#F0F7F3"/>
+
+  <!-- Left inverse-design path -->
+  <line x1="92" y1="235" x2="222" y2="235" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+  <line x1="278" y1="235" x2="438" y2="235" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+
+  <!-- Three branches from the common sequence/target node -->
+  <path d="M492 222 C570 185, 606 102, 712 95" fill="none" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+  <line x1="492" y1="235" x2="712" y2="235" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+  <path d="M492 248 C570 285, 606 368, 712 375" fill="none" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+
+  <!-- Upper branch -->
+  <line x1="768" y1="95" x2="998" y2="95" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+  <line x1="1054" y1="95" x2="1320" y2="95" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+
+  <!-- Middle branch -->
+  <line x1="768" y1="235" x2="998" y2="235" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+
+  <!-- Lower branch -->
+  <line x1="768" y1="375" x2="998" y2="375" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+  <line x1="1054" y1="375" x2="1320" y2="375" stroke="#A5BEB2" stroke-width="4" marker-end="url(#green-arrow)"/>
+
+  <!-- Research gap: ensemble to function -->
+  <line x1="1026" y1="123" x2="1026" y2="207" stroke="#E58A38" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#orange-arrow)"/>
+  <g class="font">
+    <text x="1060" y="157" class="question">本研究：ensemble是否</text>
+    <text x="1060" y="182" class="question">提供额外信息？</text>
+  </g>
+
+  <!-- Nodes -->
+  <g fill="#008247">
+    <circle cx="64" cy="235" r="28"/>
+    <circle cx="250" cy="235" r="28"/>
+    <circle cx="465" cy="235" r="31"/>
+    <circle cx="740" cy="95" r="28"/>
+    <circle cx="1026" cy="95" r="28"/>
+    <circle cx="1348" cy="95" r="28"/>
+    <circle cx="740" cy="235" r="28"/>
+    <circle cx="1026" cy="235" r="28"/>
+    <circle cx="740" cy="375" r="28"/>
+    <circle cx="1026" cy="375" r="28"/>
+    <circle cx="1348" cy="375" r="28"/>
+  </g>
+
+  <!-- Labels -->
+  <g class="font">
+    <text x="64" y="191" text-anchor="middle" class="method">Design goal</text>
+    <text x="64" y="286" text-anchor="middle" class="stage">目标性质</text>
+
+    <text x="250" y="191" text-anchor="middle" class="method">GOOSE</text>
+    <text x="250" y="286" text-anchor="middle" class="stage">序列设计</text>
+
+    <text x="465" y="191" text-anchor="middle" class="method">Common input</text>
+    <text x="465" y="286" text-anchor="middle" class="stage">IDR序列 / 靶标序列</text>
+
+    <text x="610" y="76" text-anchor="middle" class="branch">A  构象路线</text>
+    <text x="740" y="49" text-anchor="middle" class="method">STARLING / IDPFold</text>
+    <text x="740" y="145" text-anchor="middle" class="stage">构象生成</text>
+    <text x="1026" y="49" text-anchor="middle" class="method">Model ensemble</text>
+    <text x="1026" y="145" text-anchor="middle" class="stage">ensemble</text>
+    <text x="1348" y="49" text-anchor="middle" class="method">Forward model</text>
+    <text x="1348" y="145" text-anchor="middle" class="stage">公开实验验证</text>
+
+    <text x="610" y="216" text-anchor="middle" class="branch">B  功能路线</text>
+    <text x="740" y="191" text-anchor="middle" class="method">LLPSense + Environment</text>
+    <text x="740" y="286" text-anchor="middle" class="stage">功能预测</text>
+    <text x="1026" y="286" text-anchor="middle" class="stage">LLPS / 功能行为</text>
+
+    <text x="610" y="356" text-anchor="middle" class="branch">C  设计路线</text>
+    <text x="740" y="331" text-anchor="middle" class="method">IDR binder / Interface peptide</text>
+    <text x="740" y="426" text-anchor="middle" class="stage">功能分子设计</text>
+    <text x="1026" y="331" text-anchor="middle" class="method">Designed molecule</text>
+    <text x="1026" y="426" text-anchor="middle" class="stage">binder / 功能肽</text>
+    <text x="1348" y="331" text-anchor="middle" class="method">Application</text>
+    <text x="1348" y="426" text-anchor="middle" class="stage">生物学功能 / 工程应用</text>
+
+    <text x="1545" y="452" text-anchor="end" class="small">绿色：已实现路线　橙色虚线：待验证连接</text>
+  </g>
+</svg>
