@@ -1,0 +1,28 @@
+# ========== 依赖 / 构建产物 ==========
+node_modules/
+.pptx-build/
+.pnpm-store/
+
+# ========== Obsidian 本地状态 ==========
+.trash/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+
+# ========== 工具临时目录 ==========
+.workbuddy/
+.codex-finalizer/
+.codex-remote-attachments/
+
+# ========== 系统文件 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
+
+# ========== 其他 ==========
+*.pptx.lock
+*.partial

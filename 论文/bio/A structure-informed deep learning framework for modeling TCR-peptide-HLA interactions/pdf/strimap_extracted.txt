@@ -1,0 +1,2365 @@
+Article | Article in Press https://doi.org/10.1038/s41467-026-78063-1
+A structure-informed deep learning
+framework for modeling TCR-peptide-HLA
+interactions
+Kai Cao1,R u iL i1,2, Martin Stražar 1,E r i cM .B r o w n1, Phuong N. U. Nguyen 1,
+Marie-Madlen Pust 1,2,J i h y eP a r k1,D a n i e lB .G r a h a m1,2, Orr Ashenberg1,3,
+Caroline Uhler 1,4 &R a m n i kJ .X a v i e r1,2,3,5
+Interactions between T cell receptors (TCRs), peptides, and human leukocyte
+antigens (HLAs) underlie antigen-speciﬁc T cell immunity. Despite substantial
+advances in prediction methods, accurate modeling of coupled
+TCR– peptide– HLA recognition remains underdeveloped, limiting applications
+such as TCR and neoepitope prioritization in cancer and antigen identiﬁcation
+in autoimmunity. Here we present StriMap, a uniﬁed framework for predicting
+TCR– peptide– HLA interactions by integrating physicochemical, sequence-
+context, and structural features at recognition interfaces.StriMap achieves
+state-of-the-art performance with improved generalizability and enables
+applications in cancer and autoimmunity. As a case study, we screened 13
+million peptides from 43,241 bacterial proteins and identiﬁed candidate
+molecular mimics that were experimentally validated to activate T cells
+expressing an ankylosing spondylitis (AS)-associated TCR. A top validated
+peptide was enriched in patients with inﬂammatory bowel disease (IBD),
+suggesting potential shared microbial triggers. Overall, StriMap provides a
+framework for rational immunotherapy design and dissecting antigenic dri-
+vers of autoimmunity.
+Tc e l l– mediated immunity relies on the recognition of antigenic pep-
+tides presented by human leukocyte antigen (HLA) molecules through
+T cell receptors (TCRs) expressed on the surface of T cells1.T h i sH L A -
+restricted recognition of peptide epitopes is central to adaptive
+immunity, enabling the detection of infected or transformed cells
+while maintaining tolerance to self. This same recognition system,
+which enables broad immune surveillance, can also determine disease
+trajectories when dysregulated or redirected. Cancer and auto-
+immunity represent two challenging and important problems in which
+antigen-speciﬁc T cell recognition is central to both pathogenesis and
+therapy. In cancer, the ability to prioritize TCRs and neoepitopes
+underpins personalized immunotherapies and vaccines
+2,3.I n
+autoimmunity, identifying disease-associated antigens and potential
+molecular mimics can reveal causal triggers and enable antigen-
+speciﬁc interventions4,5.
+While several experimental platforms can detect interactions
+between TCRs and peptide – HLA (pHLA) complexes 6– 8,t h e yr e m a i n
+time-consuming and expensive, limiting coverage of TCR or peptide
+diversity. These limitations motivate the need for computational
+approaches
+9. Computational models have advanced different stages of
+this recognition cascade. Peptide– HLA presentation predictors, such
+as NetMHCpan 10, have become widely used for modeling antigen
+presentation11– 14, but they do not directly predict downstream TCR
+recognition. Systematically mapping downstream TCR – pHLA
+Received: 18 March 2026
+Accepted: 14 September 2026
+Check for updates
+1Broad Institute of MIT and Harvard, Cambridge, MA, USA.2Department of Molecular Biology, Massachusetts General Hospital and Harvard Medical School,
+Boston, MA, USA.3Klarman Cell Observatory, Broad Institute of MIT and Harvard, Cambridge, MA, USA.4Massachusetts Institute of Technology, Cambridge,
+MA, USA. 5Center for the Study of Inﬂammatory Bowel Disease, Massachusetts General Hospital, Boston, MA, USA.
+e-mail: cuhler@mit.edu; rxavier@broadinstitute.org
+Nature Communications Article in Press
+1234567890():,;
+1234567890():,;
+recognition remains underdeveloped 9.T h i sd i f ﬁculty re ﬂects the
+combinatorial complexity of the interaction space, the structural
+plasticity of recognition, and the limited and biased nature of available
+experimental data, as re ﬂected in the most recent benchmark
+studies
+15– 17.
+Deep learning has begun to be used to model these processes, yet
+many approaches rely primarily on sequence-based representations
+and treat pHLA presentation and TCR– pHLA recognition as indepen-
+dent tasks
+18– 25, potentially limiting generalizability beyond the training
+distribution by failing to capture their conditional dependence and
+shared structural constraints. More recently, structure-informed
+approaches, including SageTCR
+26, NetTCR-struc 27, TRAP 28,S T A G29,
+and STAG-LLM 30, have demonstrated the value of incorporating
+structural information for modeling immune-recognition interfaces.
+However, structure-informed approaches often rely on a limited
+number of experimentally solved TCR– pHLA complex structures or on
+predicted full tri-molecular complex structures, whose accuracy and
+throughput remain challenging atﬂexible TCR– pHLA interfaces. These
+constraints can limit proteome-scale candidate screening and pro-
+spective experimental validation of newly predicted TCR – pHLA
+interactions. Thus, a scalable framework is needed that can incorpo-
+rate structure-informed constraints from individual molecular chains
+without requiring accurate full-complex structure prediction, while
+explicitly linking peptide – HLA presentation with downstream TCR
+recognition and enabling experimentally testable candidate
+prioritization.
+To address this gap, in this work, we develop StriMap (
+Structure-
+informed TRi-molecularInteractionMapping), a uniﬁed deep learning
+framework that models antigen presentation and TCR recognition as a
+coupled biological process, integrating complementary sequence,
+structural, and contextual features to capture the determinants of
+immune recognition. Across diverse public datasets curated from
+multiple independent studies, StriMap consistently achieves state-of-
+the-art performance when benchmarked against leading HLA pre-
+sentation and TCR-speci ﬁcity models. We further demonstrate the
+utility of StriMap in both cancer and autoimmunity. In cancer, StriMap
+enables TCR-centric prioritization of recurrent neoepitopes and sup-
+ports neoepitope selection for personalized vaccine design. In auto-
+immunity, we apply StriMap to investigate the link between HLA-
+B27– bound bacterial peptides and TCRs containing the conserved
+TRBV9 motif associated with ankylosing spondylitis (AS). Leveraging a
+small amount of recently published disease-speciﬁcd a t at o g e t h e rw i t h
+large-scale public TCR– pHLA datasets, we train the model to screen 13
+million peptides derived from 43,241 bacterial proteins in gut bacterial
+strains linked to AS, ranking candidates by predicted binding scores.
+Notably, top-ranked peptides are experimentally validated to activate
+T cells expressing a representative TRBV9 TCR. Matched metagenomic
+and metatranscriptomic analyses reveal that one validated peptide
+from Streptococcus s t r a i n si se n r i c h e di nI B Dp a t i e n t s ,s u g g e s t i n ga
+shared antigenic trigger between the two autoimmune diseases.
+Together, these results highlight StriMap as a generalizable framework
+for linking antigen presentation to TCR recognition across cancer and
+autoimmune disease, accessible via a web portal at ( www.
+strimap.com).
+Results
+StriMap overview
+To systematically model the tri-molecular interaction underlying T
+cell-mediated immunity (Fig.1a), we developed StriMap, a uniﬁed deep
+learning framework that integrates physicochemical, sequence-con-
+text, and structural features. At the core of StriMap is the Sequence
+and Structure Feature Extractor ( SSFE), a multimodal encoder that
+learns biophysical determinants of molecular recognition (Fig.1b). For
+each input (peptide, HLA, and paired TCR α/β chains), the SSFE gen-
+erates a comprehensive representation by fusing three
+complementary channels: (i) residue-level physicochemical features31
+(Supplementary Table 1); (ii) evolutionary sequence context from
+pretrained protein language models (e.g., ESM232,P r o t T 533); and (iii)
+3D structural features predicted by ESMFold 32 and processed via an
+equivariant graph neural network (EGNN)34 to encode spatial geome-
+tries (see“Methods”). A gated cross-attention is used to integrate these
+complementary multimodal representations at the residue level. We
+further introduce a bilinear attention network
+35 (BAN) to model
+residue– residue interactions between molecular components (Fig.1c).
+To re ﬂect the hierarchical nature of immune recognition, StriMap
+employs a coupled architecture in which peptide– HLA presentation is
+ﬁrst modeled and subsequently used to condition TCR recognition on
+the underlying peptide– HLA landscape (Fig. 1d, e), thereby enforcing
+biological consistency. To address the scarcity of validated negative
+TCR– pHLA pairs, we introduce dynamic and mutation-aware negative
+sampling to improve discrimination between true binders and near-
+neighbor decoys. Together, these architectural and training innova-
+tions enable StriMap to function as a uni ﬁed framework for TCR or
+neoepitope prioritization in cancer immunotherapy and the identi ﬁ-
+cation of disease-associated antigens in autoimmunity (Fig.1f), which
+we systematically evaluate in the following sections.
+StriMap improves pHLA and TCR–pHLA benchmark
+performance
+We evaluated StriMap against representative published state-of-the-art
+models on two related tasks — pHLA presentation prediction and
+TCR– pHLA interaction prediction— using benchmark datasets curated
+from independent prior studies with published train/test splits to
+enable reproducible comparison (Supplementary Tables 2 and 3). To
+provide a complete and transparent comparison, we re-benchmarked
+the included methods across all evaluated datasets whenever runnable
+implementations and compatible input requirements were available,
+using harmonized preprocessing, data splits, and evaluation metrics.
+Published results were used only when they corresponded to the same
+dataset split and evaluation protocol. We considered in-distribution
+(ID) testing, where test examples are drawn from the same underlying
+distribution as training; distribution-shifted (DS) testing across dif-
+ferent studies or cohorts (dataset-level shift); and epitope-level out-of-
+distribution (OOD) generalization to epitopes not seen in training,
+forming an increasingly stringent hierarchy from ID to DS to OOD. For
+each benchmark, StriMap was trained or ﬁne-tuned only on the cor-
+responding training split unless otherwise stated, with evaluation
+performed on the held-out test split de ﬁned by the original study;
+dataset-speciﬁc positive and negative sample counts are summarized
+in Supplementary Data 1.
+Across multiple pHLA presentation benchmarks
+12,13,22, StriMap
+achieved top overall performance and remained robust under
+increasingly stringent ID/DS/OOD settings (Fig. 2a), with extended
+metric-level benchmarking results summarized in Supplementary
+Fig. 1. Performance gains were also consistent across individual HLA
+alleles: on the Que et al. dataset (ID)
+22, introduced alongside dee-
+pAntigen, StriMap improved per-allele AUPRC relative to
+deepAntigen
+22 (Fig. 2b), and broader per-allele comparisons against
+additional state-of-the-art predictors further supported consistent
+improvements across HLA classes (Supplementary Fig. 2). StriMap also
+consistently surpassed NetMHCpan
+11 across all evaluations, under-
+scoring robust gains over a widely used reference method in the lit-
+erature. These gains translated to tumor neoantigen prioritization:
+following the immunogenicityﬁne-tuning workﬂow used by BigMHC,
+we ﬁne-tuned StriMap on PRIME1.0/PRIME2.0 neoantigen immuno-
+genicity data and evaluated the resulting StriMap-IM model on both
+the TESLA (Tumor Neoantigen Selection Alliance)
+36 and CEDAR (Can-
+cer Epitope Database and Analysis Resource)37 benchmarks (Fig. 2c).
+StriMap-IM achieved top performance on CEDAR and ranked second
+on TESLA, while outperforming deepAntigen-IM, NetMHCpan11, and
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+additional peptide– HLA presentation predictors across both bench-
+marks. These results support the utility of StriMap-derived repre-
+sentations for practical neoantigen prioritization, where only a limited
+number of candidates can be advanced for experimental testing.
+To probe what StriMap learns beyond aggregate accuracy, we
+trained a pHLA model on a comprehensive dataset assembled from
+multiple sources. This dataset was allele-imbalanced (Supplementary
+Fig. 3). Visualization of the learned embedding space revealed a bio-
+logically meaningful organization, where the cluster separation
+reﬂected not only the individual HLA alleles but also the ﬁne-grained
+heterogeneity within each allele, determined by distinct peptide-
+binding properties (Fig.2d and Supplementary Fig. 4). For example, in
+HLA-B*27:05, peptides segregated into two major Leiden clusters (2
+and 21) with distinct motifs: cluster 2 recapitulated the canonical
+preference for Arg at position 2 and Leu at the C terminus, whereas
+cluster 21 showed non-canonical preferences at position 2, indicating
+sub-allelic structure beyond a single consensus motif. Complementing
+embedding-level structure, attention-based analyses further revealed
+allele-speciﬁc binding-position pro ﬁles and distinct interaction pat-
+terns between peptide residues and HLA contact residues, including
+differences between closely related alleles such as HLA-A*02:01 and
+HLA-A*02:03 (Supplementary Fig. 5). Finally, systematic saturation
+mutagenesis on a well-characterized in ﬂuenza epitope (GILGFVFTL)
+demonstrated allele- and position-speci ﬁc sensitivity in predicted
+binding scores (Supplementary Fig. 6). In particular, canonical anchor
+positions P2 and P9 showed signi ﬁcantly greater mutation-induced
+sensitivity than non-anchor positions across representative HLA
+alleles, supporting that StriMap captures biologically meaningful
+constraints underlying peptide– HLA binding.
+We next evaluated StriMap on the more important task of
+TCR– pHLA interaction prediction across multiple independent
+benchmarks
+6,15– 17,38. Sequence similarity analysis con ﬁrmed that test
+TCRs across these datasets exhibit substantial divergence from the
+training data, ensuring the evaluation of true generalization rather
+than memorization of highly similar clonotypes (Supplementary
+Fig. 7). Given the rapidly expanding landscape of TCR speci ﬁcity
+U, V, q: Learnable parameters E: Representation 1
+I: Multi-head Attention T : Representation 2
+I
+ET U
+1·q T
+. V T T =
+U T E . . =T T V
+…
+…
+I
+Bilinear Attention Network - BAN
+(L,17)
+Protein
+sequence
+Sequence and Structure Feature Extractor SSFE
+Hydrophobicity
+Solvent accessibility
+Hydrogen bonding
+Polarity
+Hydrophilicity
+Volume
+Polarizability
+Flexibility
+…
+Physicochemical Encoder
+H
+H
+N
+C
+H
+H
+R
+O
+O
+C
+Physicochemical
+features
+(L,20)
+Sequence Context Encoder
+ESM2
+ProtT5
+…
+Semantic features
+Structural Geometric Encoder
+ESMFold
+(L,1280)
+Geometric features
+3Dcoordinates
+(L,3)3D coordinates
+pLDDT score
+Contact count
+Secondary structure
+Backbone torsion angles
+(L,D)
+(L,D)
+1
+1− 1
+Equivariant
+GNN
+Message
+Passing
+1−
+Learnable
+Learnable
+Fused features
+(L,D)
+(x,y, z)
+(L,D)
+(L,D)
+Q
+K
+V
+Linear & Norm
+Q
+K
+ V
+a
+c
+b
+e
+alphaPeptide
+Interacting score
+BAN
+Transformer
+Linear
+HLA
+BAN
+Cross
+Attention
+Cross
+Attention
+SSFE
+concatenate
+beta
+TCR
+Feature
+aggregator
+SSFE
+Transformer
+V
+K
+Peptide-HLA
+predictor
+Cross
+Attention
+Q
+freeze
+Feature
+aggregator
+d
+HLAPeptide
+BAN
+Multi-head
+Attention
+Add & 
+Norm
+Feed
+Forward
+Positional
+Encoding
+Cross
+Attention
+SSFESSFE
+TransformerTransformer
+Interacting score
+Linear
+Cytotoxic T cell
+HLA
+class I
+TCR
+Peptide
+f
+T arget cell L: amino-acid sequence length
+D: latent dimension
+Q, K, V: attention query/key/value
+ Assist cancer immunotherapy and vaccines
+ Discover new immunogenic peptides
+Immunogenic
+peptide
+Peptides StriMap tools
+Neoepitopes StriMap tools
+T cell therapy
+Vaccine
+Bacteria
+Peptide-HLA predictor TCR-peptide-HLA predictor
+Add & 
+Norm
+Linear & Norm
+Cross Attention
+2
+2
+Cross Attention
+Linear & Norm
+Linear & Norm
+Tumor 
+neoantigen
+mutARHGAP35
+mutPIK3CA
+mutTP53
+...
+Fig. 1 | Overview of StriMap framework. a Biological context of T cell-mediated
+immune recognition. Cytotoxic T cells recognize target cells through the interac-
+tion between the T cell receptor (TCR) and peptide-HLA (pHLA) complexes pre-
+sented on the surface of target cells. This tri-molecular interaction underlies
+antigen-speciﬁc immune surveillance and forms the biological basis of StriMap.
+b The architecture of the Sequence and Structure Feature Extractor (SSFE). Given a
+protein amino-acid sequence, SSFE integrates three complementary encoders: i) a
+physicochemical encoder that computes residue-level physicochemical features; ii)
+a sequence-based context encoder (e.g., ESM2 or ProtT5) that provides contextual
+sequence embeddings; and iii) a structural-derived geometric encoder (e.g., ESM-
+Fold) that generates 3D structural representations. Structural information is further
+processed through a multi-layer equivariant graph neural network (EGNN). All
+features are fused using gated cross-attention and layer-normalization to produce a
+uniﬁed representation.c The bilinear attention network (BAN) models pairwise
+interactions between two representations using learnable bilinear projections to
+generate multi-head attention maps.d Architecture of the peptide-HLA interaction
+predictor. Peptide and HLA sequences are independently encoded by SSFE and
+processed through transformer blocks, followed by gated cross-attention and BAN
+fusion. The fused representation is fed into a linear layer to produce an interaction
+score between 0 and 1. e Architecture of the TCR-peptide-HLA interaction pre-
+dictor. TCRα/β chains, peptide, and HLA sequences are independently encoded by
+SSFE and then passed through a feature aggregator module that incorporates and
+leverages the embedding representations learned from the peptide-HLA predictor.
+The aggregated features are further integrated via gated cross-attention and BAN,
+and the fused representation is mapped through a linear layer to produce an
+interaction score between 0 and 1.f Downstream applications of StriMap. StriMap
+enables systematic modeling of peptide-HLA and TCR-peptide-HLA interactions,
+facilitating the prioritization of immunogenic neoepitopes for cancer immu-
+notherapy and vaccine development, as well as the discovery of pathogenic or
+immunodominant epitopes. Created in BioRender. Kang, H. (https://BioRender.
+com/vhttfon).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+prediction tools, we summarized representative prior methods and
+their key methodological characteristics in Supplementary Data 2, and
+then benchmarked StriMap against selected state-of-the-art models.
+Whenever runnable implementations and compatible input require-
+ments were available, methods were re-run using harmonized pre-
+processing, dataset splits, and evaluation metrics; published results
+were used only when they matched the same split and evaluation
+protocol. When benchmark datasets included predeﬁned positive and
+negative pairs, we used the original labels directly to preserve the
+published evaluation protocol. For datasets lacking explicit negative
+pairs, we generated negatives by random TCR and pHLA shuf ﬂing
+while excluding known positives, consistent with prior benchmarking
+practices
+39. We additionally incorporated dynamic negative sampling
+(DNS), regenerating negatives each epoch of model training to expand
+the effective negative space.
+cb
+0.4 0.5 0.6 0.7 0.8 0.9 1.0
+deepAntigen AUPRC
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0StriMap AUPRC
+A3101
+A0301B5701
+A0201
+A2902
+HLA class
+A
+B
+C
+Other
+100
+200
+300
+n samples
+Cluster 2 (n = 3,333)
+123456789
+AA position
+Cluster 21 (n = 1,231)
+UMAP 1
+Leiden cluster
+0
+1
+2
+3
+4
+5
+6
+7 8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+2021
+22
+23
+24
+25
+26
+27
+28
+29 30
+31
+32
+33
+3435
+36
+UMAP 2
+HLA allele
+HLA-B*27:05
+d
+0.5 0.6 0.7 0.8 0.9 1.0
+NetTCR AUROC
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+GPRLGVRAT
+NQKLIANQF
+KSKRTPMGF
+YLQPRTFLL
+HPVTKYIM
+StriMap AUROC
+0.5 0.6 0.7 0.8 0.9 1.0
+MixTCRpred AUROC
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+NQKLIANQF
+GPRLGVRAT
+LTDEMIAQY
+NLVPMVATV TTDPSFLGRY
+f
+gh
+a
+e
+Infection and vaccination
+Specificity: Non-spike Spike
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Percentile Rank
+1.11x10-6 0.0741
+inf
+inf_vax1 inf_vax
+inf_vax2 vax2
+vax2_inf
+Zhang et al. - ID Test
+Pos: 1,176,
+ Neg: 5,837
+Minerv
+ina et al
+. - DS Test 
+Pos: 3,570, Neg: 17,850
+Lu et al. - I
+D Test
+Pos: 
+304, Neg:
+ 302 IMMREP
+22
+Pos:
+ 619, Neg: 3,0
+56
+IMM
+REP23
+Pos: 598, Neg: 2
+,886
+StriMap
+EPACT
+pMTnet
+NetTCR
+MixTCRpred
+STAPLER
+TCRconv
+ERGO-II
+TITAN
+0.507 0.515 0.982 0.876 0.694
+0.443 0.510 0.811 0.767 0.569
+0.284 0.281 0.998 0.771 0.565
+0.426 0.455 0.500 0.825 0.690
+0.374 0.440 0.491 0.837 0.705
+0.387 0.397 0.569 0.834 0.500
+0.336 0.261 0.730 0.842 0.494
+0.340 0.339 0.563 0.766 0.558
+0.168 0.152 0.511 0.478 0.506
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Rank
+Chu et al. ID Test
+Pos: 85,876, Neg: 85,562
+Chu et al. DS Test
+Pos: 51,984, Neg: 51,881
+Que et al. ID Test
+Pos: 36,429, Neg: 36,507
+Que et al. OOD Test
+Pos: 13,951, Neg: 13,951
+Albert et al. ID Test
+Pos: 45,409, Neg: 900,592
+StriMap
+BigMHC
+deepAntigen
+NetMHCpan
+MixMHCpred
+TransPHLA
+MHCnuggets
+0.988 0.964 0.987 0.935 0.943
+0.985 0.961 0.979 0.923 0.926
+0.947 0.932 0.975 0.927 0.888
+0.956 0.941 0.942 0.893 0.889
+0.943 0.927 0.948 0.888 0.867
+0.979 0.950 0.916 0.907 0.811
+0.826 0.885 0.849 0.858 0.696
+1
+2
+3
+4
+5
+6
+7
+Rank
+StriMap-
+IM
+BigMHC-IM
+deepAntigen-IMNetMHCpanMixMHCpredTransPHLAMHCnuggets
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6AUPRC
+Dataset
+TESLA
+CEDAR
+StriMap
+StriM
+ap-w/o-DNS
+StriMap-w/o-StruStriMap-only-conc
+at
+EPACT
+StriMap-w
+/o-alpha
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8Performance
+AUPRC AUROC
+1.11x10-6 0.875 0.578
+Fig. 2 | StriMap achieves robust prediction of pHLA presentation and TCR-
+pHLA recognition. a pHLA presentation prediction performance across bench-
+mark datasets under ID (in distribution), DS (distribution shift), and OOD (out of
+distribution) settings. Values indicate AUPRC scores, and color intensity denotes
+method ranking within each dataset. Numbers of positive (Pos.) and negative (Neg.)
+samples are shown. b Comparison of StriMap and deepAntigen performance
+(AUPRC) across individual HLA alleles on the Que et al. dataset (ID). Dashed line
+indicates equal performance.c AUPRC comparison on TESLA and CEDAR neoan-
+tigen benchmarks. Points indicate median AUPRC values across bootstrap itera-
+tions (n = 1000), and error bars the 95% bootstrap conﬁdence intervals. “-IM”
+denotes models ﬁne-tuned on PRIME1.0/PRIME2.0 neoantigen immunogenicity
+data following the BigMHC workﬂow. d UMAP of peptide embeddings, colored by
+10 most abundant HLA alleles (left) and Leiden clusters (right). Two clusters
+(dashed ellipse) corresponding to HLA-B*27:05 exhibit divergent peptide-binding
+motifs (right).e TCR– pHLA interaction prediction performance across benchmark
+datasets under ID and DS settings. Values indicate AUPRC or benchmark-speciﬁc
+scores, and color intensity denotes method ranking within each dataset. Numbers
+of positive (Pos.) and negative (Neg.) samples are shown. f Per-peptide AUROC
+comparison between StriMap and NetTCR (left) and MixTCRpred (right) on the
+IMMREP22 benchmark. Dashed line indicates equal performance.g AUROC and
+AUPRC comparison for StriMap and ablation variants under the same evaluation
+protocol. Points indicate median performance values across bootstrap iterations
+(n = 1000), and error bars the 95% bootstrap conﬁdence intervals. StriMap-w/o-
+alpha excludes TCRα-chain input, StriMap-only-concat replaces cross-component
+interaction modules with simple concatenation, StriMap-w/o-Stru removes struc-
+tural information, and StriMap-w/o-DNS removes dynamic negative sampling.
+h Percentile binding rank distributions of TCRs across SARS-CoV-2 cohorts from
+the Minervina et al. dataset. Box plots show the median (center line), 25th and 75th
+percentiles (box limits), and 1.5 × the interquartile range (whiskers). Sample sizes
+(Non-spike/Spike TCRs): inf,n = 1,164/76; inf_vax1,n = 303/137; inf_vax,n =4 0 / 4 8 ;
+inf_vax2, n = 401/175; and vax2_inf, n = 962/172. For vax2, only spike-speciﬁcT C R s
+were available (n = 92). P values (shown above plot), two-sided Mann– Whitney U
+tests with Benjamini– Hochberg.
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+Overall, StriMap achieved strong performance under both ID and
+DS settings (Fig.2e), with per-peptide comparisons on Zhang et al. (ID),
+Minervina et al. (DS) and IMMREP22 datasets (Supplementary
+Figs. 8 – 10); Fig. 2f highlights the IMMREP22 per-peptide AUROC
+comparisons, where StriMap outperformed NetTCR
+18 and
+MixTCRpred24,t w ow i d e l yu s e dr e f e r e n c em e t h o d s .W en o t et h a tt h e
+Lu et al. benchmark17 adopts peptide-permutation negatives that pre-
+serve TCR– HLA pairs but scramble peptide identity (Supplementary
+Fig. 11). Under this scheme, negatives can be separated largely via
+peptide– HLA compatibility rather than true TCR-speciﬁcr e c o g n i t i o n ,
+potentially in ﬂating performance. Because StriMap jointly models
+pHLA presentation and TCR – pHLA recognition, it can exploit
+peptide– HLA compatibility signals and achieves substantially higher
+performance under this protocol. In contrast, methods that ignore
+HLA information or model TCR – pHLA interactions in isolation are
+structurally disadvantaged.
+To assess the contribution of paired TCR-chain information, we
+ﬁrst removed the TCR α-chain input while keeping the same training
+and evaluation protocol on Zhang et al. dataset. This reduced AUROC
+from 0.737 to 0.662 and AUPRC from 0.507 to 0.400, indicating that
+the α-chain provides substantial speci ﬁcity information beyond the
+β-chain alone. Ablation analyses further showed that removing the
+structural module, DNS, or replacing the cross-component cross-
+attention/BAN interaction modules with simple concatenation degra-
+ded AUROC/AUPRC relative to the full model (Fig. 2g). Beyond abla-
+tion analysis, peptide-length-strati ﬁed evaluations showed that
+StriMap supports variable-length peptide inputs and maintained
+robust performance across the evaluated peptide-length range in both
+pHLA and TCR– pHLA benchmarks (Supplementary Fig. 12a, b). SHAP
+analysis further quantiﬁed ﬁne-grained feature importance at both the
+modality and component levels, identifying sequence and pHLA con-
+texts as the primary drivers of predictions, while physicochemical and
+structural features provided meaningful contributions that validate
+our multi-modal design (Supplementary Fig. 12c, d). Notably, the
+integrated pHLA context exhibited a dominant SHAP score compared
+to isolated peptide and HLA features. This reﬂects our architecture: the
+fused pHLA context captures their synergistic functional dynamics,
+naturally absorbing their individual predictive weights during the
+attribution process.
+To assess generalization across clinical cohorts, we examined the
+SARS-CoV-2– related TCR– pHLA interactions in the Minervina et al.
+dataset
+38, comprising 3570 TCRs across 14 peptides (5 spike and 9 non-
+spike). Cohorts included recovered individuals ’ post-infection (inf),
+recovered after one vaccine dose (inf_vax1), sampled immediately after
+two doses (inf_vax), post-vaccination recovery (inf_vax2), vaccinated
+naïve individuals (vax2), and breakthrough infections (vax2_inf)
+(Fig. 2h). We predicted the TCR binding score for each spike or non-
+spike peptide across all categories, and summarized the results as
+percentile binding rank distributions (Fig. 2h). Within each category,
+spike- and non-spike-speciﬁc TCRs were compared using two-sided
+Mann– Whitney U tests with Benjamini – Hochberg correction.
+Vaccination-associated cohorts (“vax”) are expected to mount ele-
+vated spike-speciﬁc T cell responses following spike immunization;
+indeed, we found more favorable predicted binding ranks for spike-
+speciﬁc TCRs. This effect was most pronounced in the inf_vax cohort,
+where spike-speci ﬁc TCRs achieved signi ﬁcantly higher predicted
+binding-rank percentiles than non-spike-speciﬁc TCRs within the same
+cohort (adjusted P <1 ×1 0
+/C0 4), consistent with recent vaccination
+driving expansion and activation of spike-speciﬁc clonotypes. In con-
+trast, at later time points (inf_vax2) and in breakthrough infections
+(vax2_inf), this separation was attenuated and was not statistically
+signiﬁcant, likely reﬂecting contraction of vaccine-induced responses
+and diversiﬁcation of the T cell repertoire following additional antigen
+exposures.
+We further assessed StriMap on the IMMREP23 challenge16,w h e r e
+participants could incorporate external training data beyond the ofﬁ-
+cial dataset, and the exact data sources used by different methods are
+not fully disclosed. We compared three training strategies: (i) training
+only on the organizer-provided data, (ii) training on a comprehensive
+dataset assembled from diverse public studies
+15,16,23,40– 42 (Supplemen-
+tary Fig. 13), and (iii) an ensemble combining multiple negative sam-
+pling strategies (Supplementary Fig. 14a). With the ensemble strategy,
+StriMap ranked third with AUC0.1 = 0.6943 (Supplementary Fig. 14b; a
+deﬁnition of the AUC0.1 is provided in the Methods). Notably, the top
+two methods (IMW-DETECT and MixTCRpred_s2) leveraged undi-
+sclosed in-house data, complicating attribution of gains to archi-
+tecture versus data. We further evaluated StriMap in a zero-shot (OOD)
+setting with test epitopes absent fr om training; despite only three
+unseen epitopes, performance exceeded random baselines, indicating
+partial generalization, but remained limited, potentially due to sub-
+stantial epitope divergence (Supplementary Fig. 14c). These results
+suggest that few-shot learning is often more reliable in practice, while
+still motivating downstream use cases such as cancer TCR and neoe-
+pitope prioritization.
+TCR and neoepitope prioritization for cancer immunotherapy
+Somatic mutations in cancer can generate neoepitopes that are pro-
+cessed and presented by HLA molecules and can be recognized by
+Tc e l l s( F i g .3a), providing a key rationale for T cell-based immu-
+notherapies. To demonstrate the translational utility, we applied Stri-
+Map to two clinically relevant cancer immunotherapy tasks: (i) TCR-
+centric prioritization for recurrent mutant peptide-HLA pairs in the
+context of adoptive T cell therapy, and (ii) neoepitope prioritization
+for personalized cancer vaccine design (Fig. 3b). These two settings
+reﬂect common decision points in T cell – based immunotherapy,
+where only a small number of candidates can be experimentally eval-
+uated. For the cancer prioritization analyses, we used StriMap trained
+on the comprehensive TCR – pHLA dataset (Supplementary Fig. 13),
+without task-speciﬁc ﬁne-tuning; positive/negative sample counts are
+summarized in Supplementary Data 1.
+We ﬁrst considered task 1, a TCR-centric setting in which recurrent
+cancer-associated mutations are known, and the goal is to identify
+cognate TCRs suitable for adoptive cell therapy. Among these, muta-
+tions in TP53 represent one of the most frequent and well-
+characterized classes of cancer driver alterations across tumor types,
+and several TP53-derived mutant peptides have been shown to elicit T
+cell responses in patients
+43. Using representative TP53 hotspot muta-
+tions with experimentally observed cognate TCRs originally evaluated
+by TAPIR
+25 (Fig. 3c and Supplementary Data 3), we evaluated StriMap’ s
+ability to rank antigen-speciﬁc TCRs for mutant peptide-HLA queries
+under a fully zero-shot (OOD) setting, where neither the peptide nor
+the TCRs were seen during training. All positives and negatives were
+taken directly from TAPIR (7 cognate TCRs; 3144 negatives), and we
+compared against TAPIR and the NetTCR-2.0
+18 baseline as reported in
+the original study25.
+Within the TCR-centric ranking task, we aimed to resolve
+mutation-speciﬁc effects, where mutant peptides differ from their
+wild-type counterparts by only one or a few amino acids. Distin-
+guishing such subtle differences likely requires amino-acid – level
+modeling rather than treating non-cognate pairs as the only negatives.
+To better re ﬂect this biological setting, we introduced a mutation-
+aware negative sampling strategy, generating negatives via random
+amino acid substitutions in either the peptide or the TCR CDR3 α/β
+regions. Across both AUROC and AUPRC for TCR ranking, StriMap
+variants outperformed TAPIR, NetTCR-2.0, and TAPIR-plus (trained
+with proprietary in-house TCR functional data not accessible to Stri-
+Map), with StriMap-M2 (peptide-mutation negatives) achieving the
+strongest overall performance and StriMap-M1 (TCR-mutation nega-
+tives) providing intermediate gains relative to the base model (Fig.3d).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+To determine if this mutation-aware sampling strategy is model-
+agnostic, we applied it to baseline models (EPACT-M2 and NetTCR-
+M2). While both exhibited substantial AUROC boosts (Supplementary
+Fig. 15), a distinct architectural dependency emerged: complex,
+Transformer-based models (StriMap and EPACT) beneﬁted profoundly
+in AUPRC, whereas simpler network architectures like NetTCR failed to
+show AUPRC improvements. This suggests that models with lower
+representational capacity struggle to fully learn the ﬁne-grained
+interaction shifts induced by single-amino-acid mutations. These
+results indicate that mutation-aware negative sampling is particularly
+beneﬁcial for modeling cancer-associated antigen recognition.
+Consistent with aggregate performance metrics, StriMap showed
+improved enrichment of true binders among the highest-ranked TCR
+candidates relative to competing methods (Fig. 3e). For example,
+multiple experimentally validated TCRs recognizing neoepitopes
+DRNIFRHSVV and VVPDEPPEV were ranked within the top 20 by Stri-
+Map, whereas other methods more often ranked these true positives
+substantially lower. This capability is critical for T cell therapy, where
+only a small number of top-ranked candidates can be advanced for
+costly experimental validation and clinical development. We next
+asked whether StriMap can resolve mutation-speciﬁc effects for aﬁxed
+TCR by comparing mutant and wild-type peptide-HLA contexts.
+Because wild-type peptides may lack immunogenicity either due to
+limited TCR recognition or low HLA presentation, this comparison
+helps disentangle the underlying driver. Notably, predicted differences
+were driven predominantly by changes in pHLA presentation rather
+than large shifts in inferred TCR– pHLA binding scores (Supplementary
+Fig. 16). For example, for the C135Y mutation, the predicted HLA pre-
+sentation score increased from 0.06 (wild-type) to 0.65 (mutant),
+whereas the inferred TCR – pHLA score changed only modestly from
+0.61 to 0.65, suggesting that the gain in immunogenicity is primarily
+consistent with enhanced HLA presentation. Together, these results
+illustrate how jointly modeling pHLA presentation and TCR recogni-
+tion enables StriMap to predict whether mutation-driven effects are
+more consistent with altered HLA presentation or altered TCR
+recognition.
+We next evaluated StriMap in task 2, a complementary
+neoepitope-centric setting, where patient-speciﬁc TCR repertoires are
+available, and the objective is to prioritize immunogenic neoepitopes
+for vaccine development (Fig.3b). We used paired neoantigen and TCR
+T cell Tumor
+Neoepitope
+TCR
+HLA Wild-type
+Mutated
+T cell–tumor immune microenvironment
+a
+Task 1: TCR-centric ranking for adoptive T cell therapy (given 7 cognate TCRs and 3,144 others)
+e
+102 101 100
+TCR rank
+StriMap-M2
+StriMap-M1
+StriMap
+TAPIR-plus
+TAPIR
+NetTCR2.0
+Neoepitope
+VVPDEPPEV
+KTYQGSYGFRR
+YSPALNKMFY
+DRNIFRHSVV
+Top 20
+d
+StriMap
+TAPIR-plus
+TAPIR
+NetTCR2.0
+0.0
+0.2
+0.4
+0.6
+0.8AUROC
+0.74 0.69
+0.62
+0.69
+0.48
+0.39
+StriMap-M2StriMap-M1
+StriMap
+TAPIR-plus
+TAPIR
+NetTCR2.0
+AUPRC
+0.09
+0.13
+0.03
+0.01 0.01 0.00
+StriMap-M2StriMap-M1
+0.00
+0.05
+0.10
+0.15
+c
+TP53
+Gene #TCR
+2
+1
+3
+1
+Mutation
+Y220D
+L111R
+T211l
+C135Y
+Neoantigen
+VVPDEPPEV
+KTYQGSYGFRR
+DRNIFRHSVVV
+YSPALNKMFY
+HLA
+A0201
+A1101
+C0602
+A2902
+Task 2: Neoepitope prioritization for vaccine design (given 5 experimentally validated neoepitopes and 101 others)
+f
+StriMap-Joint
+StriMap-pHLA onlyNetMHCpan-4.2-ELNetMHCpan-4.2-BA
+0.0
+0.2
+0.4
+0.6
+0.8AUROC
+0.72
+0.56 0.55
+0.49
+0.00
+0.05
+0.10
+0.15AUPRC
+0.14
+0.08
+0.06 0.05
+StriMap-Joint
+StriMap-pHLA onlyNetMHCpan-4.2-ELNetMHCpan-4.2-BA
+g
+True discovery event
+05 0 1 0 0
+Rank
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Recall
+ZHX2
+(Rank 3)
+CIRH1A(Rank 16)
+FASN(Rank 32)
+LRP1
+(Rank 49)
+BRCA2
+(Rank 50)
+StriMap Joint
+05 0 1 0 0
+Rank
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+CIRH1A
+(Rank 6)
+BRCA2(Rank 80)
+LRP1
+(Rank 85)
+StriMap pHLA only
+ZHX2
+(Rank 35)
+FASN
+(Rank 38)
+05 0 1 0 0
+Rank
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+ZHX2(Rank 22)
+LRP1(Rank 95)
+NetMHCpan-4.2 EL
+BRCA2
+(Rank 40)
+CIRH1A(Rank 42)
+FASN
+(Rank 47)
+05 0 1 0 0
+Rank
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+BRCA2(Rank 30)
+FASN
+(Rank 63)
+LRP1(Rank 89)
+NetMHCpan-4.2 BA
+ZHX2
+(Rank 48)
+CIRH1A
+(Rank 46)
+b
+HLA types WES
+TCR-seq
+TIL/PBMC
+expanded
+pHLA predictor
+TCR-pHLA predictor
+(Trained on
+public resources)
+TCR pool
+Neoepitope pool
+Query
+Neoepitope prioritization
+Joint score ranking
+Candidates
+Neoepitopevaccine
+TCR-centric ranking
+T cellengineering 
+Candidates
+TCR score ranking
+Fig. 3 | StriMap supports two clinically relevant tasks for T cell-based immu-
+notherapy. aSchematic illustration of T cell recognition within the tumor immune
+microenvironment, highlighting interactions between TCRs and neoepitope-HLA
+complexes presented on tumor cells.b Overview of the StriMap framework for joint
+analysis of HLA presentation and TCR recognition. Whole-exome sequencing
+(WES), HLA typing, and TCR sequencing deﬁne candidate neoepitopes and patient-
+speciﬁc TCR pools, which are evaluated using StriMap pHLA and TCR-pHLA pre-
+dictors for downstream prioritization.c Representative TP53 cancer mutations,
+their corresponding neoepitopes, and the number of experimentally observed
+TCRs recognizing each neoepitope.d Performance comparison of StriMap with
+TAPIR and NetTCR for prioritizing cognate TCRs given mutant pHLA queries,
+evaluated by AUROC and AUPRC. TAPIR-plus denotes TAPIR trained on both public
+datasets and additional in-house proprietary TCR functional data, which StriMap
+does not access. StriMap-M2 indicatesﬁne-tuning using negative samples gener-
+ated by randomly mutating one to two amino acids in the peptide, whereas
+StriMap-M1 indicatesﬁne-tuning using negative samples generated by randomly
+mutating one to three amino acids in the TCR CDR3α and/or CDR3β regions. For
+reference, the random baseline is AUROC = 0.5 and AUPRC = 0.002.e TCR ranking
+results for TP53-derived neoepitopes. Each point represents a TCR-pHLA interac-
+tion for a given neoepitope. Colors denote different neoepitopes, and the dashed
+line highlights the top 20 ranked TCR candidates. (f) AUROC and AUPRC perfor-
+mance of StriMap for prioritizing immunogenic neoepitopes given melanoma
+patient-speciﬁc TCR pools, using a joint score combining TCR-pHLA and pHLA
+predictors, compared with the pHLA-only StriMap model and NetMHCpan-4.2-EL
+and NetMHCpan−4.2-BA. For reference, the random baseline is AUROC = 0.5 and
+AUPRC = 0.047.g Recall-rank curves illustrating the recovery of true immunogenic
+neoepitopes across ranking positions for TCR involved predictions versus pHLA
+predictor only predictions. Red markers denote true discovery events.
+NetMHCpan-4.2 EL and BA denote the eluted-ligand and binding-afﬁnity prediction
+modes, respectively. Panels a-b were created in BioRender. Kang, H. (https://
+BioRender.com/qeveyxr).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+repertoire data from a melanoma dataset 2, including clonally expan-
+ded TCRs pro ﬁled from tumor-in ﬁltrating lymphocytes (TILs) and
+matched peripheral blood mononuclear cells (PBMCs). In total, this
+dataset comprised 106 candidate peptide mutations, of which 5 were
+experimentally conﬁrmed to elicit T cell immune responses. Candidate
+neoepitopes were ranked using a joint score that integrates predicted
+neoepitope-HLA presentation with predicted TCR interaction score
+across the TCR repertoire; we refer to this joint scoring framework as
+StriMap-joint. Using the mutation-aware StriMap-M2 model, we sum-
+marized each candidate neoepitope by the mean interaction score of
+the top 30 ranked TCR – pHLA pairs, capturing the collective recogni-
+tion potential of the patient’ s expanded T cell repertoire. StriMap-joint
+consistently achieved higher AUROC and AUPRC than both a pHLA-
+only StriMap model and NetMHCpan−4.2-based baselines (EL and BA)
+used in the original study
+2, highlighting the bene ﬁt of explicitly
+incorporating TCR recognition into neoepitope prioritization (Fig.3f).
+This advantage was robust to the choice of the number of top-ranked
+TCR-pHLA pairs used for aggregation (Supplementary Fig. 17). Recall-
+rank analysis, summarizing the ranking positions of all experimentally
+validated immunogenic neoepitopes within the ranked candidate list,
+further showed that true immunogenic neoepitopes were placed ear-
+lier in the ranking when using the joint model compared with pHLA-
+only or NetMHCpan-based approaches (Fig.3g).
+Together, these results indicate that StriMap’ s joint modeling of
+peptide presentation and TCR recognition can support zero-shot
+prioritization in two cancer immunotherapy settings. By capturing
+mutation-driven changes in pHLA presentation and their downstream
+impact on TCR engagement, StriMap provides a uniﬁed framework for
+TCR selection in adoptive cell therapy and neoepitope ranking for
+personalized cancer vaccines.
+Proteome-wide discovery of bacterial mimic peptides in AS
+Having established StriMap’ s utility in cancer immunotherapy, we next
+asked whether the same joint modeling of peptide– HLA presentation
+and TCR recognition could be extended to autoimmune T cell recog-
+nition, where the relevant antigenic triggers are typically unknown. We
+focused on ankylosing spondylitis (AS), a prototypical HLA-B27-
+associated inﬂammatory disease, motivated by prior evidence that
+AS is strongly linked to HLA-B27 and that disease-associated TCRs
+enriched for a conserved TRBV9 motif may contribute to pathogen-
+esis. A long-standing question in AS is how environmental exposures,
+particularly gut microbial antigens, may interact with HLA-B27 to
+initiate or amplify autoreactive T cell responses. Molecular mimicry
+provides one possible mechanism: microbial peptides presented by
+HLA-B27 may activate TCRs that also cross-react with self-antigens,
+thereby linking bacterial antigen exposure to autoimmune inﬂamma-
+tion. We therefore focused on bacterial peptides not as arbitrary for-
+eign antigens, but as candidate environmental triggers that could be
+presented by HLA-B27 and recognized by AS-associated TRBV9 TCRs.
+To deﬁne a biologically grounded and clinically relevant search space,
+we curated a literature-supported cohort of AS-associated gut bac-
+terial strains spanning four major phyla: Bacillota/Firmicutes, Verru-
+comicrobiota, Bacteroidetes,a n d Proteobacteria.T h e ﬁnal panel
+comprised 16 strains, totaling 43,241 annotated proteins used for
+downstream peptide enumeration (Supplementary Table 4). This
+design allowed us to ask whether StriMap could prioritize microbial
+peptides with both predicted HLA-B27 presentation and predicted
+recognition by disease-associated TCRs from a proteome-scale bac-
+terial search space.
+To evaluate whether StriMap can generalize across patients in a
+realistic translational regime, we designed a cross-patient few-shot
+inference workﬂow centered on TRBV9 TCRs (Fig.4a). Speciﬁcally, we
+used TCR binding data from patient 1 (TRBV9 TCR AS3.1) and patient 2
+(TRBV9 TCRs AS4.1 – AS4.4) as reference inputs and then predicted
+peptide-binding speciﬁcity for a query TRBV9 TCR (AS8.4) from an
+independent patient 3. AS8.4 was selected because it was not among
+the ﬁve TRBV9 TCRs used for few-shot training
+44,e n a b l i n ga no u t - o f -
+sample evaluation, and because it showed the strongest activation to
+the positive-control peptides among the remaining TRBV9 TCRs tes-
+ted in the original study
+44. This design simulates deployment on a new
+patient with limited disease-speciﬁc supervision while still leveraging
+large public training resources (Supplementary Data 1). To examine
+whether the trained model relied on biologically plausible recognition
+determinants in this setting, we applied residue-level attribution ana-
+lysis to experimentally solved AS-associated TCR – YEIH– HLA-B*27:05
+complex structures, including AS4.2, AS4.3, and AS8.4 (Supplementary
+Fig. 18). This analysis showed that high-importance residues were
+concentrated in CDR3 regions of both TCR α and TCRβ chains, sup-
+porting that StriMap captures biologically relevant TCR recognition
+regions rather than broadly distributed sequence signals.
+We then performed proteome-wide in silico screening of bacterial
+peptides at the scale required for mimicry discovery (Fig.4b). For each
+bacterial proteome, we generated overlapping 9-mer peptides using a
+s l i d i n gw i n d o w( k=9 ,s t r i d e=1 ) ,y i e l d i n gap o o lo f1 3 , 0 6 8 , 9 0 2c a n d i -
+date 9-mers. StriMap was then applied in a two-stage, dual-task man-
+ner: (i) predicting the score of HLA-B*27:05 presentation, followed by
+(ii) predicting recognition by the disease-associated TRBV9 TCRs,
+thereby coupling presentation and recognition in a single screening
+workﬂow. In our implementation, we retained the top predicted HLA-
+B*27:05 binders (top 3% relative to a random-peptide background;
+568,982 peptides) for downstream TCR screening (Fig. 4c). After ﬁl-
+tering for high-conﬁdence HLA-B*27:05 candidates, we used the Stri-
+Map TCR – pHLA predictor to estimate interactions between each
+candidate peptide and ﬁve disease-associated TRBV9 TCRs (AS3.1,
+AS4.1– AS4.4) previously reported to be reactive to multiple HLA-
+B*27:05– bound peptides
+44. Peptides were then ranked by the mean
+predicted binding score across the ﬁve TCRs, and we selected seven
+top-ranking bacterial peptides that were each predicted to interact
+strongly with at least two TRBV9 TCRs. We imposed this multi-TCR
+criterion to re ﬂect the known cross-reactivity of disease-associated
+TRBV9 TCRs and to prioritize candidates with broader potential to
+activate multiple TRBV9 clonotypes instead of peptides speciﬁct oa
+single TCR, thereby increasing translational relevance. We next eval-
+uated the predicted reactivity of these candidates against the out-of-
+sample query TRBV9 TCR AS8.4. We benchmarked the candidate
+bacterial peptides against negative controls and two previously
+reported positive controls: the human self-peptide TRLALIAPK and the
+bacterial mimic peptide LRVMMLAPF. Furthermore, to rigorously test
+the model ’ s discriminative power, we included human-derived
+homologous peptides — identiﬁed via BLAST for their high linear
+sequence similarity to the bacterial sequences in our screening pool—
+as stringent speci ﬁcity checks to demonstrate StriMap ’ s ability to
+distinguish true structural mimics from mere sequence neighbors.
+Top-ranked candidates included peptides derived fromStreptococcus
+spp.a n d A. muciniphila, and multiple high-scoring candidates (e.g.,
+ARVMALMPF, GRILALVPK, PRIMMISMK, PRLPLTVPF) emerged among
+the leading predictions under this cross-patient few-shot setting
+(Fig. 4d). The main conclusion from this computational screen is that
+StriMap can reduce a large disease-associated microbial proteome
+space to a small set of candidate HLA-B27-presented bacterial peptides
+predicted to engage AS-associated TRBV9 TCRs.
+Experimental validation of TRBV9⁺ T cell activation
+To experimentally validate StriMap-prioritized candidate mimic pep-
+tides in an HLA-B*27:05 – restricted setting, we implemented a dis-
+covery work ﬂow in which computational screening nominates
+candidate TCR – peptide– HLA interactions for targeted testing and
+iterative reﬁnement (Fig. 5a). Unlike prior validation settings that pri-
+marily tested known epitopes, binding-level readouts, or bulk peptide
+immunogenicity, this work ﬂow combines proteome-scale discovery
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+with TCR-de ﬁned functional activation assays for newly predicted
+bacterial mimic peptides (Supplementary Table 5). We generated
+endogenous TCR-knockout Jurkat cell lines and re-expressed the
+TRBV9 TCR AS8.4 by lentiviral transduction (“Materials and Methods”).
+Antigen-presenting cells (APCs) were generated by transducing
+293 T cells to express HLA-B*27:05. T cells were then co-cultured with
+APCs that had been pre-incubated with the candidate peptides, and T
+cell activation was assessed by measuring both CD69 surface expres-
+sion and ﬂuorescence from the NFAT-driven ZsGreen reporter, in
+which ZsGreen expression is controlled by a nuclear factor of activated
+T cells (NFAT) response element to report downstream TCR signaling
+(Fig. 5b; “Materials and Methods”).
+Although not all candidates were predicted to bind AS8.4, we
+tested the full set of 10 peptides to directly assess the model’ s ability to
+separate activators (CD69⁺ZsGreen⁺) from non-binders. We observed
+robust T cell activation in response to the three predicted positive
+binders: ARVMALMPF (fromStreptococcus anginosus, S. mutans,a n dS.
+parasanguinis;4 9 . 5 % ) ,P R I M M I S M K( f r o mPrevotella copri and Sega-
+tella copri; 1.29%), and GRILALVPK (from Akkermansia muciniphila;
+0.97%) (Fig. 5c and Supplementary Fig. 19). For comparison, we
+included two previously reported positive controls (TRLALIAPK, 7.0%;
+LRVMMLAPF, 57.8%), and two negative controls (RRFDERRPR, 0.057%;
+GILGFVFTL, 0.084%) together with background conditions (no pep-
+tide; no APC/no peptide), all of which showed minimal activation.
+StriMap predictions across the ten peptides were highly con-
+cordant with experimental outcomes: the three activating peptides
+(ARVMALMPF, GRILALVPK, PRIMMISMK) were ranked among the top
+candidates, whereas non-activating peptides received consistently low
+scores. To contextualize these results, we benchmarked multiple
+modeling strategies on the experimentally tested peptide– TCR pairs
+by labeling the three activating peptides as positives and the remaining
+peptides as negatives, and computing AUROC/AUPRC from each
+method’ s predicted scores (Supplementary Fig. 20). StriMap sub-
+stantially outperformed logistic regression, the amino-acid
+frequency– based baselines used in Yang et al.
+44,a sw e l la sN e t T C R -
+2.219, in both metrics. Notably, incorporating limited experimental
+feedback in a few-shot setting improved performance, indicating that
+StriMap can efﬁciently leverage sparse experimental validation data to
+reﬁne disease-speciﬁc TCR-antigen recognition predictions.
+Finally, given reports linking potentially pathogenicStreptococcus
+species to AS, IBD, and AS – IBD overlap
+45,46, we asked whether the
+experimentally validated candidates show broader clinical associa-
+tions. We performed an exact k-mer search against a translated, non-
+redundant microbial protein catalog constructed from metagenomic
+mix-assemblies
+47. This protein catalog was built from 156 individuals
+with IBD including ulcerative colitis (UC, n = 29) and Crohn’ s disease
+(CD, n = 82) as well as from healthy controls ( n = 45) across IBD
+cohorts48– 50, healthy controls from the Men’ s Lifestyle Validation Study
+(MLVS) study ( n =3 6 1 )51, and 970 patients with pathogen-con ﬁrmed
+gastroenteritis52. Matched metatranscriptomic data were available for
+all metagenomic samples, allowing us to evaluate the transcriptional
+activity of the genes encoding proteins that contain the candidate
+peptides. Across the ten candidate peptides, ﬁve proteins containing
+the ARVMALMPF motif were signiﬁcantly more prevalent and enriched
+in patients with CD or UC compared to healthy controls, whereas two
+proteins with PRIMMISMK were more prevalent and transcriptionally
+Number of HLA-B27 high-affinity 9-mer peptides (×104)
+Streptococcus anginosus (2)
+Streptococcus anginosus (1)
+Streptococcus mutans
+Streptococcus salivarius
+Limosilactobacillus fermentum (Lactobacillus fermentum)
+Streptococcus parasanguinis
+Intestinibacter bartlettii (Clostridium bartlettii)
+Lachnospiraceae bacterium
+Prevotella melaninogenica
+Parasutterella excrementihominis (1)
+Ruminococcus gnavus
+Parasutterella excrementihominis (2)
+Akkermansia muciniphila
+Prevotella copri (Segatella copri)
+Escherichia coli
+Klebsiella pneumoniae
+02468
+c
+d
+Streptoccoccus species
+Positive control
+A. muciniphila
+P. copri (S. copri)
+Human protein
+E. coli
+Negative control
+K. pneumoniae
+ARVMALMPFLRVMMLAPFTRLALIAPKGRILALVPKPRIMMISMKPR
+LPLT
+VPF
+TRVMLMPKKVRAALYAPKTRVALYAPRGILGFVFTLRRFDERRRRPRLPLAVPRPRLPRALPRGR
+LMALNPR
+0.0
+0.2
+0.4
+0.6Predicted reactivity score
+Bacteroidetes
+Verrucomicrobia
+Firmicutes
+Proteobacteria All bacterial proteins
+(43,241 proteins)
+Bacterial cohort proteomes
+Bacterial protein sequence
+Sliding window screen
+MKVR I LGASDE F ...
+KVR I LGASD
+9-mer peptide 2
+VR I LG A S DE
+9-mer peptide 3
+Sliding window
+RIL G A S D EF
+9-mer peptide 4
+...
+...
+Pool of 13 million 
+9-mer peptides
+K V R I L GAS D
+KV R A L G AS D
+VR I L DASDE
+V R IL GASD
+E
+K V RI L G AS D
+K VA IL GA H D
+K VR I L D A S D
+R I LG AS DE F
+R C LG A S DE F
+RI L G AH D EF
+V R IL GAS DE
+RI L G AH D E F
+Step 1: StriMap predicts  
+HLA-B*27:05 presentation
+Step 2: StriMap predicts
+TRBV9 TCR recognition
+Computational predictionb
+a Few-shot generalization to out-of-sample AS TCRs
+StriMapAS-specific & 
+public training data
+TRBV9 TCR: 
+AS3.1 
+Patient 1
+Patient 2
+TRBV9 TCR: 
+AS4.1, AS4.2, 
+AS4.3, AS4.4 
+TRBV9 TCR: 
+AS8.4 (Query) 
+Patient 3
+Ankylosing 
+spondylitis (AS)
+HLA-B*27+
+patients
+Fig. 4 | Computational discovery of AS-associated bacterial mimicry peptides
+through cross-patient prediction. aAS-associated bacterial cohort and cross-
+patient few-shot prediction setup. We curated a literature-derived cohort of gut
+bacterial strains previously reported to be associated with ankylosing spondylitis
+(AS), spanning four major phyla: Bacillota, includingStreptococcusspp., R. gnavus,
+etc.), Verrucomicrobiota (A. muciniphila), Bacteroidetes (P. copri, P. melaninogen-
+ica), and Proteobacteria (K. pneumoniae, E. coli, Parasutterella excrementihominis).
+To assess generalization to unseen patient TCRs, we implemented a cross-patient
+inference workﬂow in which TRBV9 TCR binding data from patient 1 (AS3.1) and
+patient 2 (AS4.1– AS4.4) were used as reference inputs to train the speciﬁcity model,
+and StriMap then predicted peptide-binding speciﬁcity for a query TRBV9 TCR
+from an independent Patient 3 (AS8.4), simulating a few-shot setting.b Large-scale
+in silico 9-mer peptide screening pipeline. The proteomes of the selected bacterial
+cohort, comprising 43,241 proteins, were retrieved and processed. A sliding win-
+dow approach with a window size of k = 9 and a stride of 1 amino acid was applied to
+generate a pool of ~13 million 9-mer peptides. The StriMap computational frame-
+work performs a dual-task prediction: Task 1 predicts the likelihood of HLA-B*27:05
+presentation, and Task 2 predicts the recognition probability by speciﬁcT R B V 9
+TCRs (e.g., AS8.4).c Landscape of HLA-B27 high-afﬁnity 9-mer peptides across the
+cohort. The bar chart illustrates the distribution and total count of predicted high-
+afﬁnity 9-mer peptides for each bacterial strain. Strains such asK. pneumoniaeand
+E. coli exhibit a high density of potential HLA-B27 binders, highlighting their sig-
+niﬁcance in the molecular mimicry hypothesis. d Predicted reactivity scores for
+candidate bacterial peptides. Representative peptides from various phyla were
+ranked by their predicted reactivity scores against the target TCR. High-scoring
+candidates from Streptococcus spp.a n dA. muciniphila are compared against
+positive and negative controls, indicating potential cross-reactivity between bac-
+terial antigens and AS-associated TCRs.a, b were created in BioRender. Kang, H.
+(https://BioRender.com/77gafpz).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+upregulated in non-IBD samples (Fig. 5d, e and Supplementary
+Table 6). In particular, ARVMALMPF— predicted with the highest score
+in the screening stage (Fig. 4d) and validated here to activate AS8.4 ⁺
+T cells— showed consistent enrichment in IBD cohorts, supporting the
+possibility of shared microbial triggers between AS and IBD.
+Discussion
+Deep learning has enabled major progress across biomedicine, yet
+generalizing to new biological contexts remains challenging, particu-
+larly under data sparsity, class imbalance, and dataset bias. Rather than
+relying solely on ever-larger datasets, we focus on developing models
+that better capture biological structure under limited supervision, and
+apply this principle to TCR antigen-speci ﬁcity prediction, a central
+problem in infection, cancer, and autoimmunity. T cell – mediated
+immunity relies on a recognition cascade in which peptides are pre-
+sented by HLA molecules and subsequently engaged by diverse T cell
+receptors. Modeling this tri-molecular process has been dif ﬁcult
+because the interaction space is combinatorially large, recognition is
+structurally constrained yet ﬂexible, and available experimental data
+are sparse and biased. Here we present StriMap, a uni ﬁed framework
+that jointly models peptide – HLA presentation and TCR recognition
+using complementary physicochemical, sequence-context, and
+structure-informed representations.
+A central conceptual advance of StriMap is its treatment of anti-
+gen presentation and TCR recognition as a coupled biological process
+rather than independent prediction tasks. By conditioning TCR
+recognition on the peptide – HLA landscape, StriMap provides a bio-
+logically consistent decision pathway that helps disentangle whether
+changes in immunogenicity arise from altered presentation or altered
+TCR engagement. Moreover, StriMap incorporates structure-derived
+constraints at scale without requiring experimentally solved com-
+plexes, enabling reasoning about interface geometry beyond current
+structural databases. In practice, we ﬁnd that training strategy is a
+critical complement to architecture: dynamic and mutation-aware
+negative sampling exposes the model to realistic near-miss decoys,
+which is particularly important in clinical settings where neoantigens
+often differ from self by a single amino acid.
+StriMap’ s utility is highlighted by applications in two distinct
+disease settings where candidate selection must be aggressively
+prioritized. In cancer immunotherapy, StriMap improves enrichment
+of true binders among the top-ranked candidates under zero-shot
+conditions, a setting that mirrors clinical reality because patient-
+speciﬁc neoantigens are inherently novel. The coupled modeling of
+Fig. 5 | Experimental validation of AS-associated microbial mimicry peptides.
+a Overview of discovery framework, in which StriMap prioritizes candidate disease-
+associated TCR-peptide-HLA interactions for experimental validation and iterative
+reﬁnement. b Experimental workﬂow for validating interactions between the AS-
+associated TCR AS8.4 and candidate peptides. CD8⁺ Jurkat T cells were transduced
+to express the AS8.4 TCR and co-cultured with HLA-B*27:05-expressing antigen-
+presenting cells (APCs) pulsed with candidate bacterial peptides.c Flow cytometry
+analysis of T cell activation following peptide stimulation. Activation was quantiﬁed
+by co-expression of CD69 (y-axis) and NFAT (nuclear factor of activated T cells)-
+driven ZsGreen reporter activity (x-axis). Three bacterial peptides induced robust T
+cell activation, comparable to the positive control, whereas negative and back-
+ground controls showed minimal activation. Activated cells are enriched in the
+CD69⁺ZsGreen⁺ quadrant. Representativeﬂow-cytometry plots from one of two
+independent experiments are shown; both experiments produced consistent
+activation patterns.d Metagenomic and metatranscriptomic proﬁling of bacterial
+peptide candidates across clinical cohorts. Heatmap shows the relative prevalence
+of peptide-associated features in healthy controls, infectious gastroenteritis,
+Crohn’ s disease CD, and ulcerative colitis UC, following Z-score normalization.
+e Statistical comparison of peptide-associated features across diagnostic groups. A
+Kruskal-Wallis test was performed across healthy, infectious gastroenteritis, UC,
+and CD cohorts. Features with signiﬁcant group-level differences (p < 0.05) were
+further assessed using post hoc Dunn’ s tests with multiple-comparison correction.
+Exact P values and Bonferroni-adjustedP values for all pairwise comparisons are
+provided in Supplementary Table 6. MGX Metagenomics; MTX Metatran-
+scriptomics.a, b were created in BioRender. Kang, H. (https://BioRender.com/
+gu35uﬁ).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+presentation and recognition provides a practical framework for
+prioritizing TCRs and vaccine neoepitopes when only a small number
+of candidates can be experimentally tested. Although we focus on
+melanoma and TP53 mutations here, we anticipate that this prior-
+itization strategy may generalize to other cancer contexts. In auto-
+immunity, StriMap links a large-scale microbial sequence space to
+antigen-speciﬁc T cell responses: by combining disease-associated
+TRBV9 TCR clonotypes with an HLA-B*27:05-restricted microbial
+peptide landscape, we identiﬁed bacterial peptides that were experi-
+mentally validated to activate AS-associated T cells. The enrichment of
+one validated peptide in IBD cohorts further suggests that shared
+microbial antigenic drivers may contribute to overlapping inﬂamma-
+tory phenotypes, illustrating how StriMap can convert large-scale in
+silico screening into testable mechanistic hypotheses. Importantly,
+functional molecular mimicry often relies on shared biochemical
+hotspots rather than rigid global structural homology
+53.S t r i M a ps u c -
+cessfully captures these non-linear geometric constraints, enabling the
+identiﬁcation of diverse bacterial mimics that transcend simple
+sequence or structural alignment.
+We envision StriMap as a task-speci ﬁc predictive framework
+designed to rapidly evaluate large peptide– HLA and TCR – pHLA can-
+didate spaces while explicitly coupling antigen presentation and TCR
+recognition. From a practical clinical perspective, StriMap can com-
+plement other structure modeling approaches, such as AlphaFold3
+54 in
+a two-stage work ﬂow. In this work ﬂow, StriMap is ﬁrst applied to
+prioritize a manageable set of candidate neoepitopes or TCR – pHLA
+pairs, after which structural modeling approaches are used to generate
+mechanistic hypotheses about how the selected targets interact.
+Several limitations and opportunities remain. First, because
+TCR– pHLA data are sparse and unevenly distributed across epitope
+space, fully zero-shot generalization to entirely novel epitopes remains
+challenging
+55. Our results, therefore, suggest that evaluation of zero-
+shot performance should emphasize functional prioritization, rather
+than relying solely on aggregate metrics such as AUROC. OOD
+benchmarks such as IMMREP23 include only a small number of unseen
+epitopes (n = 3), limiting the interpretability of global performance
+statistics. In contrast, StriMap demonstrates strong practical utility in
+clinically relevant ranking settings: it placed validated TP53-speci ﬁc
+TCRs among the top-ranked candidates in cancer immunotherapy, and
+prioritized a small set of activating peptides from a pool of ~13 million
+bacterial 9-mers in autoimmunity. Such top-K precision is often the key
+determinant of translational success, because it directly governs which
+candidates are selected for costly experimental validation. Never-
+theless, few-shot adaptation using limited task- or patient-speciﬁc data
+remains a reliable strategy for further improving accuracy in applica-
+tions requiring higher ﬁdelity.
+Second, structure-informed representations improve interface
+modeling but may not capture conformational dynamics that in ﬂu-
+ence recognition; incorporating structural uncertainty (e.g., ensemble
+predictions) or dynamics-inspired features may further improve pre-
+dictions. Consistent with this direction, the ongoing IMMREP25 Kaggle
+challenge underscores the importance of structure-aware TCR– pHLA
+modeling, although direct comparison is currently limited because
+top-performing structure-based approaches have not yet been pub-
+lished. Moreover, many leading models are based on AlphaFold3
+54
+prediction, whose computational cost and throughput constraints
+limit applicability to proteome-scale screening. StriMap circumvents
+this by modeling interfaces implicitly and employing a two-stage fun-
+nel strategy: relying on rapid sequence encoders for massive-scale
+pHLA screening, while engaging ESMFold-derived monomer struc-
+tures speciﬁcally for the complex task of TCR recognition. This delib-
+erate trade-off enables ef ﬁcient prioritization across millions of
+candidates. Third, our current implementation focuses on HLA class I
+and CD8⁺ T cell recognition; extending the framework to HLA class II
+presentation and CD4 ⁺ T cell recognition will be important for
+broadening translational impact.
+To facilitate broad adoption and iterative improvement, we pro-
+vide a web portal and training interface that support both prediction
+and rapid ﬁne-tuning on local datasets, enabling users to incorporate
+sparse experimental feedback while retaining knowledge from large-
+scale pretraining (Supplementary Fig. 21). We anticipate that this
+combination of coupled modeling, structure-aware representations,
+and lab-in-the-loop validation will help bridge computational predic-
+tion and mechanistic immunology, enabling more effective discovery
+in cancer immunotherapy and antigen-driven autoimmune disease.
+Methods
+The StriMap framework
+StriMap is a uni ﬁed deep learning framework for modeling pHLA
+binding and TCR recognition of pHLA complexes at residue resolution.
+The framework consists of two modular components: (i) a peptide-
+HLA predictor that learns transferable pHLA representations, and (ii) a
+TCR-pHLA predictor that leverages pretrained pHLA features. Both
+components are built upon a uniﬁed Sequence and Structure Feature
+Extractor (SSFE) and attention-based residue-level interaction model-
+ing using Bilinear Attention Networks (BAN).
+Sequence and structure feature extractor (SSFE)
+G i v e na ni n p u tp r o t e i ns e q u e n c eo fl e n g t hL, SSFE constructs residue-
+level representations by integrating physicochemical, sequence-con-
+text, and structure-informed features. All three modalities are encoded
+independently and subsequently fused.
+Physicochemical encoding
+Residuei is encoded using a 20-dim physicochemical descriptor vector
+Sphys
+i 2 Rdphys derived from AAindex 31 (selected properties, such as
+hydrophobicity, charge, polarity, molecular volume, and side-chain
+ﬂexibility; z-score normalized across amino acids) (Supplementary
+Table 1). For a sequence of length L, physicochemical features are
+assembled into a matrix
+S
+phys = Sphys
+1 , ... , Sphys
+L
+hi >
+2 RL × dphys , dphys =2 0: ð1Þ
+To align this modality with the model ’ s latent space, we apply a
+fully connected layer to map the features to d dimensions:
+Xphys =L i n e a rSphys
+/C16/C17
+2 RL × d , d =2 5 6: ð2Þ
+Sequence context encoding
+To capture evolutionary and contextual information beyond local
+amino acid properties, we employ a pretrained protein language
+model, ESM2 (650 million parameters)
+32.F o ra ni n p u ts e q u e n c e ,
+residue-level semantic embeddings are extracted from the ﬁnal
+transformer layer of ESM2 followed by a fully connected layer:
+Ssem =E S M 2SðÞ , Ssem2 RL × dsem , dsem =1 2 8 0: ð3Þ
+Xsem =L i n e a rSsem/C0/C1
+2 RL × d , d =2 5 6: ð4Þ
+Structure geometric encoding
+Protein structural information is derived from 3D structures predicted
+by ESMFold. For residue i, we extract a structural descriptor vector
+Xstruct
+i 2 Rdstruct , dstruct = 17, which includes backbone torsion angles
+(encoded as sine and cosine pairs), secondary structure states, relative
+solvent accessibility, residue contact counts, and predicted conﬁdence
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+scores (pLDDT). In addition, the Cartesian coordinates of the Cα atom
+are retained: ri2 R3.
+To explicitly model spatial relationships, residues are represented
+as nodes in a geometric graph, and a stacked SE(3)-equivariant graph
+neural network (EGNN) is applied. For EGNN layerl,n o d ef e a t u r e sa n d
+coordinates are updated as:
+mij = ϕ mðh lðÞ
+i , h lðÞ
+j ,kr lðÞ
+i /C0 r lðÞ
+j k
+2
+Þ; ð5Þ
+r l +1ðÞ
+i = r lðÞ
+i +
+X
+j≠i
+r lðÞ
+i /C0 r lðÞ
+j
+/C16/C17
+ϕ r mij
+/C16/C17
+; ð6Þ
+mi =
+X
+j≠i
+mij ; ð7Þ
+h l +1ðÞ
+i = ϕ hðh lðÞ
+i , miÞ; ð8Þ
+where ϕ m, ϕr ,a n d ϕ h are learnable multilayer perceptrons. Node
+features are initialized as h 0ðÞ
+i = Xstruct
+i and r 0ðÞ
+i = ri.T h ec o o r d i n a t e
+update formulation guarantees SE(3)-equivariance.
+Finally, the structure-derived geometric encoding is de ﬁned as
+the node embeddings from the ﬁnal layer N followed by a fully con-
+nected layer:
+Sstruct = h NðÞ 2 RL × degnn ; ð9Þ
+Xstruct =L i n e a rSstruct/C0/C1
+2 RL × d , d =2 5 6; ð10Þ
+where degnn denotes the hidden dimension of the EGNN.
+Multimodal feature fusion
+Physicochemical and sequence-context features are fused using a
+gated cross-attention mechanism. Given Xphys and Xsem , cross-
+attention is computed as:
+A = Attn Q = Xphys , K = Xsem , V = Xsem
+/C16/C17
+; ð11Þ
+where
+Attn Q, K, VðÞ =S o f t m a xQK>
+ﬃﬃﬃ
+d
+p
+/C18/C19
+V: ð12Þ
+A learnable gating function controls modality contribution:
+ω 1 = σ Linear Xphys ; A
+hi/C16/C17/C16/C17
+; ð13Þ
+Eseq = LayerNorm ω1/C1 Xphys +1 /C0 ω 1
+/C0/C1
+/C1 A
+/C16/C17
+; ð14Þ
+Structure-aware embeddings are further integrated with
+sequence-derived features. The ﬁnal residue representation is com-
+puted as:
+ω2 = σ Linear Eseq ; Attn Eseq , Xstruct , Xstruct/C0/C1/C2/C3/C0/C1/C0/C1
+; ð15Þ
+Efu s e d= ω 2/C1 Eseq +1 /C0 ω2
+/C0/C1
+/C1 Attn Eseq , Xstruct , Xstruct/C0/C1
+: ð16Þ
+where ω k2 R, k2 1, 2fg is a scalar gating coef ﬁcient obtained via a
+sigmoid activation functionσ/C1ðÞ .
+Interaction modeling: bilinear attention networks (BAN)
+To model the ﬁne-grained contact interface and capture the intricate
+dependencies between the residues of two protein chains (e.g., Pep-
+tide and HLA, or TCR and pHLA), we implement Bilinear Attention
+Networks. Unlike standard dot-product attention which often reduces
+information into a single dimension, BAN models pairwise residue
+interactions via a bilinear compatibility function and aggregates
+interaction-aware features without explicitly constructing a full outer-
+product tensor.
+We utilize learnable weight matricesU2 R
+D × D0 and V2 RD × D0 to
+project two representations E2 RLe × D and T2 RLt × D into a joint
+space of dimension D0 = 256. The transformed features for the i-th
+residue of E and the j-th residue of T are:
+~ei = U>Ei, ~tj = V>Tj ; ð17Þ
+where ~ei, ~tj2 RD0.
+The interaction scoreSi, j for each residue pair is computed using
+a learnable parameter q2 RD0 to measure bilinear compatibility as:
+Si, j = ~e>
+i /C1 diag qðÞ/C1 ~tj ; ð18Þ
+where S2 RLe × LT .
+The attention map Ii, j is normalized via an explicit 2D Softmax
+function:
+Ii, j =
+exp Si, j
+/C16/C17
+PLe
+a =1
+PLt
+b =1
+exp Sa, b
+/C0/C1 ; ð19Þ
+where I2 RLe × LT .
+The pooled interaction vectorz is derived through the Hadamard
+product (/C12 ) across all residue pairs:
+z = BatchNorm
+XLe
+i =1
+XLt
+j =1
+Ii, j/C1 ~ei/C12 ~tj
+/C16/C17 !
+; ð20Þ
+where z2 RD0.
+Peptide-HLA predictor model
+The peptide-HLA predictor integrates SSFE, Transformer encoders,
+cross-attention, and BAN.
+Let Spep and Shla denote the amino acid sequence of peptide and
+HLA. The model accepts variable-length peptide inputs through
+residue-level sequence encoding and attention-based interaction
+modeling, without requiring peptides to be ﬁxed to 9-mers; peptide
+length is handled implicitly through padding and masking during
+batch processing. Peptide and HLA residue features areﬁrst encoded
+independently by SSFE module:
+E
+fu s e d:pep = SSFE Spep/C0/C1
+, Efu s e d:hla =S S F E Shla
+/C16/C17
+; ð21Þ
+and Transformer blocks:
+Epep =T r a n s f o r m e rEfu s e d:pep
+/C16/C17
+, Ehla =T r a n s f o r m e rEfu s e d:hla
+/C16/C17
+: ð22Þ
+Bidirectional cross-attention is then applied:
+P =L a y e r N o r mEpep + Attn Epep, Ehla , Ehla
+/C16/C17/C16/C17
+; ð23Þ
+H =L a y e r N o r mEhla + Attn Ehla , Epep, Epep
+/C16/C17/C16/C17
+: ð24Þ
+BAN is applied between peptide residues and HLA pocket residues
+predeﬁned as 34 canonical binding-groove positions 11, producing an
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+interaction vector,
+zpHLA =B A NP, HðÞ ; ð25Þ
+which is passed to a multilayer perceptron with a sigmoid activation to
+predict peptide-HLA binding score. Importantly, while the full pHLA
+model natively supports multimodal structural fusion via the SSFE
+module, the peptide’ s structural branch can be optionally deactivated
+during training and inference. This ﬂexible design maximizes
+computational throughput during ultra-large-scale virtual screening
+(e.g., proteome-wide screening) where sequence and physicochemical
+features are highly suf ﬁcient for presentation modeling, while the
+complete tri-molecular structural architecture is fully engaged during
+the downstream TCR recognition task.
+TCR-peptide-HLA predictor model
+The TCR-pHLA predictor model predicts the speciﬁc recognition of a
+pHLA complex by a TCR α/β heterodimer. This model utilizes a multi-
+stage training pipeline and a sophisticated interaction hierarchy to
+handle the increased complexity of the quaternary complex.
+Feature aggregator: pre-training and transfer learning
+To stabilize and guide the learning of TCR-pHLA recognition, the pHLA
+predictor is ﬁrst pre-trained and subsequently reused as a feature
+aggregator. This transfer learning strategy ensures that the model
+leverages established knowledge of pHLA complex stability before
+modeling the TCR interaction.
+Let H
+pre and Ppre denote the pre-trained embeddings (for HLA and
+peptide, respectively) extracted from the frozen pHLA predictor, and
+let H
+task and Ptask denote the task-speci ﬁc embeddings generated
+within the TCR-pHLA pipeline. These representations are integrated
+through gated fusion:
+ω
+hla = σ Linear Htask ; Attn Htask , Hpre , Hpre
+/C16/C17hi/C16/C17/C16/C17
+; ð26Þ
+ω pep = σ Linear Ptask ; Attn Ptask , Ppre , Ppre
+/C16/C17hi/C16/C17/C16/C17
+; ð27Þ
+Hagg =L a y e r N o r mðω hla/C1 Htask +1 /C0 ωhla
+/C0/C1
+/C1 Attn Htask , Hpre , Hpre
+/C16/C17
+/C138ÞÞ ;
+ð28Þ
+Pagg =L a y e r N o r mðω pep/C1 Ptask +1 /C0 ω pep
+/C16/C17
+/C1 Attn Ptask , Ppre , Ppre
+/C16/C17
+/C138ÞÞ
+ð29Þ
+The pretrained representations Hpre and Ppre provide a
+presentation-aware representation of the pHLA complex, including
+peptide– HLA compatibility and HLA-restricted context. In contrast,
+H
+task and Ptask are optimized directly for TCR recognition. This design
+does not assume that TCR binding is driven by the same residues or
+features that determine peptide– HLA presentation. Instead, the pre-
+trained branch provides a stable pHLA-context prior, while the task-
+speciﬁc branch learns features associated with TCR engagement.
+These two representations are combined through an input-dependent
+gating mechanism, which controls their relative contribution for each
+pHLA input and allows the model to balance presentation-aware con-
+text with TCR-recognition-speciﬁc information.
+Interaction hierarchy: SSFE+ transformer+ cross
+attention+ BAN
+Following feature aggregation, the TCR-pHLA interaction is modeled
+through a hierarchical sequence of operations:
+• Let Stcra and Stcrb denote the amino acid sequences of TCRα and
+TCRβ chains. The residue features are encoded independently by
+SSFE module and Transformer blocks:
+Etcra = Transformer SSFE Stcra/C0/C1/C0/C1
+, Etcrb = Transformer SSFE Stcrb
+/C16/C17/C16/C17
+ð30Þ
+• CDR3 Segment Extraction: The model identiﬁes and extracts the
+hypervariable CDR3α and CDR3β segments. For each chain, let
+iα
+start , iβ
+start and iα
+end , iβ
+end be the anchor residue indices. The seg-
+ment Ecdr 3a and Ecdr3b is extracted as:
+Ecdr 3a = Etcra iα
+start : iα
+end
+/C2/C3
+, Ecdr3b = Etcrb iβ
+start : iβ
+end
+hi
+: ð31Þ
+• Multichannel Cross-Attention: Mutual information is exchanged
+between the TCR loops and the pHLA aggregator features to
+reﬁne the docking orientation:
+Tcdr3a LayerNorm Ecdr 3a + Attn Ecdr3a, Pagg , Pagg
+/C16/C17/C16/C17
+; ð32Þ
+Tcdr3b LayerNorm Ecdr 3b + Attn Ecdr3b, Pagg , Pagg
+/C16/C17/C16/C17
+; ð33Þ
+Ttcra  LayerNorm Etcra + Attn Etcra , Hagg , Hagg/C0/C1/C0/C1
+; ð34Þ
+Ttcrb  LayerNorm Etcrb + Attn Etcrb , Hagg , Hagg
+/C16/C17/C16/C17
+; ð35Þ
+• Bilinear Interaction Modeling: Using the BAN architecture
+described in Section 3.3, the model computes four distinct
+interaction vectors:
+z
+cdr3a/C0 pep =B A N Tcdr3a, Pagg
+/C16/C17
+, zcdr3b/C0 pep =B A N Tcdr3b, Pagg
+/C16/C17
+;
+ð36Þ
+ztcra/C0 hla =B A N Ttcra , Hagg/C0/C1
+, ztcrb/C0 hla =B A N Ttcrb , Hagg
+/C16/C17
+: ð37Þ
+• Prediction Head: These vectors are concatenated into a global
+interaction representationztotal and passed through a multi-layer
+perceptron (MLP) with a sigmoid activation to output the ﬁnal
+TCR-pHLA binding score.
+Negative sampling
+To improve discrimination and mitigate shortcut learning under lim-
+ited experimentally validated negatives, we used two complementary
+negative-sampling strategies: dynamic shufﬂing-based negatives and
+mutation-aware hard negatives.
+Dynamic negative sampling
+Because comprehensive negative binding data are scarce for TCR-
+pHLA interaction prediction, we generated negative pairs for training.
+Common strategies include: (i) ﬁxing pHLA and randomly shuf ﬂing
+TCRs to form mismatched pairs, while excluding any known positive
+pairs; and (ii) pairing pHLA with background TCRs from healthy
+donors. We adopted the shuf ﬂing-based strategy to avoid potential
+distribution mismatches between positive and negative TCR reper-
+toires that may arise when using healthy-donor backgrounds
+39.C o n -
+cretely, we sampled negatives at a 3:1 negative-to-positive ratio. Rather
+than ﬁxing a single set of negatives before training, we regenerated
+shufﬂed negatives dynamically during training (e.g., each epoch),
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+which expands the effective negative space while keeping the positive
+set unchanged and reduces reliance on a limited, static negative pool.
+Mutation-aware hard negative sampling
+In the cancer mutation analyses, we additionally introduced a
+mutation-aware strategy to construct hard negatives that more closely
+reﬂect the biological challenge of distinguishing mutants from closely
+related self-contexts. Speciﬁcally, we generated decoy pairs via small
+sequence perturbations:
+• Peptide mutation: for a positive peptide, we randomly substitute
+1-2 residues to create minimally perturbed decoys that are
+expected to reduce peptide-HLA and/or TCR recognition
+compatibility.
+• TCR CDR3 mutation: we randomly mutate 1-3 residues within the
+CDR3 loop(s) (excluding conserved anchor positions) to produce
+near-neighbor decoys likely to alter speciﬁcity.
+We note that this strategy can introduce label noise, as a subset of
+perturbed sequences may still retain measurable binding. Never-
+theless, under this construction, the experimentally supported posi-
+tives are expected to exhibit higher binding propensity on average
+than the mutated decoys, making these hard negatives a useful
+approximation for training and evaluation in the absence of exhaustive
+negative measurements.
+Training objective
+Models are trained using focal loss to address class imbalance. For
+label y2 0, 1fg and predicted probability p, the loss is deﬁned as:
+L =/C0 αy 1/C0 pðÞ
+γ log pðÞ/C0 1/C0 αðÞ 1/C0 yðÞ pγ log 1/C0 pðÞ ; ð38Þ
+where α balances positive and negative classes andγ emphasizes hard
+examples. This strategy forces the model to distinguish true molecular
+recognition from highly similar decoy interactions, substantially
+improving speciﬁcity.
+Training details
+• Optimizer: AdamW with a learning rate of 1 × 10 /C0 4 and
+weight decay.
+• Regularization: Dropout of 0.1 and Gradient Clipping at a max
+norm of 2.0.
+• Cross-Validation: 5-fold cross-validation with an EarlyStopping
+patience of 5 epochs for Peptide-HLA predictor, and 10-fold cross-
+validation with an EarlyStopping patience of 10 epochs for TCR-
+pHLA predictor, both based on validation AUROC. The maximum
+epoch was set to 100.
+• Batch size: The batch size was set to 256.
+• Hardware: All models were trained on NVIDIA A6000 GPUs using
+the PyTorch framework.
+Evaluation metrics
+We evaluated model performance using AUROC, AUPRC, recall, true
+discovery rate (TDR), and AUC0.1. The AUROC (area under the receiver
+operating characteristic curve) was used to measure the ability of a
+model to rank positive interactions above negative interactions across
+all possible classi ﬁcation thresholds. Because many immunological
+prediction tasks are highly imbalanced, we also reported AUPRC (the
+area under the precision– recall curve), which is more sensitive to the
+recovery of rare positive interactions among a large number of
+negatives.
+For candidate prioritization analyses, recall was de ﬁned as the
+fraction of experimentally validated positives recovered within the
+top-ranked predictions. TDR was deﬁned as the fraction of top-ranked
+candidates that were experimentally validated positives, providing a
+practical measure of enrichment among candidates selected for
+downstream validation.
+AUC0.1 was used for the IMMREP23 benchmark following the
+original challenge protocol. It represents the partial area under the
+ROC curve calculated only up to a false positive rate of 0.1. This metric
+focuses on the high-speciﬁcity region of the ROC curve and is there-
+fore useful for evaluating models in settings where false positives are
+costly and only a small number of predicted TCR– epitope interactions
+can be experimentally tested.
+Modality-level SHAP analysis
+To demystify the multi-modal architecture and quantitatively assess
+the global importance of distinct data modalities and biological com-
+ponents, we implemented a customized, exact SHAP (SHapley Addi-
+tive exPlanations) framework. Standard SHAP estimation packages
+(e.g., KernelSHAP) are generally designed for high-dimensional feature
+spaces and often rely on approximations. Given our objective to
+evaluate a constrained number of macro-level features (i.e., data
+modalities or biological components, denoted as M), we bypassed
+approximation algorithms and computed the exact Shapley values to
+ensure maximum mathematical rigor.
+Speciﬁcally, for each sample in the test set, we evaluated the
+model’ s predictive output across all 2
+M possible combinations (coali-
+tions) of input modalities. The masked inputs were substituted with
+expected values drawn from a background dataset distribution.
+The exact Modality SHAP value ϕ
+i for the i-th modality was then
+calculated as the weighted average of its marginal contributions to all
+possible subsets S that do not contain i:
+ϕi =
+X
+S/C18 Mn ifg
+jSj!jMj/C0j Sj/C0 1ðÞ !
+jMj! vS ∪ ifgðÞ /C0 vSðÞðÞ ; ð39Þ
+where vSðÞ represents the model’ s prediction given the subset of active
+modalities S. This exact ablation-based approach provides a highly
+robust quantiﬁcation of each module ’ s contribution to the inferred
+TCR-pHLA interactions.
+Experimental details
+Plasmid construction. The AS8.4 TCR sequences TRBV901-TRBJ2-301
+and TRAV2101-TRAJ2801 were obtained from the international
+ImMunoGeneTics information system (IMGT/GENE-DB, https://www.
+imgt.org/). CDR3 regions correspond to those reported by Yang et al.
+(β: CASSVGTYSTDTQYF; α: CAVNSPGSGAGSYQLTF). Gene fragments
+were codon-optimized for Homo sapiens, joined with a P2A linker, and
+assembled into a pLX307 vector. Correct assembly was conﬁrmed by
+Sanger sequencing (CCIB DNA Core, Massachusetts General Hospital,
+Boston).
+Cell lines. Jurkat E6.1 (ATCC; TIB-152), HEK293T (ATCC; CRL-3216),
+and Plat-A (Cell Biolabs, San Diego, CA, USA; RV-102) cells were cul-
+tured at 37 °C and 5 % CO ₂. Jurkat and Plat-A cells were maintained in
+RPMI-1640 (Thermo Fisher; 61870036); HEK293T and Plat-A cells were
+maintained in DMEM (Thermo Fisher; 10569010). Media were sup-
+plemented with 10 % (v/v) heat-inactivated FBS (Thermo Fisher;
+26140079) and 100 µgm l⁻¹ penicillin-streptomycin (Thermo Fisher;
+15140-122). Cell lines were screened mycoplasma-free every 3 months
+with the Mycoplasma Detection Kit (InvivoGen; rep-mys-50).
+CRISPR-Cas9 knockout of endogenous TCR .T oe l i m i n a t ee n d o -
+genous TCR expression in Jurkat cells, both the TCRα constant region
+(TRAC) and the TCR β constant region (TRBC1) were targeted using
+synthetic guide RNAs (sgRNAs) complexed with Cas9-GFP protein
+(IDT; 10008100). Ribonucleoprotein complexes were assembled at a
+1:2 molar ratio of Cas9-GFP (IDT; 10008100) to sgRNA (IDT). The fol-
+lowing sgRNA sequences were used: for TRAC, 5 ′-
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+TGGATTTAGAGTCTCTCAGC-3′ and 5 ′-ACAAAACTGTGCTAGACATG-
+3′;f o rT R B C 1 ,5 ′-CGTAGAACTGGACTTGACAG-3′ and 5 ′-CCCAC-
+CAGCTCAGCTCCACG-3′. Jurkat cells were electroporated with ribo-
+nucleoprotein complexes using a 4D-Nucleofector ™ XU n i t( L o n z a )
+and the SE Cell Line 4D-Nucleofector ™ X Kit S (Lonza; V4XC-1032).
+Program CL-120 was used, and cells were transferred immediately to
+2 mL pre-warmed RPMI + 10 % FBS. After 5 days, cells were stained with
+PE-conjugated anti-human TCRαβ antibody (clone IP26; BioLegend,
+catalog no. 306708) at a 1:100 dilution in a total staining volume of
+100 µL for 30 min on ice. TCR αβ-negative cells were sorted using a
+Bigfoot™ Spectral Cell Sorter (Thermo Fisher Scientiﬁc), and the post-
+sort purity was ≥95.0%.
+Lentiviral vector production and transduction. HEK293T cells were
+co-transfected with the plasmids psPAX2 (Addgene #12260) and
+pMD2.G (Addgene #12259) at 4:4:1 ratio using TransIT®-LT1 (Mirus Bio;
+MIR 2300). Supernatants were harvested after 72 h,ﬁltered, and stored
+at −80 °C. Viral concentrations were determined with Lenti-X ™ GoS-
+tix™ Plus (Takara Bio, 631280). TCR knockout Jurkat cells were trans-
+duced with the virus by spinfection (1000 × g, 90 min, 32 °C) in the
+presence of 8µg/mL polybrene (Sigma-Aldrich; TR-1003-G). After 48 h,
+2 µg/mL puromycin was applied for 5 d. Expression of the AS8.4 TCR
+was veriﬁed by staining with PE-conjugated anti-human TCR αβ anti-
+body (clone IP26; BioLegend, catalog no. 306708) and APC-conjugated
+anti-human CD3 antibody (clone UCHT1; BioLegend, catalog no.
+300411). Both antibodies were used at a 1:100 dilution in a total
+staining volume of 100µL, and cells were incubated for 30 min on ice.
+Retroviral delivery of CD8 αβ and NFAT-ZsGreen reporter .T h e
+CD8α-CD8β-8×NFAT-ZsGreen construct (Addgene #153417) was
+packaged in Plat-A cells. TransIT-LT1 (Mirus Bio; MIR 2300) was used
+for transfection. Supernatants (48 h, 72 h) were ﬁltered and con-
+centrated 10-fold with the Lenti-X Concentrator (Takara Bio; 631231).
+Jurkat-AS8.4 cells were spin-infected as described above and cultured
+for 72 h. Cells were then stained with PerCP-conjugated anti-human
+CD8α antibody (clone RPA-T8; BioLegend, catalog no.301030) at a
+1:100 dilution in a total staining volume of 100 µL for 30 min on ice.
+CD8α-positive cells were sorted, and the post-sort purity was≥95.0%.
+Generation of HEK293T-B2M-HLA-B*27:05 antigen-presenting cells.
+Lentiviral construct encoding humanβ₂
+-microglobulin (B2M) and HLA-
+B*27:05 was packaged as above. HEK293T cells were transduced by
+spinfection (1000 ×g,9 0 m i n ,3 2 ° C )i nt h ep r e s e n c eo f8µg/mL poly-
+brene, selected with puromycin (2 µg/mL, 5 d), and cell-surface
+expression was assessed by staining with FITC-conjugated mouse
+anti-human HLA-B27 antibody (clone HLA-ABC-m3; Bio-Rad, catalog no.
+MCA116F) at a 1:100 dilution in a total staining volume of 100 µLf o r
+30 min on ice.
+Peptide stimulation assay. HEK293T-HLA-B*27 cells (1 × 10⁵ cells per
+well) were seeded in 96-well U-bottom plates in 100 µL DMEM com-
+plete medium. After 24 h, synthetic peptides (GenScript; HPLC purity
+≥9 5 . 0 % )w e r ed i s s o l v e di nw a t e ra n da d d e da taﬁnal concentration of
+100 µM. Peptides were pre-incubated with HEK293T-HLA-B*27 cells for
+60 min at 37 °C and 5 % CO ₂.T h e n1×1 0⁵ Jurkat-AS8.4-NFAT-ZsGreen
+cells in 100 µL RPMI + 10 % FBS were added. Co-cultures proceeded
+24 h (37 °C, 5 % CO ₂).
+Cells were harvested and stained with APC-conjugated anti-
+human CD69 antibody (clone FN50; BioLegend, catalog no. 985206) at
+a 1:100 dilution in a total volume of 100µL PBS supplemented with 2%
+FBS for 30 min on ice (Supplementary Table 7). Following staining,
+cells were washed and resuspended in 300µL PBS supplemented with
+2% FBS. Data were acquired using a Cytek® Aurora spectral ﬂow cyt-
+ometer (Cytek Biosciences, Fremont, CA, USA) with SpectroFlo v3.0.3
+a n da n a l y z e du s i n gF l o w J o™ v10.10.0 (BD Biosciences, San Jose, CA,
+USA). Jurkat cells were identi ﬁed by forward- and side-scatter char-
+acteristics, followed by singlet gating. T-cell activation was quantiﬁed
+as the percentage of CD69-positive and NFAT-ZsGreen-positive cells
+among live singlet Jurkat cells. The peptide stimulation assay was
+performed in two independent experiments.
+Reporting summary
+Further information on research design is available in the Nature
+Portfolio Reporting Summary linked to this article.
+Data availability
+The ﬁnal model weights, training data and AS-related microbial pep-
+tides analyzed in this study are publicly available via Zenodo at
+(https://doi.org/10.5281/zenodo.18002170). The benchmarking data-
+sets analyzed in this study are publicly available through their original
+publications, including the Melanoma dataset
+2 (https://doi.org/10.
+1016/j.cell.2025.06.019), Albert et al.12 (https://doi.org/10.1038/s42256-
+023-00694-6), Chu et al.13 (https://doi.org/10.1038/s42256-022-00459-
+7), IMMREP22 15 (https://doi.org/10.1016/j.immuno.2023.100024),
+IMMREP2316 (https://www.kaggle.com/competitions/tcr-speciﬁcity-
+prediction-challenge). Lu et al. 17 (https://doi.org/10.1038/s41592-025-
+02910-0), Que et al. 22 (https://doi.org/10.1038/s41467-025-60461-6),
+TESLA36 (https://doi.org/10.1016/j.cell.2020.09.015), CEDAR37 (https://
+cedar.iedb.org), Minervina et al. 38 (https://doi.org/10.1038/s41590-
+022-01184-4), Zhang et al. 23 (https://doi.org/10.1038/s42256-024-
+00913-8), TP53 dataset 43 (https://doi.org/10.1158/2326-6066.CIR-22-
+0040). All other data are available in the article and its Supplementary
+ﬁles or from the corresponding author upon request. Source data are
+provided with this paper.
+Code availability
+The open-source StriMap codebase is maintained at ( https://github.
+com/uhlerlab/strimap-tools) and Zenodo at https://doi.org/10.5281/
+zenodo.21925295 (ref.56). A publicly accessible web server imple-
+menting the StriMap prediction platform is available at (www.strimap.
+com), providing batch prediction, analysis, visualization and model
+ﬁne tuning for peptide-HLA binding and TCR-pHLA recognition.
+References
+1. Punt, J., Stranford, S., Jones, P., & Owen, J. Kuby Immunology.
+(Macmillan Higher Education, 2018).
+2. Blass, E. et al. A multi-adjuvant personal neoantigen vaccine gen-
+erates potent immunity in melanoma.Cell 188,
+5125–5141.e27 (2025).
+3. Klebanoff, C. A., Chandran, S. S., Baker, B. M., Quezada, S. A. &
+Ribas, A. T cell receptor therapeutics: immunological targeting of
+the intracellular cancer proteome.Nat. Rev. Drug Discov. 22,
+996–1017 (2023).
+4. Theo ﬁlopoulos, A. N., Kono, D. H. & Baccala, R. The multiple path-
+ways to autoimmunity.Nat. Immunol. 18,7 1 6–724 (2017).
+5. Buckner, J. H. Antigen-speci ﬁc immunotherapies for autoimmune
+disease. Nat. Rev. Rheumatol. 21,8 8–97 (2025).
+6. Zhang, S.-Q. et al. High-throughput determination of the antigen
+speciﬁcities of T cell receptors in single cells. Nat. Biotechnol.36,
+1156–1159 (2018).
+7. Kula, T. et al. T-scan: a genome-wide method for the systematic
+discovery of T cell epitopes. Cell 178,1 0 1 6–1028 (2019).
+8 . J o g l e k a r ,A .V .&L i ,G .Tc e l la n t i g e nd i s c o v e r y .Nat. Methods 18,
+873–880 (2021).
+9. Hudson, D., Fernandes, R. A., Basham, M., Ogg, G. & Koohy, H. Can
+we predict T cell speciﬁcity with digital biology and machine
+learning? Nat. Rev. Immunol. 23,5 1 1–521 (2023).
+10. Nilsson, J. B., Greenbaum, J., Peters, B. & Nielsen, M. NetMHCpan-
+4.2: improved prediction of CD8+ epitopes by use of transfer
+learning and structural features.Front. Immunol.16, 1616113 (2025).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+1 1 . R e y n i s s o n ,B . ,A l v a r e z ,B . ,P a u l ,S . ,P e t e r s ,B .&N i e l s e n ,M .
+NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of
+MHC antigen presentation by concurrent motif deconvolution and
+integration of MS MHC eluted ligand data. Nucleic Acids Res. 48,
+W449–W454 (2020).
+12. Albert, B. A. et al. Deep neural networks predict class I major his-
+tocompatibility complex epitope presentation and transfer learn
+neoepitope immunogenicity.Nat. Mach. Intell. 5,8 6 1–872 (2023).
+13. Chu, Y. et al. A transformer-based model to predict peptide –HLA
+class I binding and optimize mutated peptides for vaccine design.
+Nat. Mach. Intell. 4,3 0 0–311 (2022).
+14. Stra žar, M. et al. HLA-II immunopeptidome proﬁling and deep
+learning reveal features of antigenicity to inform antigen discovery.
+Immunity 56,1 6 8 1–1698.e13 (2023).
+15. Meysman, P. et al. Benchmarking solutions to the T-cell receptor
+epitope prediction problem: IMMREP22 workshop report.Immu-
+noinformatics (Amst.)9, 100024 (2023).
+16. Nielsen, M. et al. Lessons learne d from the IMMREP23 TCR-epitope
+prediction challenge.Immunoinformatics (Amst.)16,
+100045 (2024).
+17. Lu, Y. et al. Assessment of computational methods in predicting
+TCR-epitope binding recognition.Nat. Methods 23,
+248–259 (2026).
+18. Montemurro, A. et al. NetTCR-2.0 enables accurate prediction of
+TCR-peptide binding by using paired TCRα and β sequence data.
+Commun. Biol. 4, 1060 (2021).
+19. Jensen, M. F. & Nielsen, M. NetTCR 2.2 - Improved TCR speci ﬁcity
+predictions by combining pan- and peptide-speciﬁct r a i n i n gs t r a -
+tegies, loss-scaling and integration of sequence similarity.eLife 12,
+RP93934 (2024).
+20. Lu, T. et al. Deep learning-based prediction of the T cell receptor-
+antigen binding speciﬁcity. Nat. Mach. Intell. 3,8 6 4–875 (2021).
+2 1 . G a o ,Y .e ta l .P a n - P e p t i d eM e t aL e a r n i n gf o rT - c e l lr e c e p t o r–antigen
+binding recognition.Nat. Mach. Intell. 5,2 3 6–249 (2023).
+22. Que, J. et al. Identifying T cell antigen at the atomic level with graph
+convolutional network.Nat. Commun. 16, 5171 (2025).
+23. Zhang, Y. et al. Epitope-anchored contrastive transfer learning for
+paired CD8+ T cell receptor–antigen recognition.Nat. Mach. Intell.
+6,1 3 4 4–1358 (2024).
+24. Croce, G. et al. Deep learning predictions of TCR-epitope interac-
+tions reveal epitope-speciﬁc chains in dual alpha T cells. Nat.
+Commun. 15, 3211 (2024).
+25. Fast, E., Dhar, M. & Chen, B. TAPIR: a T-cell receptor language model
+for predicting rare and novel targets.bioRxiv https://doi.org/10.
+1101/2023.09.12.557285(2023).
+26. Li, X., Sun, C., Huang, W., Wang, Y. & Ma, B. SageTCR: a structure-
+based model integrating residue- and atom-level representations
+for enhanced TCR-pMHC binding prediction.Brief. Bioinform.26,
+bbaf496 (2025).
+27. Deleuran, S. N. & Nielsen, M. NetTCR-struc, a structure driven
+approach for prediction of TCR-pMHC interactions.Front. Immunol.
+16,1 6 1 6 3 2 8( 2 0 2 5 ) .
+28. Ge, J. et al. TRAP: a contrastive learning-enhanced framework for
+robust TCR-pMHC binding prediction with improved general-
+izability. Chem. Sci. 16,9 8 8 1–9894 (2025).
+29. Slone, J. K., Conev, A., Rigo, M. M., Reuben, A. & Kavraki, L. E. TCR-
+pMHC binding speciﬁcity prediction from structure using graph
+neural networks.IEEE Trans. Comput. Biol. Bioinform.22,
+171–179 (2025).
+30. Slone, J. K. et al. STAG-LLM: predicting TCR-pHLA binding with
+protein language models and computationally generated 3D
+structures.Comput. Struct. Biotechnol. J.27, 3885–3896 (2025).
+31. Kawashima, S. & Kanehisa, M. AAindex: amino acid index database.
+Nucleic Acids Res. 28, 374 (2000).
+32. Lin, Z. et al. Evolutionary-scale prediction of atomic-level protein
+structure with a language model.Science 379, 1123–1130 (2023).
+33. Elnaggar, A. et al. ProtTrans: toward understanding the language of
+life through self-supervised learning.IEEE Trans. Pattern Anal. Mach.
+Intell. 44, 7112–7127 (2022).
+34. Garcia Satorras, V., Hoogeboom, E . & Welling, M. E(n) equivariant
+graph neural networks.P r o c .3 8 t hI n t .C o n f .M a c h .L e a r n .P M L R139,
+9323–9332 (2021).
+35. Kim, J.-H., Jun, J. & Zhang, B.-T. Bilinear Attention Networks.i n Pro-
+ceedings of the 32nd InternationalConference on Neural Informa-
+tion Processing Systems1571
+–1581 (Curran Associates Inc., Red
+Hook, NY, USA, 2018).
+36. Wells, D. K. et al. Key parameters of tumour epitope immunogeni-
+city revealed through a consortium approach improve neoantigen
+prediction.Cell 183,8 1 8–834.e13 (2020).
+37. Ko şaloğ lu-Yalçın, Z. et al. The Cancer Epitope Database and Ana-
+lysis Resource (CEDAR).Nucleic Acids Res 51, D845–D852 (2023).
+38. Minervina, A. A. et al. SARS-CoV-2 antigen exposure history shapes
+phenotypes and speciﬁcity of memory CD8+ T cells.Nat. Immunol.
+23,7 8 1–790 (2022).
+39. Dens, C., Laukens, K., Bittremieux, W. & Meysman, P. The pitfalls of
+negative data bias for the T-cell epitope speciﬁcity challenge. Nat.
+Mach. Intell. 5,1 0 6 0–1062 (2023).
+40. Vita, R. et al. The immune epitope database (IEDB): 2024 update.
+Nucleic Acids Res. 53,D 4 3 6–D443 (2025).
+41. Shugay, M. et al. VDJdb: a curated database of T-cell receptor
+sequences with known antigen speciﬁcity. Nucleic Acids Res 46,
+D419–D427 (2018).
+42. Povlsen, H. R. et al. Improved T cell receptor antigen pairing
+through data-drivenﬁltering of sequencing information from single
+cells. Elife 12,e 8 1 8 1 0( 2 0 2 3 ) .
+4 3 . K i m ,S .P .e ta l .A d o p t i v ec e l l u lar therapy with autologous tumor-
+inﬁltrating lymphocytes and T-cell receptor-engineered T cells
+targeting common p53 neoantigens in human solid tumors.Cancer
+Immunol. Res. 10,9 3 2–946 (2022).
+44. Yang, X. et al. Autoimmunity-associated T cell receptors recognize
+HLA-B*27-bound peptides.Nature 612,7 7 1–777 (2022).
+45. Thompson, K. N. et al. Alteratio ns in the gut microbiome implicate
+key taxa and metabolic pathways across inﬂammatory arthritis
+phenotypes.Sci. Transl. Med. 15, eabn4722 (2023).
+46. Sternes, P. R. et al. Distinctive gut microbiomes of ankylosing
+spondylitis and inﬂammatory bowel disease patients suggest dif-
+fering roles in pathogenesis and correlate with disease activity.
+Arthritis Res. Ther. 24
+, 163 (2022).
+47. Delgado, L. F. & Andersson, A. F. Evaluating metagenomic assembly
+approaches for biome-speciﬁcg e n ec a t a l o g u e s .Microbiome10,
+72 (2022).
+48. Franzosa, E. A. et al. Gut microbiome structure and metabolic
+activity in inﬂammatory bowel disease.Nat. Microbiol. 4,
+293–305 (2019).
+49. Gevers, D. et al. The treatment-naive microbiome in new-onset
+Crohn’sd i s e a s e .Cell Host Microbe 15,3 8 2–392 (2014).
+50. Hall, A. B. et al. A novel Ruminococcus gnavus clade enriched in
+inﬂammatory bowel disease patients.Genome Med 9, 103 (2017).
+51. Mehta, R. S. et al. Stability of the human faecal microbiome in a
+cohort of adult men. Nat. Microbiol. 3,3 4 7–355 (2018).
+52. Cunningham-Oakes, E. et al. Enhancing infectious intestinal disease
+diagnosis through metagenomic and metatranscriptomic sequen-
+cing of 1000 human diarrhoeal samples.Genome Med 17,
+55 (2025).
+53. Adams, J. J. et al. T cell receptor signaling is limited by docking
+geometry to peptide-major histocompatibility complex.Immunity
+35,6 8 1–693 (2011).
+54. Abramson, J. et al. Accurate str ucture prediction of biomolecular
+interactions with AlphaFold 3.Nature 630,4 9 3–500 (2024).
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
+55. Wang, N. et al. Deep peptide recognition pro ﬁling decodes TCR
+speciﬁcity and enables disease-associated antigen discovery.Nat.
+Biotechnol.(2026).
+56. Cao, K. uhlerlab/strimap-tools: strimap-tools ﬁrst release (Version
+v1.0.0) [Computer software].Zenodo https://doi.org/10.5281/
+zenodo.21925295(2026).
+Acknowledgements
+W et h a n kQ .G o n g ,C .L i ,F .C h e n ,C .K r i s h n a ,W .J i n ,B .S h a o ,L .Y u a n ,X .
+Zhang, J. Zhang, R. Zhang, and S. Liu for valuable discussions regarding
+method design. We thank E. Forte, T. Reimels, and H. Kang for helpful
+discussions and feedback on the manuscript.
+Author contributions
+R.J.X. and C.U. directed the study. K.C., M.S., E.M.B., and P.N.U.N. con-
+ceived the study. K.C. developed the model. K.C., M-M.P. and J.P. per-
+formed data analysis. D.B.G. and R.L. designed the AS experiments. R.L.
+performed the AS experiments. O.A. and D.B.G provided crucial insights.
+K.C., R.L., M.S., M-M.P., O.A., D.B.G, C.U. and R.J.X. wrote the manuscript.
+Funding
+K.C. was partially supported by a fellowship from AstraZeneca, the Eric
+and Wendy Schmidt Center at the Broad Institute of MIT and Harvard,
+and the National Institutes of Health (DK135492). C.U. was partially
+supported by NCCIH/NIH (1DP2AT012345), NIDDK/NIH (5RC2DK135492-
+02), ONR (N00014-24-1-2687), the United States Department of Energy
+(DE-SC0023187), and MIT J-Clinic for Machine Learning and Health.
+R.J.X. was supported by the National Institutes of Health (DK043351,
+AI110495, and DK135492), and The Leona M. and Harry B. Helmsley
+Charitable Trust.
+Competing interests
+R.J.X. is a co-founder of Convergence Bio, scientiﬁc advisory board
+member at Nestlé and Magnet BioMedicine, and board director at
+MoonLake Immunotherapeutics. C.U. serves on the ScientiﬁcA d v i s o r y
+Board of Immunai and Relation Therapeutics and has received spon-
+sored research support from AstraZeneca and Janssen Pharmaceuticals.
+These organizations had no roles in this study. The other authors declare
+no competing interests.
+Additional information
+Supplementary informationThe online version contains
+supplementary material available at
+https://doi.org/10.1038/s41467-026-78063-1
+.
+Correspondenceand requests for materials should be addressed to
+Caroline Uhler or Ramnik J. Xavier.
+Peer review informationNature Communicationsthanks Mate Man-
+czinger and the other, anonymous, reviewer(s) for their contribution to
+the peer review of this work. A peer review ﬁle is available.
+Reprints and permissions informationis available at
+http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to jur-
+isdictional claims in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the
+Creative Commons licence, and indicate if you modiﬁed the licensed
+material. You do not have permission under this licence to share adapted
+material derived from this article or parts of it. The images or other third
+party material in this article are included in the article's Creative
+Commons licence, unless indicatedotherwise in a credit line to the
+material. If material is not included in the article's Creative Commons
+licence and your intended use is not permitted by statutory regulation or
+exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://
+creativecommons.org/licenses/by-nc-nd/4.0/
+.
+© The Author(s) 2026
+This Article in Press is shared early to give you faster access to new
+research. It is citable and carries a permanent DOI. The ﬁnal edited
+version will replace it automatically.
+Article https://doi.org/10.1038/s41467-026-78063-1
+Nature Communications Article in Press
