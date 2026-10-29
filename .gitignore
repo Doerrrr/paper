@@ -2,7 +2,7 @@
 node_modules/
 .pptx-build/
 .pnpm-store/
-
+.pptx-build/node_modules/
 # ========== Obsidian 本地状态 ==========
 .trash/
 .obsidian/workspace.json
