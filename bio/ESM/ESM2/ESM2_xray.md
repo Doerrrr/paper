@@ -126,7 +126,7 @@ $$\mathcal{L}_{\text{MLM}}=\mathbb{E}_{x}\left[-\sum_{i\in M}\log p_\theta(x_i\m
 
 这一步的意义：**它测的是"表示里有没有结构"，而不是"结构头有多强"。** 如果 P@L 随规模上升，说明结构信息确实在 ESM-2 的表示里，而不是被某个监督头"硬塞"进去的。
 
-![[figs_esm2/fig1a_contact.png]]
+![[论文/bio/ESM/ESM2/figs_esm2/fig1a_contact.png]]
 
 > **承担什么**：证明 ESM-2 的注意力里已经含有"哪些残基在空间上挨着"的信息——这是"结构涌现"的第一个直接证据。
 > **先看这里**：左侧绿色卡通是 3LYW 的结构；右侧矩阵是模型自己学出来的接触图；蓝点=真阳性，红点=假阳性，灰点=其他接触。
@@ -147,7 +147,7 @@ ESM-2 只输出表示，不输出坐标。要把表示变成原子结构，需�
 
 **关键区分**：ESM-2 是**自监督**的；ESMFold 是**有监督**的（用 PDB 结构训练）。所以"ESM-2 学到了结构"和"ESMFold 能预测结构"是两件事——后者依赖前者，但前者不依赖后者。
 
-> 3D 生成的六步走读（读序列 → 建 pair 表 → trunk → structure module → recycling → 输出）见 [ESMFold 篇](../ESMFOLD/ESMFold_Science2023_xray.md)，这里不重复。
+> 3D 生成的六步走读（读序列 → 建 pair 表 → trunk → structure module → recycling → 输出）见 [ESMFold 篇](ESMFold_Science2023_xray.md)，这里不重复。
 
 ### 2.6 应用：ESM Metagenomic Atlas
 
@@ -166,7 +166,7 @@ Atlas 是"用"的部分：它证明这套表示 + 读出 + 速度，能把结构
 
 ### 3.1 接触精度随规模上升（Fig. 1B/C）
 
-![[figs_esm2/fig1bc_scaling.png]]
+![[论文/bio/ESM/ESM2/figs_esm2/fig1bc_scaling.png]]
 
 > **承担什么**：证明"结构信息"不是某个固定模型里偶然出现的，而是随规模持续变强。
 > **先看这里**：B 的曲线整体随参数量上移；C 里同源命中数越少（红/橙线）的组，随规模上升越陡。
@@ -198,7 +198,7 @@ Atlas 是"用"的部分：它证明这套表示 + 读出 + 速度，能把结构
 
 ### 3.3 读出成 3D：ESMFold 的精度（Fig. 2B）
 
-![[figs_esm2/fig2b_accuracy.png]]
+![[论文/bio/ESM/ESM2/figs_esm2/fig2b_accuracy.png]]
 
 > **承担什么**：证明"表示里学到的结构"可以被读成真实坐标，而不是只停留在接触图。
 > **先看这里**：Standard 组 ESMFold vs AF2 vs RoseTTAFold；No MSA 组 AF2/RF 掉到 0.4 左右。
@@ -218,7 +218,7 @@ Atlas 是"用"的部分：它证明这套表示 + 读出 + 速度，能把结构
 
 ### 3.4 规模到 6 亿：Atlas 与 AF2 的一致性（Fig. 3A）
 
-![[figs_esm2/fig3a_atlas.png]]
+![[论文/bio/ESM/ESM2/figs_esm2/fig3a_atlas.png]]
 
 > **承担什么**：证明 ESMFold 与 AF2 在宏基因组规模上大体一致，因此"高置信"可以当大规模筛选依据。
 > **先看这里**：散点沿对角线；Pearson 0.79；左下角低 LDDT 的尾部。

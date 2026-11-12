@@ -89,7 +89,7 @@ ESMFold 是证明这句话的"读出装置"，不是概念本身。这也解释�
 
 **这一步的副产品是注意力图。** 论文把注意力线性投影成接触图，发现它已经和真实接触图很像（Fig. 1A）。
 
-![[figs_science/fig1a_contact.png]]
+![[论文/bio/ESM/ESMFOLD/figs_science/fig1a_contact.png]]
 
 > **承担什么**：证明 ESM-2 的注意力里已经含有"哪些残基在空间上挨着"的信息——这是后面不需要 MSA 的前提。
 > **先看这里**：左下角绿色卡通是 3LYW 的结构；右侧矩阵是模型自己学出来的接触图；蓝点=真阳性，红点=假阳性，灰点=其他接触。
@@ -109,7 +109,7 @@ ESMFold 是证明这句话的"读出装置"，不是概念本身。这也解释�
 
 ### 2.3 第 3 步：folding trunk 把关系翻译成约束
 
-![[figs_science/fig2a_architecture.png]]
+![[fig2a_architecture.png]]
 
 > **承担什么**：把整条"序列 → 结构"的流水线画出来，并放大 folding block 的内部。
 > **先看这里**：左边 ESM-2 → Folding Trunk（48 blocks）→ Structure Module（8 blocks）→ 坐标；右边 folding block 里 seq 与 pair 怎么交替更新。
@@ -165,7 +165,7 @@ MSA 提供共进化；ESM-2 在 UniRef 上见过亿万条序列，把同样的�
 
 ### 3.1 结构真的在表示里吗？（Fig. 1B/C）
 
-![[figs_science/fig1bc_scaling.png]]
+![[论文/bio/ESM/ESMFOLD/figs_science/fig1bc_scaling.png]]
 
 > **承担什么**：证明接触精度随模型规模上升，而且低同源蛋白的收益更大。
 > **先看这里**：B 的曲线整体随参数量上移；C 里同源命中数越少（红/橙线）的组，随规模上升越陡。
@@ -183,7 +183,7 @@ MSA 提供共进化；ESM-2 在 UniRef 上见过亿万条序列，把同样的�
 
 ### 3.2 不用 MSA 能预测吗？（Fig. 2B）
 
-![[figs_science/fig2b_accuracy.png]]
+![[论文/bio/ESM/ESMFOLD/figs_science/fig2b_accuracy.png]]
 
 > **承担什么**：证明整条链在真实测试集上能跑，而且远超"无 MSA 的 AF2"。
 > **先看这里**：Standard 组 ESMFold vs AF2 vs RoseTTAFold；No MSA 组 AF2/RF 掉到 0.4 左右。
@@ -205,7 +205,7 @@ MSA 提供共进化；ESM-2 在 UniRef 上见过亿万条序列，把同样的�
 
 ### 3.3 高置信可信吗？（Fig. 2C + perplexity）
 
-![[figs_science/fig2c_calibration.png]]
+![[fig2c_calibration.png]]
 
 > **承担什么**：证明 pLDDT 可以当筛选器——高置信的预测确实更准。
 > **先看这里**：左图 pLDDT vs LDDT 的散点（corr=0.85）；右图 pLDDT vs 与 AF2 的差距（corr=−0.79）。
@@ -229,7 +229,7 @@ MSA 提供共进化；ESM-2 在 UniRef 上见过亿万条序列，把同样的�
 
 ### 3.4 能 scale 到 6 亿吗？（Fig. 3A + Fig. 4）
 
-![[figs_science/fig3a_atlas.png]]
+![[论文/bio/ESM/ESMFOLD/figs_science/fig3a_atlas.png]]
 
 > **承担什么**：证明 ESMFold 与 AF2 在宏基因组规模上大体一致，因此"高置信"可以当大规模筛选的依据。
 > **先看这里**：散点沿对角线；Pearson 0.79；左下角低 LDDT 的尾部。
@@ -247,7 +247,7 @@ MSA 提供共进化；ESM-2 在 UniRef 上见过亿万条序列，把同样的�
 - 高置信里 **76.8%** 与 UniRef90 的 identity < 90%；
 - **12.6%** 在 PDB 里没有任何实验结构匹配。
 
-![[figs_science/fig4_examples.png]]
+![[fig4_examples.png]]
 
 > **承担什么**：给几个具体例子，说明"高置信 + 远离已知"长什么样。
 > **先看这里**：A 的 6 个例子（ESMFold vs AF2；ESMFold vs 最近 PDB）；B/C 的"无 UniRef90 匹配"例子。

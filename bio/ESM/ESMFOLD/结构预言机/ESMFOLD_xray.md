@@ -108,7 +108,7 @@ $$T_i=\left(\frac{T_{\min}}{T_{\max}}\right)^{i/M}$$
 
 ### 3.3 Fig. 1：整篇论文的论点，压在一张图上
 
-![[figs/fig1_overview.png]]
+![[fig1_overview.png]]
 
 > **承担什么**：说明"程序 → 能量 → 退火 → 设计"这条流水线，以及每一步的信息形态。
 > **先看这里**：A 的语法树（约束挂在不同层）；B 的能量下降曲线（多条轨迹叠在一起）；C 的序列—结构对。
@@ -127,7 +127,7 @@ $$T_i=\left(\frac{T_{\min}}{T_{\max}}\right)^{i/M}$$
 
 ## 4. 结果一：全蛋白与部分约束（Fig. 2）
 
-![[figs/fig2_constraints.png]]
+![[fig2_constraints.png]]
 
 > **承担什么**：证明这套方法能处理从"完全自由生成"到"固定骨架"再到"局部功能位点"的不同约束强度。
 > **先看这里**：B 与 C 的对比——同样是 200 个 free hallucination，ESMFold 自己 100% 过 0.7，独立的 ssAF2 只有 22%。
@@ -153,7 +153,7 @@ $$T_i=\left(\frac{T_{\min}}{T_{\max}}\right)^{i/M}$$
 
 ### 5.1 Fig. 3：单链对称与同源多聚
 
-![[figs/fig3_symmetry.png]]
+![[fig3_symmetry.png]]
 
 > **承担什么**：证明"重复同一非终结符 K 次"就能程序化地设计 3–8 重对称，并能扩展到多聚体。
 > **先看这里**：B 的 3–8 重对称例子；C 的 pLDDT–roundtrip RMSD 负相关；E 的多聚体球状/多面体形状。
@@ -170,7 +170,7 @@ $$T_i=\left(\frac{T_{\min}}{T_{\max}}\right)^{i/M}$$
 
 ### 5.2 Fig. 4：两层对称
 
-![[figs/fig4_two_level.png]]
+![[fig4_two_level.png]]
 
 > **承担什么**：证明语法树可以同时约束"链内对称"和"链间对称"两层。
 > **先看这里**：B 的 3×3 网格（二聚/三聚/四聚体 × 2/3/4 重对称）；C/D 的相关性。
@@ -190,7 +190,7 @@ $$T_i=\left(\frac{T_{\min}}{T_{\max}}\right)^{i/M}$$
 
 ## 6. 结果三：层级约束的极限（Fig. 5）
 
-![[figs/fig5_hierarchy.png]]
+![[fig5_hierarchy.png]]
 
 > **承担什么**：把"功能位点"与"对称"叠在一起，甚至设计"部分对称、部分不对称"的复合物。
 > **先看这里**：B 的 3 重 IL10 / ACE2 scaffold；C 的程序树；D–F 的非对称复合物。
